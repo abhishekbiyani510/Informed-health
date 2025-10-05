@@ -61,7 +61,7 @@ const RefundPolicy = () => {
 
               <h2 className="font-heading font-bold text-2xl mt-8 mb-4">Contact</h2>
               <p className="text-muted-foreground">
-                For refund requests, please contact us at info@madhaviwellness.com with your booking details.
+                For refund requests, please contact us at behealthinformed@gmail.com with your booking details.
               </p>
             </div>
           </Card>

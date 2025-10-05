@@ -26,36 +26,27 @@ const Navbar = () => {
           <div className="flex items-center space-x-3">
             <img src="../../public/favicon.ico" alt="Logo" className="h-10 w-auto" />
             <Link to="/" className="flex items-center space-x-2">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="font-heading font-bold text-xl md:text-2xl"
-              >
+              <div className="font-heading font-bold text-xl md:text-2xl">
                 <span className="text-primary">Informed Health</span>
                 <p className="text-xs font-normal text-muted-foreground">Eat Well. Live Well. Be Healthy.</p>
-              </motion.div>
+              </div>
             </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-1">
-            {navItems.map((item, index) => (
-              <motion.div
+            {navItems.map((item) => (
+              <Link
                 key={item.path}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
+                to={item.path}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                  isActive(item.path)
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground hover:bg-accent hover:text-accent-foreground"
+                }`}
               >
-                <Link
-                  to={item.path}
-                  className={`px-4 py-2 rounded-md text-sm font-medium ${
-                    isActive(item.path)
-                      ? "bg-primary text-primary-foreground"
-                      : "text-foreground hover:bg-accent hover:text-accent-foreground"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              </motion.div>
+                {item.name}
+              </Link>
             ))}
           </div>
 
@@ -73,9 +64,10 @@ const Navbar = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
               className="lg:hidden overflow-hidden"
             >
               <div className="py-4 space-y-2">
@@ -84,7 +76,7 @@ const Navbar = () => {
                     key={item.path}
                     to={item.path}
                     onClick={() => setIsOpen(false)}
-                    className={`block px-4 py-2 rounded-md text-sm font-medium ${
+                    className={`block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                       isActive(item.path)
                         ? "bg-primary text-primary-foreground"
                         : "text-foreground hover:bg-accent"

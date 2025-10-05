@@ -33,7 +33,7 @@ const CancellationPolicy = () => {
                 To cancel or reschedule an appointment:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
-                <li>Email us at info@madhaviwellness.com</li>
+                <li>Email us at behealthinformed@gmail.com</li>
                 <li>Call us at +91 88265 04708 during business hours</li>
                 <li>Use the cancellation link in your appointment confirmation email</li>
               </ul>
@@ -66,7 +66,7 @@ const CancellationPolicy = () => {
 
               <h2 className="font-heading font-bold text-2xl mt-8 mb-4">Contact Us</h2>
               <p className="text-muted-foreground">
-                Questions about our cancellation policy? Contact us at info@madhaviwellness.com or call +91 88265 04708.
+                Questions about our cancellation policy? Contact us at behealthinformed@gmail.com or call +91 88265 04708.
               </p>
             </div>
           </Card>

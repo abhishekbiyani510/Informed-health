@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Youtube, Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const socialLinks = [
@@ -70,21 +72,35 @@ const Footer = () => {
           >
             <h3 className="font-heading font-bold text-lg">Contact</h3>
             <ul className="space-y-3">
-              <li className="flex items-start space-x-3">
-                <MapPin size={18} className="text-secondary mt-1 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">
-                  123 Wellness Street, Connaught Place<br />
-                  New Delhi, 110001
-                </span>
-              </li>
-              <li className="flex items-center space-x-3">
+                <li className="flex items-center space-x-3">
                 <Phone size={18} className="text-secondary flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">+91 88265 04708</span>
+                <a 
+                  href="tel:+918826504708" 
+                  className="text-sm text-muted-foreground hover:text-primary"
+                >
+                  +91 88265 04708
+                </a>
+                </li>
+              <li className="flex items-center space-x-2">
+                <FontAwesomeIcon icon={faWhatsapp} size="lg" className="text-secondary flex-shrink-0" />
+                <a 
+                  href="https://wa.me/918826504708" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-primary"
+                >
+                  Chat on WhatsApp
+                </a>
               </li>
-              <li className="flex items-center space-x-3">
+                <li className="flex items-center space-x-3">
                 <Mail size={18} className="text-secondary flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">info@madhaviwellness.com</span>
-              </li>
+                <a 
+                  href="mailto:behealthinformed@gmail.com" 
+                  className="text-sm text-muted-foreground hover:text-primary"
+                >
+                  behealthinformed@gmail.com
+                </a>
+                </li>
             </ul>
           </motion.div>
 

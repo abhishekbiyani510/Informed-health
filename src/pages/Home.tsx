@@ -54,7 +54,7 @@ const Home = () => {
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="../../public/Homepage-main-image.jpg"
+                  src="../../public/Homepage-image.jpg"
                   alt="Healthy food"
                   className="w-full h-full object-cover"
                 />
@@ -114,7 +114,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white rounded-2xl p-12 text-center"
+            className="bg-accent rounded-2xl p-12 text-center"
             >
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">
               Ready to Start Your Wellness Journey?
@@ -122,7 +122,7 @@ const Home = () => {
             <p className="text-lg mb-8 opacity-90">
               Book a consultation today and take the first step towards optimal health
             </p>
-            <Button asChild size="lg" variant="outline" className="text-secondary mx-auto">
+            <Button asChild size="lg">
               <Link to="/contact">Schedule Consultation</Link>
             </Button>
           </motion.div>

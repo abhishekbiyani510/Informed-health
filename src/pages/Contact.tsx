@@ -4,9 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -26,11 +28,11 @@ const Contact = () => {
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
-  const contactInfo = [
+    const contactInfo = [
     {
-      icon: MapPin,
-      title: "Address",
-      content: "123 Wellness Street, Connaught Place\nNew Delhi, 110001",
+      icon: () => <FontAwesomeIcon icon={faWhatsapp} size="lg" color="primary" />,
+      title: "WhatsApp",
+      content: "+91 88265 04708",
     },
     {
       icon: Phone,
@@ -40,7 +42,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "info@madhaviwellness.com",
+      content: "behealthinformed@gmail.com",
     },
     {
       icon: Clock,
@@ -74,55 +76,55 @@ const Contact = () => {
             <Card className="p-8">
               <h2 className="font-heading font-bold text-2xl mb-6">Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Label htmlFor="name">Full Name *</Label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Enter your name"
-                    required
-                  />
-                </div>
+          <div>
+            <Label htmlFor="name">Full Name *</Label>
+            <Input
+              id="name"
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              placeholder="Enter your name"
+              required
+            />
+          </div>
 
-                <div>
-                  <Label htmlFor="email">Email Address *</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="your.email@example.com"
-                    required
-                  />
-                </div>
+          <div>
+            <Label htmlFor="email">Email Address *</Label>
+            <Input
+              id="email"
+              type="email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              placeholder="Enter your email address"
+              required
+            />
+          </div>
 
-                <div>
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="+91 88265 04708"
-                  />
-                </div>
+          <div>
+            <Label htmlFor="phone">Phone Number</Label>
+            <Input
+              id="phone"
+              type="tel"
+              value={formData.phone}
+              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              placeholder="Enter your contact number"
+            />
+          </div>
 
-                <div>
-                  <Label htmlFor="message">Message *</Label>
-                  <Textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us about your health goals and how we can help..."
-                    rows={6}
-                    required
-                  />
-                </div>
+          <div>
+            <Label htmlFor="message">Message *</Label>
+            <Textarea
+              id="message"
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              placeholder="Tell us about your health goals and how we can help..."
+              rows={6}
+              required
+            />
+          </div>
 
-                <Button type="submit" size="lg" className="w-full">
-                  Send Message
-                </Button>
+          <Button type="submit" size="lg" className="w-full">
+            Send Message
+          </Button>
               </form>
             </Card>
           </motion.div>
@@ -144,26 +146,34 @@ const Contact = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-start space-x-4">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <info.icon className="text-primary" size={24} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">{info.title}</h3>
-                      <p className="text-sm text-muted-foreground whitespace-pre-line">
-                        {info.content}
-                      </p>
-                    </div>
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <info.icon className="black" size={24} />
                   </div>
-                </Card>
+                  <div>
+                    <h3 className="font-semibold mb-1">{info.title}</h3>
+                    <p className="text-sm text-muted-foreground whitespace-pre-line">
+                {info.content}
+                    </p>
+                  </div>
+                </div>
+              </Card>
               </motion.div>
             ))}
 
-            {/* Map Placeholder */}
+            {/* Map */}
             <Card className="overflow-hidden">
-              <div className="aspect-video bg-muted flex items-center justify-center">
-                <p className="text-muted-foreground">Map Location Placeholder</p>
+              <div className="aspect-video">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1401.931883847473!2d77.2438309!3d28.5375533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3a43a325245%3A0x11ca783ce946bc7a!2sInformed%20Health!5e0!3m2!1sen!2sin!4v1697041234567!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
               </div>
             </Card>
           </motion.div>
