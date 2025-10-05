@@ -4,16 +4,16 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
   },
-  plugins: [react()],
-  base: "/Informed-health/",
+  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  base: mode === "development" ? "/" : "/Informed-health/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-});
+}));
