@@ -1,4 +1,4 @@
-// Mock data structure that would typically come from a MongoDB database
+import testimonialImage from "../../public/About-image.jpg"
 
 export interface Workshop {
   id: string;
@@ -75,7 +75,7 @@ export const testimonials: Testimonial[] = [
     role: "Software Engineer",
     content: "Madhavi's personalized nutrition plan transformed my health completely. I've never felt more energetic and balanced!",
     rating: 5,
-    image: "../../public/About-image.jpg",
+    image: testimonialImage,
   },
   {
     id: "2",
@@ -83,7 +83,7 @@ export const testimonials: Testimonial[] = [
     role: "Business Owner",
     content: "The gut health workshop was eye-opening. Madhavi's expertise and approachable teaching style made complex topics easy to understand.",
     rating: 5,
-    image: "../../public/About-image.jpg",
+    image: testimonialImage,
   },
   {
     id: "3",
@@ -91,7 +91,7 @@ export const testimonials: Testimonial[] = [
     role: "Yoga Instructor",
     content: "I've recommended Madhavi to all my students. Her holistic approach to nutrition complements my yoga practice perfectly.",
     rating: 5,
-    image: "../../public/About-image.jpg",
+    image: testimonialImage,
   },
 ];
 

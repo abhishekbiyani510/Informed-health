@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import homepageImage from "../../public/Homepage-image.jpg";
 
 const Home = () => {
   const benefits = [
@@ -54,7 +55,7 @@ const Home = () => {
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="../../public/Homepage-image.jpg"
+                  src={homepageImage}
                   alt="Healthy food"
                   className="w-full h-full object-cover"
                 />
