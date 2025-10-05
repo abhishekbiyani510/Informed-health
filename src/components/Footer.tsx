@@ -31,7 +31,7 @@ const Footer = () => {
                   target="_blank"
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-full bg-background flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="w-10 h-10 rounded-full bg-background flex items-center justify-center hover:bg-primary hover:text-primary-foreground"
                 >
                   <social.icon size={18} />
                 </a>
@@ -44,7 +44,6 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
             className="space-y-4"
           >
             <h3 className="font-heading font-bold text-lg">Quick Links</h3>
@@ -53,7 +52,7 @@ const Footer = () => {
                 <li key={item}>
                   <Link
                     to={`/${item.toLowerCase().replace(" ", "-")}`}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-sm text-muted-foreground hover:text-primary"
                   >
                     {item}
                   </Link>
@@ -67,7 +66,6 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
             className="space-y-4"
           >
             <h3 className="font-heading font-bold text-lg">Contact</h3>
@@ -95,7 +93,6 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
             className="space-y-4"
           >
             <h3 className="font-heading font-bold text-lg">Reviews & Policies</h3>
@@ -104,7 +101,7 @@ const Footer = () => {
                 href="https://www.google.com/maps"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary"
               >
                 <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground text-xs font-bold">
                   G
@@ -113,17 +110,17 @@ const Footer = () => {
               </a>
               <ul className="space-y-2">
                 <li>
-                  <Link to="/refund-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link to="/refund-policy" className="text-sm text-muted-foreground hover:text-primary">
                     Refund Policy
                   </Link>
                 </li>
                 <li>
-                  <Link to="/cancellation-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link to="/cancellation-policy" className="text-sm text-muted-foreground hover:text-primary">
                     Cancellation Policy
                   </Link>
                 </li>
                 <li>
-                  <Link to="/grievance" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link to="/grievance" className="text-sm text-muted-foreground hover:text-primary">
                     Grievance Portal
                   </Link>
                 </li>

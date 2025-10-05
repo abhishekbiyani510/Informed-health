@@ -32,7 +32,7 @@ const Navbar = () => {
                 className="font-heading font-bold text-xl md:text-2xl"
               >
                 <span className="text-primary">Informed Health</span>
-                <p className="text-xs font-normal text-muted-foreground">by Madhavi K. Sharma</p>
+                <p className="text-xs font-normal text-muted-foreground">Eat Well. Live Well. Be Healthy.</p>
               </motion.div>
             </Link>
           </div>
@@ -44,11 +44,10 @@ const Navbar = () => {
                 key={item.path}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
               >
                 <Link
                   to={item.path}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`px-4 py-2 rounded-md text-sm font-medium ${
                     isActive(item.path)
                       ? "bg-primary text-primary-foreground"
                       : "text-foreground hover:bg-accent hover:text-accent-foreground"
@@ -85,7 +84,7 @@ const Navbar = () => {
                     key={item.path}
                     to={item.path}
                     onClick={() => setIsOpen(false)}
-                    className={`block px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                    className={`block px-4 py-2 rounded-md text-sm font-medium ${
                       isActive(item.path)
                         ? "bg-primary text-primary-foreground"
                         : "text-foreground hover:bg-accent"

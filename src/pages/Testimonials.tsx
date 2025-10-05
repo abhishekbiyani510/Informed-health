@@ -62,7 +62,7 @@ const Testimonials = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-primary to-secondary text-white rounded-2xl p-12"
+          className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white rounded-2xl p-12 text-center"
         >
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
