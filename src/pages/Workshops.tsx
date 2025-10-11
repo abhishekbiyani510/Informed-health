@@ -17,89 +17,89 @@ const Workshops = () => {
   };
 
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen py-8">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">Upcoming Workshops</h1>
+          <h1 style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }} className="font-heading font-semibold text-4xl md:text-4xl mb-2 tracking-tight">Upcoming Workshops</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Join our interactive workshops to deepen your understanding of functional nutrition and practical wellness strategies
           </p>
         </motion.div>
 
         {/* Workshops Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {workshops.map((workshop, index) => {
             const spotsLeft = workshop.capacity - workshop.enrolled;
             const isAlmostFull = spotsLeft <= 5;
 
             return (
               <motion.div
-                key={workshop.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+              key={workshop.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
               >
-                <Card className="overflow-hidden h-full flex flex-col hover:shadow-xl transition-shadow">
-                  {/* Image */}
-                  <div className="aspect-video relative overflow-hidden">
-                    <img
-                      src={workshop.image}
-                      alt={workshop.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                    {isAlmostFull && (
-                      <Badge className="absolute top-4 right-4 bg-destructive">
-                        Only {spotsLeft} spots left!
-                      </Badge>
-                    )}
+              <Card className="overflow-hidden h-[500px] w-[400px] flex flex-col hover:shadow-xl transition-shadow mx-auto">
+                {/* Image */}
+                <div className="aspect-video relative overflow-hidden">
+                <img
+                  src={workshop.image}
+                  alt={workshop.title}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+                {isAlmostFull && (
+                  <Badge className="absolute top-4 right-4 bg-destructive">
+                  Only {spotsLeft} spots left!
+                  </Badge>
+                )}
+                </div>
+
+                {/* Content */}
+                <div className="p-4 flex-1 flex flex-col">
+                <h3 className="font-heading font-bold text-lg mb-2">{workshop.title}</h3>
+                <p className="text-sm text-muted-foreground mb-3 flex-1">{workshop.description}</p>
+
+                {/* Details */}
+                <div className="space-y-1 mb-4">
+                  <div className="flex items-center text-sm text-muted-foreground">
+                  <Calendar size={16} className="mr-2 text-primary" />
+                  <span>{new Date(workshop.date).toLocaleDateString('en-IN', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                  })}</span>
                   </div>
-
-                  {/* Content */}
-                  <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="font-heading font-bold text-xl mb-3">{workshop.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-4 flex-1">{workshop.description}</p>
-
-                    {/* Details */}
-                    <div className="space-y-2 mb-6">
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Calendar size={16} className="mr-2 text-primary" />
-                        <span>{new Date(workshop.date).toLocaleDateString('en-IN', { 
-                          year: 'numeric', 
-                          month: 'long', 
-                          day: 'numeric' 
-                        })}</span>
-                      </div>
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Clock size={16} className="mr-2 text-primary" />
-                        <span>{workshop.duration}</span>
-                      </div>
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Users size={16} className="mr-2 text-primary" />
-                        <span>{workshop.enrolled} / {workshop.capacity} enrolled</span>
-                      </div>
-                    </div>
-
-                    {/* Price and CTA */}
-                    <div className="flex items-center justify-between pt-4 border-t">
-                      <div className="flex items-center">
-                        <IndianRupee size={20} className="text-primary" />
-                        <span className="font-heading font-bold text-2xl">{workshop.price}</span>
-                      </div>
-                      <Button 
-                        onClick={() => handlePayNow(workshop.title)}
-                        disabled={spotsLeft === 0}
-                      >
-                        {spotsLeft === 0 ? 'Sold Out' : 'Pay Now'}
-                      </Button>
-                    </div>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                  <Clock size={16} className="mr-2 text-primary" />
+                  <span>{workshop.duration}</span>
                   </div>
-                </Card>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                  <Users size={16} className="mr-2 text-primary" />
+                  <span>{workshop.enrolled} / {workshop.capacity} enrolled</span>
+                  </div>
+                </div>
+
+                {/* Price and CTA */}
+                <div className="flex items-center justify-between pt-2 border-t">
+                  <div className="flex items-center">
+                  <IndianRupee size={20} className="text-primary" />
+                  <span className="font-heading font-bold text-xl">{workshop.price}</span>
+                  </div>
+                  <Button 
+                  onClick={() => handlePayNow(workshop.title)}
+                  disabled={spotsLeft === 0}
+                  >
+                  {spotsLeft === 0 ? 'Sold Out' : 'Pay Now'}
+                  </Button>
+                </div>
+                </div>
+              </Card>
               </motion.div>
             );
           })}

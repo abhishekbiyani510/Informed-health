@@ -3,13 +3,13 @@ import { Card } from "@/components/ui/card";
 
 const RefundPolicy = () => {
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen py-8">
       <div className="container mx-auto px-4 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <h1 className="font-heading font-bold text-4xl md:text-5xl mb-8">Refund Policy</h1>
+          <h1 style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }} className="font-heading font-semibold text-4xl md:text-4xl mb-6 tracking-tight">Refund Policy</h1>
           
           <Card className="p-8">
             <div className="prose prose-lg max-w-none">

@@ -5,16 +5,16 @@ import { Star } from "lucide-react";
 
 const Testimonials = () => {
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen py-8">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
-          <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">Client Testimonials</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h1 style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }} className="font-heading font-semibold text-4xl md:text-4xl mb-2 tracking-tight">Client Testimonials</h1>
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
             Real stories from real people who transformed their health through functional nutrition
           </p>
         </motion.div>

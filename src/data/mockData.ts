@@ -35,28 +35,6 @@ export const workshops: Workshop[] = [
     capacity: 25,
     enrolled: 12,
   },
-  {
-    id: "3",
-    title: "Hormone Balance Through Nutrition",
-    description: "Understand the connection between nutrition and hormonal health. Learn dietary strategies to balance hormones naturally.",
-    date: "2025-12-05",
-    duration: "3.5 hours",
-    price: 3299,
-    image: "../../public/food.jpg",
-    capacity: 20,
-    enrolled: 8,
-  },
-  {
-    id: "4",
-    title: "Plant-Based Nutrition Essentials",
-    description: "Master the art of plant-based eating with complete nutritional guidance for optimal health and vitality.",
-    date: "2025-12-12",
-    duration: "3 hours",
-    price: 2799,
-    image: "../../public/food.jpg",
-    capacity: 35,
-    enrolled: 22,
-  },
 ];
 
 export interface Testimonial {
@@ -187,17 +165,5 @@ export const services: Service[] = [
       "Lab review and interpretation",
     ],
     icon: "activity",
-  },
-  {
-    id: "4",
-    title: "Corporate Wellness",
-    description: "Comprehensive wellness programs designed for workplace health and productivity.",
-    features: [
-      "Group workshops",
-      "Nutrition seminars",
-      "Health screenings",
-      "Customized corporate plans",
-    ],
-    icon: "briefcase",
   },
 ];

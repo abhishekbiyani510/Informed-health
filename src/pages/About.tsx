@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Award, BookOpen, Heart, Users } from "lucide-react";
 
@@ -27,7 +27,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen py-8">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -35,7 +35,7 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">About Madhavi K. Sharma</h1>
+          <h1 style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }} className="font-heading font-semibold text-4xl md:text-4xl mb-2 tracking-tight">About Madhavi K. Sharma</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Certified Functional Nutritionist dedicated to transforming lives through personalized nutrition
           </p>

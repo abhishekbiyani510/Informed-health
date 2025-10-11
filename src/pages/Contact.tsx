@@ -52,7 +52,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen py-8">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -60,7 +60,7 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">Get In Touch</h1>
+            <h1 className="font-heading font-semibold text-4xl md:text-4xl mb-2 tracking-tight" style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }}>Get In Touch</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Ready to start your wellness journey? Reach out to schedule a consultation or ask any questions
           </p>

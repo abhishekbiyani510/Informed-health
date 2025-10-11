@@ -24,10 +24,10 @@ const Navbar = () => {
       <div className="container mx-auto px-15">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center space-x-3">
-            <img src="../../public/favicon.ico" alt="Logo" className="h-10 w-auto" />
+            <img src="../../public/favicon.ico" alt="Logo" className="h-16 w-auto" />
             <Link to="/" className="flex items-center space-x-2">
               <div className="font-heading font-bold text-xl md:text-2xl">
-                <span className="text-primary">Informed Health</span>
+                <span style={{ fontFamily: 'Anton, sans-serif' }} className="text-primary font-thin">Informed Health</span>
                 <p className="text-xs font-normal text-muted-foreground">Eat Well. Live Well. Be Healthy.</p>
               </div>
             </Link>

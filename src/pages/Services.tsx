@@ -13,24 +13,29 @@ const iconMap = {
 };
 
 const Services = () => {
+  // Only take first 3 services
+  const displayedServices = services.slice(0, 3);
+
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen py-8">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">Our Services</h1>
+          <h1 style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }} className="font-heading font-semibold text-4xl md:text-4xl mb-2 tracking-tight">
+            Comprehensive Wellness Programs
+          </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive nutrition services tailored to your unique health goals and challenges
+            Choose from our specialized nutrition programs designed to meet your health goals
           </p>
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {services.map((service, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {displayedServices.map((service, index) => {
             const Icon = iconMap[service.icon as keyof typeof iconMap];
             return (
               <motion.div
@@ -40,21 +45,21 @@ const Services = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="p-8 h-full hover:shadow-xl transition-shadow">
+                <Card className="p-6 h-full hover:shadow-xl transition-shadow">
                   <div className="flex items-start space-x-4 mb-6">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <Icon className="text-primary" size={32} />
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <Icon className="text-primary" size={24} />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-heading font-bold text-2xl mb-2">{service.title}</h3>
-                      <p className="text-muted-foreground">{service.description}</p>
+                      <h3 className="font-heading font-bold text-xl mb-2">{service.title}</h3>
+                      <p className="text-sm text-muted-foreground">{service.description}</p>
                     </div>
                   </div>
 
                   <div className="space-y-3 mb-6">
-                    <h4 className="font-semibold text-sm uppercase text-muted-foreground">What's Included:</h4>
+                    <h4 className="font-semibold text-sm uppercase text-muted-foreground">Includes:</h4>
                     <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
+                      {service.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="flex items-start">
                           <span className="text-secondary mr-2 mt-1">✓</span>
                           <span className="text-sm">{feature}</span>

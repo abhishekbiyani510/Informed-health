@@ -16,9 +16,9 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-20 md:py-12 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-accent to-background -z-10" />
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -26,7 +26,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="space-y-6"
             >
-              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight">
+              <h1 className="font-heading font-bold text-4xl md:text-4xl lg:text-5xl leading-tight text-gray-700">
                 Transform Your Health with{" "}
                 <span className="text-primary">Functional Nutrition</span>
               </h1>
@@ -35,13 +35,13 @@ const Home = () => {
                 Let's work together to achieve optimal health through evidence-based nutrition.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button asChild size="sm" className="group">
+                <Button asChild size="sm" className="group bg-secondary hover:bg-secondary/100">
                   <Link to="/contact">
                     Get Started
                     <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={20} />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="sm">
+                <Button asChild variant="outline" size="sm" className="bg-transparent hover:bg-accent/30">
                   <Link to="/services">Learn More</Link>
                 </Button>
               </div>
@@ -60,7 +60,7 @@ const Home = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-secondary text-secondary-foreground p-6 rounded-xl shadow-lg">
+              <div className="absolute -top-6 -left-6 bg-secondary text-secondary-foreground p-6 rounded-xl shadow-lg">
                 <p className="font-heading font-bold text-3xl">500+</p>
                 <p className="text-sm">Happy Clients</p>
               </div>
