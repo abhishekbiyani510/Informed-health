@@ -105,6 +105,45 @@ const Workshops = () => {
           })}
         </div>
 
+        {/* Wellness & Corporate Workshops Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto my-16"
+        >
+          <Card className="bg-gradient-to-r from-secondary/10 to-accent/10 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-8">
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="font-heading font-bold text-2xl mb-2 text-secondary">
+                Wellness & Corporate Workshops
+              </h2>
+              <p className="text-muted-foreground mb-4">
+                Elevate your team’s wellbeing and productivity with our customized wellness and corporate nutrition workshops. 
+                <br />
+                <span className="font-semibold text-secondary">Interactive, evidence-based, and tailored for your organization’s unique needs.</span>
+                <br />
+                Topics include stress management, healthy eating at work, energy optimization, and more. Available for both in-person and virtual formats.
+              </p>
+              <Button 
+                asChild 
+                size="lg" 
+                className="text-white font-semibold shadow-md hover:scale-105 transition-transform"
+              >
+                <a href="/contact?type=corporate" target="_blank" rel="noopener noreferrer">
+                  Enquire for Corporate Wellness
+                </a>
+              </Button>
+            </div>
+            <div className="hidden md:block flex-shrink-0">
+              <img
+                src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332"
+                alt="Corporate Wellness"
+                className="rounded-xl shadow-lg w-35% h-40 object-cover"
+              />
+            </div>
+          </Card>
+        </motion.div>
+
         {/* Info Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

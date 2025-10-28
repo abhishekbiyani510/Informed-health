@@ -57,6 +57,36 @@ const Testimonials = () => {
           ))}
         </div>
 
+        {/* Read More Reviews Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex justify-center mb-16"
+        >
+          <a
+            href="https://www.google.com/maps/place/Informed+Health/@28.537549,77.246406,17z/data=!4m18!1m9!3m8!1s0x390ce3a43a325245:0x11ca783ce946bc7a!2sInformed+Health!8m2!3d28.5375486!4d77.2464058!9m1!1b1!16s%2Fg%2F11fl0t8g9b!3m7!1s0x390ce3a43a325245:0x11ca783ce946bc7a!8m2!3d28.5375486!4d77.2464058!9m1!1b1!16s%2Fg%2F11fl0t8g9b?hl=en&entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group"
+          >
+            <div className="flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-secondary/10 to-accent/10 shadow hover:scale-105 hover:shadow-lg transition-all border border-secondary/20">
+              <span className="font-heading font-semibold text-lg text-secondary">
+                Read More Reviews on Google
+              </span>
+              <svg
+                className="w-6 h-6 text-secondary group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </div>
+          </a>
+        </motion.div>
+
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
