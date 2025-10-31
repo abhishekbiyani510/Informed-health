@@ -6,7 +6,6 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Instagram, href: "https://www.instagram.com/behealthinformed/", label: "Instagram" },
     { icon: Youtube, href: "https://www.youtube.com/@informedhealth", label: "YouTube" },
   ];
@@ -22,21 +21,22 @@ const Footer = () => {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h3 className="font-heading font-bold text-lg text-primary">Madhavi K. Sharma</h3>
+            {/* <h3 className="font-heading font-bold text-lg text-primary">Madhavi K. Sharma</h3>
             <p className="text-sm text-muted-foreground">
               Certified Functional Nutritionist dedicated to transforming lives through personalized nutrition and wellness programs.
-            </p>
+            </p> */}
+            <h1 className="font-heading font-bold text-lg text-primary">Follow Us</h1>
             <div className="flex space-x-3">
               {socialLinks.map((social, index) => (
-          <a
+            <a
             key={index}
             target="_blank"
             href={social.href}
             aria-label={social.label}
-            className="w-10 h-10 rounded-full bg-background flex items-center justify-center hover:bg-primary hover:text-primary-foreground"
-          >
+            className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:bg-white hover:text-primary"
+            >
             <social.icon size={18} />
-          </a>
+            </a>
               ))}
             </div>
           </motion.div>

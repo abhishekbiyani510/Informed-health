@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { User, ShieldPlus, Activity } from "lucide-react";
+import { User, ShieldPlus, Activity, Bold } from "lucide-react";
 
 const programmeData = [
 	{
@@ -62,8 +62,8 @@ const Services = () => {
 						Biohack to Heal Programme
 					</h1>
 					<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-						Choose from our specialized 12-week programmes designed to help you
-						biohack your health and achieve lasting results.
+						Choose from our Specialized Programmes designed to help you
+						Biohack your Health and achieve lasting results.
 					</p>
 				</motion.div>
 
@@ -186,11 +186,10 @@ const Services = () => {
 						Not Sure Which Service is Right for You?
 					</h2>
 					<p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-						Schedule a complimentary discovery call to discuss your health goals
-						and find the perfect program
+						Schedule a 30-minutes Clarity Call to discuss your Health Goals.
 					</p>
 					<Button asChild size="lg">
-						<Link to="/contact">Schedule Free Discovery Call</Link>
+						<Link to="/contact">Schedule Your Clarity Call</Link>
 					</Button>
 				</motion.div>
 			</div>

@@ -15,7 +15,7 @@ const Testimonials = () => {
         >
           <h1 style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }} className="font-heading font-semibold text-4xl md:text-4xl mb-2 tracking-tight">Client Testimonials</h1>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-            Real stories from real people who transformed their health through functional nutrition
+            Real stories from Real people who transformed their Health through Functional Nutrition
           </p>
         </motion.div>
 
@@ -100,12 +100,12 @@ const Testimonials = () => {
               <p className="opacity-90">Happy Clients</p>
             </div>
             <div>
-              <p className="font-heading font-bold text-5xl mb-2">10+</p>
+              <p className="font-heading font-bold text-5xl mb-2">20+</p>
               <p className="opacity-90">Years Experience</p>
             </div>
             <div>
-              <p className="font-heading font-bold text-5xl mb-2">95%</p>
-              <p className="opacity-90">Success Rate</p>
+              <p className="font-heading font-bold text-5xl mb-2">5/5</p>
+              <p className="opacity-90">Star Rating</p>
             </div>
           </div>
         </motion.div>

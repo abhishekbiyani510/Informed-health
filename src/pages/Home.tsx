@@ -15,10 +15,6 @@ const Home = () => {
       highlight: "Functional Nutrition",
     },
     {
-      main: "Your Journey to",
-      highlight: "Wellness Begins Here",
-    },
-    {
       main: "Helping You Choose Informed Health",
       highlight: "The Science of Nutrition & The Art of Mindful Living",
     },
@@ -161,8 +157,8 @@ const Home = () => {
               Why Choose Functional Nutrition?
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Experience a personalized approach to wellness that addresses the
-              root causes of health concerns
+              Experience a Personalized Approach to Wellness that addresses the
+              Root Causes of Health Concerns
             </p>
           </motion.div>
 

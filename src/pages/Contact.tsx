@@ -47,7 +47,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: "Hours",
-      content: "Mon-Fri: 9:00 AM - 6:00 PM\nSat: 10:00 AM - 4:00 PM",
+      content: "Mon-Sat: 11:00 AM - 7:00 PM",
     },
   ];
 
@@ -62,7 +62,7 @@ const Contact = () => {
         >
             <h1 className="font-heading font-semibold text-4xl md:text-4xl mb-2 tracking-tight" style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }}>Get In Touch</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to start your wellness journey? Reach out to schedule a consultation or ask any questions
+            Ready to Start your Wellness Journey? Reach out to Schedule a Consultation or ask any Questions
           </p>
         </motion.div>
 
