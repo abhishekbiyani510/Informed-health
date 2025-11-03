@@ -23,7 +23,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTitle((prev) => (prev + 1) % titles.length);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [titles.length]);
 
@@ -114,11 +114,6 @@ const Home = () => {
               transition={{ delay: 0.5 }}
               className="space-y-4 md:space-y-6"
             >
-              <p className="text-base md:text-lg text-white/90 px-4 md:px-0">
-                Discover personalized wellness solutions tailored to your unique
-                needs. Let's work together to achieve optimal health through
-                evidence-based nutrition.
-              </p>
               <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
                 <Button
                   asChild

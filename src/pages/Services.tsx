@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { User, ShieldPlus, Activity, Bold } from "lucide-react";
+import { link } from "fs";
 
 const programmeData = [
 	{
@@ -16,7 +17,7 @@ const programmeData = [
 			"Weekly progress tracking",
 			"Supplement guidance",
 		],
-		link: "https://nutrition.informedhealth.in/biohack-your-gut",
+		internalRoute: "/biohack-your-gut",
 	},
 	{
 		title: "Glucose Biohacking",
@@ -29,7 +30,7 @@ const programmeData = [
 			"Lifestyle & stress management",
 			"Weekly coaching sessions",
 		],
-		link: "https://nutrition.informedhealth.in/defeat-diabetes-naturally",
+		internalRoute: "/glucose-biohacking",
 	},
 	{
 		title: "Body Transformation",
@@ -41,6 +42,19 @@ const programmeData = [
 			"Body composition tracking",
 			"Motivation & accountability",
 			"Mindset coaching",
+		],
+		link: "https://example.com/body-transformation",
+	},
+	{
+		title: "Women's Wellness",
+		icon: Bold,
+		description:
+			"A 12-week programme dedicated to women's unique health needs. Balance hormones, boost energy, and support overall wellbeing with tailored nutrition and lifestyle strategies.",
+		features: [
+			"Hormonal balance support",
+			"Cycle-synced nutrition",
+			"Stress & sleep optimization",
+			"Personalized coaching",
 		],
 	},
 ];
@@ -68,12 +82,13 @@ const Services = () => {
 				</motion.div>
 
 				{/* Programmes Grid */}
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
 					{programmeData.map((programme, index) => {
 						const Icon = programme.icon;
+						const isInternal = !!programme.internalRoute;
 						const isExternal = !!programme.link;
 						const cardContent = (
-							<Card className={`p-6 h-full flex flex-col justify-between hover:shadow-xl transition-shadow ${isExternal ? "cursor-pointer hover:ring-2 hover:ring-primary" : ""}`}>
+							<Card className={`p-6 h-full flex flex-col justify-between hover:shadow-xl transition-shadow ${(isInternal || isExternal) ? "cursor-pointer hover:ring-2 hover:ring-primary" : ""}`}>
 								<div>
 									<div className="flex items-start space-x-4 mb-6">
 										<div className="p-2 bg-primary/10 rounded-lg">
@@ -106,9 +121,6 @@ const Services = () => {
 									<Button asChild className="w-full">
 										<Link to="/contact">Book 12-Week Programme</Link>
 									</Button>
-									<Button asChild variant="outline" className="w-full">
-										<Link to="/contact">One Time Consultation</Link>
-									</Button>
 								</div>
 							</Card>
 						);
@@ -121,7 +133,17 @@ const Services = () => {
 								viewport={{ once: true }}
 								transition={{ delay: index * 0.1 }}
 							>
-								{isExternal ? (
+								{isInternal ? (
+									<a
+										href={programme.internalRoute}
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ textDecoration: "none" }}
+										tabIndex={0}
+									>
+										{cardContent}
+									</a>
+								) : isExternal ? (
 									<a
 										href={programme.link}
 										target="_blank"
@@ -137,6 +159,20 @@ const Services = () => {
 							</motion.div>
 						);
 					})}
+				</div>
+
+				{/* One Time Consultation CTA */}
+				<div className="flex justify-center mb-16">
+					<Card className="w-full max-w-2xl p-6 bg-gradient-to-r from-primary/10 to-accent/10 text-center shadow-lg">
+						<p className="mb-4 font-medium text-lg text-primary">
+							Before you proceed, if you wish to have a one-time consultation to discuss your needs, click below:
+						</p>
+						<Button asChild size="lg" className="font-semibold">
+							<Link to="/contact?type=one-time-consultation">
+								Book One Time Consultation
+							</Link>
+						</Button>
+					</Card>
 				</div>
 
 				{/* Packages Section */}

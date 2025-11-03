@@ -16,6 +16,8 @@ import RefundPolicy from "./pages/RefundPolicy";
 import CancellationPolicy from "./pages/CancellationPolicy";
 import Grievance from "./pages/Grievance";
 import NotFound from "./pages/NotFound";
+import BiohackYourGut from "./pages/BiohackYourGut";
+import GlucoseBiohacking from "./pages/GlucoseBiohacking";
 
 const queryClient = new QueryClient();
 
@@ -39,7 +41,8 @@ const App = () => (
               <Route path="/refund-policy" element={<RefundPolicy />} />
               <Route path="/cancellation-policy" element={<CancellationPolicy />} />
               <Route path="/grievance" element={<Grievance />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="/biohack-your-gut" element={<BiohackYourGut />} />
+              <Route path="glucose-biohacking" element={<GlucoseBiohacking />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
