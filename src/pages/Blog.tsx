@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
+import BlurImage from "@/components/BlurImage";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { blogPosts } from "@/data/mockData";
@@ -32,37 +33,37 @@ const Blog = () => {
           >
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
               <div className="grid md:grid-cols-2">
-          <div className="aspect-video md:aspect-[4/3]">
-            <img
-              src={blogPosts[0].image}
-              alt={blogPosts[0].title}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="p-6 flex flex-col justify-center">
-            <Badge className="w-fit mb-3">{blogPosts[0].category}</Badge>
-            <h2 className="font-heading font-bold text-2xl mb-3">{blogPosts[0].title}</h2>
-            <p className="text-muted-foreground mb-4 text-sm">{blogPosts[0].excerpt}</p>
-            
-            <div className="flex items-center space-x-4 text-xs text-muted-foreground mb-4">
-              <div className="flex items-center">
-                <Calendar size={14} className="mr-1" />
-                <span>{new Date(blogPosts[0].date).toLocaleDateString('en-IN', {
-            year: 'numeric',
-            month: 'short',
-            day: 'numeric'
-                })}</span>
-              </div>
-              <div className="flex items-center">
-                <Clock size={14} className="mr-1" />
-                <span>{blogPosts[0].readTime}</span>
-              </div>
-            </div>
+                <div className="aspect-video md:aspect-[4/3]">
+                  <BlurImage
+                    src={blogPosts[0].image}
+                    alt={blogPosts[0].title}
+                    className="w-full h-full"
+                  />
+                </div>
+                <div className="p-6 flex flex-col justify-center">
+                  <Badge className="w-fit mb-3">{blogPosts[0].category}</Badge>
+                  <h2 className="font-heading font-bold text-2xl mb-3">{blogPosts[0].title}</h2>
+                  <p className="text-muted-foreground mb-4 text-sm">{blogPosts[0].excerpt}</p>
+                  
+                  <div className="flex items-center space-x-4 text-xs text-muted-foreground mb-4">
+                    <div className="flex items-center">
+                      <Calendar size={14} className="mr-1" />
+                      <span>{new Date(blogPosts[0].date).toLocaleDateString('en-IN', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric'
+                  })}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Clock size={14} className="mr-1" />
+                      <span>{blogPosts[0].readTime}</span>
+                    </div>
+                  </div>
 
-            <Button asChild size="sm">
-              <Link to={`/blog/${blogPosts[0].id}`}>Read Full Article</Link>
-            </Button>
-          </div>
+                  <Button asChild size="sm">
+                    <Link to={`/blog/${blogPosts[0].id}`}>Read Full Article</Link>
+                  </Button>
+                </div>
               </div>
             </Card>
           </motion.div>
@@ -80,10 +81,10 @@ const Blog = () => {
             >
               <Card className="overflow-hidden h-full flex flex-col hover:shadow-xl transition-shadow">
                 <div className="aspect-video overflow-hidden">
-                  <img
+                  <BlurImage
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 
