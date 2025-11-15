@@ -8,13 +8,37 @@ const realTestimonials = [
 	{
 		id: 1,
 		content:
+			"Madhvi ji came highly recommended and I can say she has delivered for me. So the five stars for her. Despite my crazy travel schedule, she taught me / motivated me / guided me and explained to me the basics of food selection and food planning. Her teachings will stay with me forever. She is not a dietician. Her philosophy is simple - healthy eating & healthy habits leads to great life. Thank you Madhvi ji.",
+		rating: 5,
+		name: "shailesh jain",
+		date: "a month ago",
+	},
+	{
+		id: 2,
+		content:
+			"I followed Madhavi Ji's 3 month diet plan which helped me in controlling my diabetes very well and I also lost weight. Her plans are flexible and provide ample options to choose from and fit into family routine. Thank You for your personal guidance of making me feel good about my health and lifestyle.",
+		rating: 5,
+		name: "suman saboo",
+		date: "3 months ago",
+	},
+	{
+		id: 3,
+		content:
+			"I'm super happy that I was able to connect with Madhavi Mam. She really is an amazing person who genuinely cares and her guidance regarding my diet was super helpful. I truly wish her all the best in everything she does!",
+		rating: 5,
+		name: "Veni U",
+		date: "2 months ago",
+	},
+	{
+		id: 4,
+		content:
 			"I cannot recommend Dr. Madhavi enough. She's not just a nutritionist; she's a life changer. Her approach to gut health and overall wellness is incredibly thorough and effective. She takes time to understand your specific health concerns...",
 		rating: 5,
 		name: "Sonal Srivastava",
 		date: "2 months ago",
 	},
 	{
-		id: 2,
+		id: 5,
 		content:
 			"Dr Madhavi is a fantastic functional nutritionist. She provides evidence based lifestyle and nutrition guidance. She is extremely knowledgeable, patient and supportive throughout the healing journey...",
 		rating: 5,
@@ -22,7 +46,7 @@ const realTestimonials = [
 		date: "a year ago",
 	},
 	{
-		id: 3,
+		id: 6,
 		content:
 			"Dr Madhavi helped me a lot with my gut issues. She is very knowledgeable and understood my concerns very well. She explained me the root cause of my problems and how to address them...",
 		rating: 5,
@@ -130,11 +154,11 @@ const Testimonials = () => {
 				>
 					<h1
 						style={{ fontFamily: "Poppins, sans-serif", color: "#444444" }}
-						className="font-heading font-semibold text-4xl md:text-4xl mb-2 tracking-tight"
+						className="font-heading font-semibold text-[50px] md:text-[50px] mb-2 tracking-tight"
 					>
 						Client Testimonials
 					</h1>
-					<p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+					<p className="text-xl text-muted-foreground max-w-4xl mx-auto">
 						Real stories from Real people who transformed their Health through
 						Functional Nutrition
 					</p>

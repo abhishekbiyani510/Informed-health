@@ -60,8 +60,8 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-            <h1 className="font-heading font-semibold text-4xl md:text-4xl mb-2 tracking-tight" style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }}>Get In Touch</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h1 className="font-heading font-semibold text-[50px] md:text-[50px] mb-2 tracking-tight" style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }}>Get In Touch</h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to Start your Wellness Journey? Reach out to Schedule a Consultation or ask any Questions
           </p>
         </motion.div>
@@ -73,21 +73,26 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <Card className="p-8">
-              <h2 className="font-heading font-bold text-2xl mb-6">Send Us a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <Label htmlFor="name">Full Name *</Label>
-            <Input
-              id="name"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              placeholder="Enter your name"
-              required
-            />
-          </div>
+            <Card 
+  className="p-8" 
+  style={{
+    boxShadow: '0 0 30px 10px #6cc52e',
+  }}
+>
+  <h2 className="font-semibold text-[#444444] text-2xl mb-6">Send Us a Message</h2>
+  <form onSubmit={handleSubmit} className="space-y-6">
+    <div className="space-y-3">
+      <Label htmlFor="name">Full Name *</Label>
+      <Input
+        id="name"
+        value={formData.name}
+        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+        placeholder="Enter your name"
+        required
+      />
+    </div>
 
-          <div>
+          <div className="space-y-3">
             <Label htmlFor="email">Email Address *</Label>
             <Input
               id="email"
@@ -99,7 +104,7 @@ const Contact = () => {
             />
           </div>
 
-          <div>
+          <div className="space-y-3">
             <Label htmlFor="phone">Phone Number</Label>
             <Input
               id="phone"
@@ -110,7 +115,7 @@ const Contact = () => {
             />
           </div>
 
-          <div>
+          <div className="space-y-3">
             <Label htmlFor="message">Message *</Label>
             <Textarea
               id="message"

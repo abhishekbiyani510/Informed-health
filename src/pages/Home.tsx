@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Star, X } from "lucide-react";
+import { ArrowRight, Star, X, Heart } from "lucide-react";
 import homepageImage from "../../public/facebook banner.png";
 import seed from "../../public/seedling.png";
 import stretch from "../../public/gymnastic.png";
@@ -20,11 +20,10 @@ const scrollToId = (id: string, offset = 120) => {
   window.scrollTo({ top: target, behavior: "smooth" });
 };
 
-// Typewriter component: simple, lightweight, non-looping by default
 const Typewriter = ({
   text,
-  speed = 40, // ms per character
-  delay = 200, // ms before starting
+  speed = 40,
+  delay = 200,
 }: {
   text: string;
   speed?: number;
@@ -47,10 +46,13 @@ const Typewriter = ({
       clearTimeout(start);
     };
   }, [text, speed, delay]);
+
+  const isComplete = display.length === text.length;
+
   return (
     <span>
       {display}
-      <span className="ml-1 inline-block animate-pulse">|</span>
+      {!isComplete && <span className="ml-1 inline-block animate-pulse">|</span>}
     </span>
   );
 };
@@ -86,7 +88,6 @@ const Avatar = ({ name }: { name: string }) => {
   );
 };
 
-// Modal component (same as Testimonials.tsx)
 const Modal = ({
   isOpen,
   onClose,
@@ -194,7 +195,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/65" />
 
         <div className="container mx-auto px-4 md:px-8 relative z-10">
-          <div className="absolute top-0 right-4 md:top-8 md:right-8 bg-secondary/90 text-secondary-foreground p-3 md:p-6 rounded-xl shadow-lg backdrop-blur-sm transform -translate-y-1/2 md:translate-y-0">
+          <div className="hidden lg:block absolute top-0 right-4 lg:top-8 lg:right-8 bg-secondary/90 text-secondary-foreground p-3 lg:p-6 rounded-xl shadow-lg backdrop-blur-sm transform lg:translate-y-0">
             <p className="font-heading font-bold text-xl md:text-3xl">500+</p>
             <p className="text-xs md:text-sm">Happy Clients</p>
           </div>
@@ -245,33 +246,10 @@ const Home = () => {
                 className="border border-white text-white hover:bg-white/10 px-4 py-2 rounded-lg"
                 variant="ghost"
               >
-                Discover the 5 Pillars →
+                Discover the 5 Pillars
               </Button>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto">
-            <Card className="p-8 bg-secondary/20">
-              <div className="md:flex md:items-center md:gap-8">
-                <div className="flex-1">
-                  <h2 className="font-heading font-bold text-5xl mb-8" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#444444'}}>Why This Matters</h2>
-                  <p className="text-muted-foreground mt-4 text-[18px]">
-                    Most people try to fix symptoms - acidity, bloating, high sugar, fatigue, acne, hair fall, excess weight - without asking why they began in the first place.
-                  </p>
-                  <p className="mt-2 text-muted-foreground text-[18px]">
-                    True healing begins when you address the root cause: your gut, metabolism, and daily rhythm.
-                  </p>
-                  <p className="mt-2 text-muted-foreground text-[18px]">
-                    My approach combines science, wisdom, and compassion to help you rebuild health naturally - without fads, fear, or restrictions.
-                  </p>
-                </div>
-              </div>
-            </Card>
-          </motion.div>
         </div>
       </section>
 
@@ -288,7 +266,7 @@ const Home = () => {
               5 Pillars of Functional Healing
             </h2>
             <p className="text-muted-foreground mt-3 text-1xl">
-              True wellness isn’t built on quick fixes, but on five timeless foundations.
+              True wellness isn't built on quick fixes, but on five timeless foundations.
             </p>
           </motion.div>
 
@@ -297,7 +275,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 8 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-5 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-20"
             >
               {pillars.map((p, i) => {
                 const initialProps =
@@ -316,74 +294,98 @@ const Home = () => {
                     transition={{ duration: 1, delay: i * 0.08, ease: "easeOut" }}
                     className="flex-1"
                   >
-                    <div className="flex flex-col items-center text-center p-6 rounded-lg">
+                    <div className="flex flex-col sm:flex-col lg:flex-col items-center text-center sm:text-center lg:text-center p-4 sm:p-6 lg:p-6 rounded-lg">
                       <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center mb-4">
                         <img src={p.iconPath} alt={p.title} className="w-12 h-12 object-contain" />
                       </div>
-                      <h3 style={{ color: "#444444" }} className="font-heading font-semibold text-lg mb-2">
-                        {p.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground max-w-[18rem]">{p.text}</p>
+                      <div className="flex flex-col sm:flex-col lg:flex-col items-center lg:items-center w-[120%]">
+                        <h3 style={{ color: "#444444" }} className="font-heading font-semibold text-base sm:text-lg lg:text-lg mb-2 w-[150%]">
+                          {p.title}
+                        </h3>
+                        <p className="text-xs sm:text-sm lg:text-sm text-muted-foreground w-full">{p.text}</p>
+                      </div>
                     </div>
                   </motion.div>
                 );
               })}
             </motion.div>
-
-            {/* moved highlight line sits below the pillars */}
-            {/* <motion.div
-              initial={{ opacity: 0, y: 8 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mt-6"
-            >
-              <Card className="p-4 bg-white/5 text-center">
-                <p className="text-muted-foreground italic mb-0">
-                  When your gut, food, movement, rhythm, and mind align - healing becomes effortless.
-                </p>
-              </Card>
-            </motion.div> */}
           </div>
         </div>
       </section>
 
-      {/* Signature Program Snapshot */}
-      {/* <section id="signature" className="py-16">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-5xl mx-auto">
-            <h2 style={{ color: '#444444' }} className="font-heading font-bold text-3xl mb-4">The Complete Gut & Glucose Reset</h2>
-            <p className="text-muted-foreground mb-6">
-              A 6-Month Integrative Program designed to help you reverse chronic imbalances - from gut dysfunction to insulin resistance.
-            </p>
-
-            <Card className="p-6 mb-6">
-              <div className="md:flex md:gap-6 items-center">
-                <div className="flex-1">
-                  <h3 style={{ color: '#444444' }} className="font-heading font-semibold text-xl mb-2">What you will gain</h3>
-                  <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-2">
-                    <li>Reset your gut and stabilise glucose naturally</li>
-                    <li>Align your circadian rhythm for better sleep and energy</li>
-                    <li>Build metabolic flexibility through food and movement</li>
-                    <li>Unlearn diet culture and reconnect with your body’s natural signals</li>
-                  </ul>
-                </div>
-                <div className="w-full md:w-64 mt-6 md:mt-0">
-                  <img src={homepageImage} alt="Program Snapshot" className="rounded-lg w-full h-40 object-cover shadow" />
-                </div>
+      <section className="pt-20">
+        <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+          <div className="flex justify-center align-items-center">
+            <h2 className="font-heading font-bold text-5xl mb-10" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#444444'}}>Why This Matters</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-2 md:order-1"
+            >
+              <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
+                <p>
+                  Many people chase quick symptom relief for acidity, bloating, high sugar, fatigue, acne,
+                  hair loss, or stubborn weight without ever asking what triggered them. Treating surface
+                  symptoms alone often means the underlying imbalance persists.
+                </p>
+                <p>
+                  Real, lasting healing begins by addressing root causes — the gut ecosystem, metabolic
+                  function, and daily rhythm that regulate digestion, hormones and energy. When you target
+                  the source, symptoms resolve more naturally and sustainably.
+                </p>
+                <p>
+                  My approach blends evidence-based nutrition, circadian-friendly habits, and time-tested
+                  wisdom to help you rebuild health with compassion — no fads, no fear, and no unnecessary
+                  restriction. The result is practical, steady change that fits your life.
+                </p>
               </div>
-            </Card>
+            </motion.div>
 
-            <div className="flex justify-center">
-              <Button asChild size="lg">
-                <Link to="/contact?program=complete-reset">Join the Program</Link>
-              </Button>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-1 md:order-2"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 blur-3xl -z-10"></div>
+                <div className="overflow-hidden rounded-3xl shadow-6xl">
+                  <img
+                    src="/madhavi2.jpeg"
+                    alt="Madhavi"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+                <div className="absolute -top-6 -right-6 w-40 h-40 bg-accent/10 rounded-full blur-3xl -z-10"></div>
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="mt-12 text-center"
+          >
+            <h2
+              className="font-heading font-bold text-4xl md:text-5xl"
+              style={{ color: "white", lineHeight: 1.05 }}
+            >
+              Why This Matters
+            </h2>
           </motion.div>
         </div>
-      </section> */}
+      </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-muted">
+      <section className="py-10 bg-muted">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mx-auto text-center mb-12">
             <h2 style={{ color: '#444444' }} className="font-heading font-bold text-5xl">Results & Testimonials</h2>
@@ -399,15 +401,13 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="p-6 h-full hover:shadow-xl transition-shadow">
-                  {/* Rating */}
+                <Card className="p-6 h-full hover:shadow-xl transition-shadow" style={{ boxShadow: '6px 6px 20px #6cc52e' }}>
                   <div className="flex mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
                       <Star key={i} size={18} className="fill-primary text-primary" />
                     ))}
                   </div>
 
-                  {/* Content */}
                   <p className="text-muted-foreground mb-2 italic">
                     "{truncateText(testimonial.content)}"
                     {testimonial.content.length > 150 && (
@@ -423,10 +423,8 @@ const Home = () => {
                     )}
                   </p>
 
-                  {/* Date */}
                   <p className="text-sm text-muted-foreground mb-6">{testimonial.date}</p>
 
-                  {/* Author */}
                   <div className="flex items-center pt-6 border-t">
                     <Avatar name={testimonial.name} />
                     <div className="ml-4">
@@ -440,7 +438,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Modal for testimonial full review */}
       <Modal isOpen={!!selectedTestimonial} onClose={() => setSelectedTestimonial(null)}>
         {selectedTestimonial && (
           <div className="space-y-4">
@@ -461,44 +458,65 @@ const Home = () => {
         )}
       </Modal>
 
-      {/* Why Work With Me */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto">
-            <Card className="p-8 bg-gradient-to-r from-primary/6 to-accent/6">
-              <h2 className="font-heading font-bold text-3xl mb-4" style={{ color: '#444444' }}>Why Work With Me</h2>
-              <p className="text-muted-foreground mb-4">
-                I’m Madhavi Sharma, a Functional Nutritionist specialising in Gut Health & Diabetes Reversal.
-              </p>
-              <p className="text-muted-foreground mb-4">
-                My approach blends modern nutrition science with Indian wisdom - focusing on circadian rhythm, mindful eating, satiety signals, and unlearning diet culture.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                I help people rebuild health naturally through clarity, rhythm, and flow - not fear or restriction.
-              </p>
-              <div className="flex justify-center">
-                <Button asChild size="sm">
-                  <Link to="/about" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 50)}>Meet Madhavi →</Link>
-                </Button>
+        <div className="container mx-auto px-4 md:px-8 max-w-5xl">
+          <div className="flex justify-center align-items-center">
+            <h2 className="font-heading font-bold text-5xl mb-10" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#444444'}}>Why Work With Me</h2>
+          </div>
+          <div className="items-center ">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-2 md:order-1"
+            >
+              <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
+                <p style={{textAlign: 'center'}}>
+                  I'm Madhavi Sharma, a Functional Nutritionist specialising in Gut Health & Diabetes Reversal with over 20 years of international experience in integrative health.
+                  My approach blends modern nutrition science with Indian wisdom — focusing on circadian rhythm, mindful eating, satiety signals, and unlearning diet culture. I help people rebuild health naturally through clarity, rhythm, and flow — not fear or restriction.
+                </p>
+                <p style={{textAlign: 'center'}}>
+                  Every plan I design is Simple, Sensible, and Sustainable, created to fit real lives and enable long-term healing. Your body isn't broken; it's waiting to be understood.
+                </p>
               </div>
-            </Card>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="mt-12 text-center"
+          >
+            <Button asChild size="lg">
+              <Link to="/about">Meet Madhavi</Link>
+            </Button>
           </motion.div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      {/* <section className="py-16">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-accent rounded-2xl p-12 text-center">
-            <h2 className="font-heading font-bold text-3xl mb-4">Ready to uncover your root cause and rebuild health from within?</h2>
-            <p className="text-lg mb-6 opacity-90">Let’s co-create your path to medicine-free, stress-free living. Because your body isn’t broken - it’s waiting to be understood.</p>
-            <Button asChild size="lg">
-              <Link to="/contact">Book Your Free Discovery Call</Link>
-            </Button>
-            <p className="mt-4 text-sm text-muted-foreground">Healing doesn’t start with restriction - it starts with awareness.</p>
-          </motion.div>
-        </div>
-      </section> */}
+      <div className="container mx-auto px-4 mb-16 text-center">
+        <span className="text-[20px]">
+          Please feel free to Call Us at{' '}
+          <a
+            href="tel:+918826504708"
+            style={{ color: '#6cc52e', fontWeight: 'bold' }}
+            aria-label="Call +91 8826504708"
+          >
+            +91 8826504708
+          </a>{' '}
+          or Email at{' '}
+          <a
+            href="mailto:behealthinformed@gmail.com"
+            style={{ color: '#6cc52e', fontWeight: 'bold' }}
+            aria-label="Email behealthinformed at gmail dot com"
+          >
+            behealthinformed@gmail.com
+          </a>
+        </span>
+      </div>
     </div>
   );
 };
