@@ -207,7 +207,7 @@ const Home = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight">
-                Rebuild Your Health from the Inside Out
+                Rebuild Your Health from Inside Out
               </h1>
 
               <div className="mt-4">
@@ -356,7 +356,7 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 blur-3xl -z-10"></div>
                 <div className="overflow-hidden rounded-3xl shadow-6xl">
                   <img
-                    src="/madhavi2.jpeg"
+                    src="public\madhavi2.jpeg"
                     alt="Madhavi"
                     className="w-full h-auto object-cover"
                   />
