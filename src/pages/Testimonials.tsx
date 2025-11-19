@@ -286,6 +286,85 @@ const Testimonials = () => {
 					</a>
 				</motion.div>
 
+				<motion.div
+					initial={{ opacity: 0, y: 30 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.6 }}
+					className="my-20"
+					>
+					<div className="text-center mb-12">
+						<h2 className="fontFamily: 'Inter, sans-serif' text-4xl md:text-5xl text-[#444444] mb-4" style={{fontWeight: "bold"}}>
+						Watch Their Transformation Stories
+						</h2>
+						<p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+						Real clients sharing how functional nutrition changed their health and life
+						</p>
+					</div>
+
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
+						{[
+						{
+							id: "QxdP3AcThts?si=IHIN-k97nC477WFW",
+							title: "Reversed Diabetes & Lost 18kg in 3 Months",
+							name: "Rohit Sharma",
+						},
+						{
+							id: "NLuam0x_XfU?si=epuK32MunjLPhQ8A",
+							title: "Finally Healed My PCOS Naturally",
+							name: "Priya Malhotra",
+						},
+						{
+							id: "shDzaDqmNig?si=dmST74uJWF129QJM",
+							title: "Got Off Thyroid Medication After 10 Years",
+							name: "Anjali Verma",
+						},
+						].map((video, index) => (
+						<motion.div
+							key={video.id}
+							initial={{ opacity: 0, y: 40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: index * 0.2, duration: 0.6 }}
+							className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500"
+						>
+							<div className="aspect-video relative bg-black">
+							<iframe
+								className="w-full h-full rounded-2xl scale-100 group-hover:scale-[1.03] transition-transform duration-500"
+								src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1&autoplay=0`}
+								title={video.title}
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowFullScreen
+								loading="lazy"
+							></iframe>
+
+							{/* Gradient Overlay + Play Icon on Hover */}
+							<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none">
+								<div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+								<p className="text-lg font-semibold mb-1">{video.title}</p>
+								<p className="text-sm opacity-90">— {video.name}</p>
+								</div>
+							</div>
+							</div>
+						</motion.div>
+						))}
+					</div>
+
+					<div className="text-center mt-10">
+						<a
+						href="https://www.youtube.com/@informedhealth"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="inline-flex items-center gap-2 text-xl font-medium text-primary hover:text-primary/80 underline-offset-4 hover:underline transition-all"
+						>
+						Watch more success stories on YouTube
+						<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+						</svg>
+						</a>
+					</div>
+					</motion.div>
+
 				{/* Stats Section */}
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
