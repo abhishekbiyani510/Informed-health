@@ -85,7 +85,7 @@ const About = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h1 style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }} className="font-heading font-semibold text-[50px] md:text-[50px] mb-2 tracking-tight">About Madhavi K. Sharma</h1>
+          <h1 style={{ fontFamily: 'Inter, sans-serif', color: '#444444', fontWeight: 'bold' }} className="font-heading font-semibold text-[50px] md:text-[50px] mb-2 tracking-tight">About Madhavi K. Sharma</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Functional Nutritionist | Founder, Informed Health <br />Specialising in Functional Healing, Metabolic Health & Preventive Nutrition
           </p>
@@ -116,7 +116,7 @@ const About = () => {
             viewport={{ once: true }}
             className="space-y-6 h-full flex flex-col justify-center"
           >
-            <h2 className="font-heading font-bold text-4xl" style={{ color:"#6cc52e" }}>Meet Madhavi </h2>
+            <h2 className="font-heading font-bold text-4xl" style={{ color:"#6cc52e", fontFamily: 'Inter, sans-serif' }}>Meet Madhavi </h2>
             <div className="prose prose-lg">
               <p className="text-muted-foreground pb-3 text-[18px]">
                 Madhavi Sharma is a Functional Nutritionist and the Founder of Informed Health, with degree in Nutrition & Dietitics from Delhi University and over 20 years of international experience in the field of integrative health and lifestyle medicine.
@@ -152,7 +152,7 @@ const About = () => {
                 <CheckCircle2 className="text-primary" size={48} />
               </div>
               <div>
-                <h2 className="font-heading font-bold text-3xl mb-4" style={{ color: "#444444" }}>Her Approach</h2>
+                <h2 className="font-heading font-bold text-3xl mb-4" style={{ color: "#444444", fontFamily: 'Inter, sans-serif' }}>Her Approach</h2>
                  <p className="text-muted-foreground mb-8 text-[18px]">
                    Madhavi's work is anchored in the principle of root-cause healing — addressing underlying imbalances rather than managing surface-level symptoms. Her functional framework integrates:
                  </p>
@@ -227,7 +227,7 @@ const About = () => {
                 <div className="flex justify-center mb-6">
                   <Briefcase className="text-white" size={48} />
                 </div>
-                <h2 className="font-heading font-bold text-3xl mb-4 text-white" style={{ color: "#ffffff" }}>
+                <h2 className="font-heading font-bold text-3xl mb-4 text-white" style={{ color: "#ffffff", fontFamily: 'Inter, sans-serif' }}>
                   Her Work
                 </h2>
                 <p className="text-white/90 mb-8 text-[18px] max-w-4xl mx-auto">
@@ -282,7 +282,7 @@ const About = () => {
                   <MessageSquare className="text-primary" size={48} />
                 </div>
                 <div>
-                  <h2 className="font-heading font-bold text-3xl mb-4" style={{ color: "#444444" }}>Her Philosophy</h2>
+                  <h2 className="font-heading font-bold text-3xl mb-4" style={{ color: "#444444", fontFamily: 'Inter, sans-serif' }}>Her Philosophy</h2>
                   <p className="text-muted-foreground mb-8 text-[18px] max-w-4xl mx-auto">
                     True health is an inside-out process — nourish the body with the right food, rhythm, and mindfulness, and it naturally restores balance.
                   </p>
@@ -343,7 +343,7 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-12 px-4"
           >
-            <h2 className="font-heading font-bold text-4xl mb-4" style={{ color: "#444444" }}>Our Clients</h2>
+            <h2 className="font-heading font-bold text-4xl mb-4" style={{ color: "#444444", fontFamily: 'Inter, sans-serif' }}>Our Clients</h2>
             <p className="text-muted-foreground text-lg">Working with organizations committed to wellness and health</p>
           </motion.div>
 
@@ -359,10 +359,10 @@ const About = () => {
                 { name: "Aditya Birla Group", logo: "/logos/aditya-birla.png" },
                 { name: "HT", logo: "/logos/ht.png" },
                 { name: "Happy Moms & Kids", logo: "/logos/happy-moms-kids.jpg" },
-                { name: "Millennium Post", logo: "/logos/millennium-post.png" },
+                { name: "Millennium Post", logo: "/logos/millenium.jpeg" },
                 { name: "ITC", logo: "/logos/itc.png" },
                 { name: "The Hindu", logo: "/logos/the-hindu.png" },
-                { name: "HMD", logo: "/logos/hmd.png" },
+                { name: "HMD", logo: "/logos/hmd.jpg" },
                 { name: "Doordarshan Kisan", logo: "/logos/ddkisan.png" },
                 { name: "Heart Foundation Botswana", logo: "/logos/heart-foundation-botswana.jpeg" },
               ].map((brand, idx) => (

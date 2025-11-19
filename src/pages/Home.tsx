@@ -436,6 +436,18 @@ const Home = () => {
             ))}
           </div>
         </div>
+        <div className="text-center mt-10">
+        <Button
+          asChild
+          size="lg"
+          className="bg-secondary text-secondary-foreground hover:bg-secondary/90"
+        >
+          <Link to="/testimonials" style={{fontSize:"18px"}}>
+            Read More Success Stories
+            <ArrowRight className="ml-2" size={16} />
+          </Link>
+        </Button>
+      </div>
       </section>
 
       <Modal isOpen={!!selectedTestimonial} onClose={() => setSelectedTestimonial(null)}>

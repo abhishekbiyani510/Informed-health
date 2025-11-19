@@ -153,7 +153,7 @@ const Testimonials = () => {
 					className="text-center mb-8"
 				>
 					<h1
-						style={{ fontFamily: "Poppins, sans-serif", color: "#444444" }}
+						style={{ fontFamily: 'Inter, sans-serif', fontWeight: "bold", color: "#444444" }}
 						className="font-heading font-semibold text-[50px] md:text-[50px] mb-2 tracking-tight"
 					>
 						Client Testimonials
