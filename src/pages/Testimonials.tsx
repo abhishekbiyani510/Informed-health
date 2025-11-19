@@ -267,7 +267,7 @@ const Testimonials = () => {
 					>
 						<div className="flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-secondary/10 to-accent/10 shadow hover:scale-105 hover:shadow-lg transition-all border border-secondary/20">
 							<span className="font-heading font-semibold text-lg text-secondary">
-								Read More Reviews on Google
+								More 5 Star Reviews on Google
 							</span>
 							<svg
 								className="w-6 h-6 text-secondary group-hover:translate-x-1 transition-transform"

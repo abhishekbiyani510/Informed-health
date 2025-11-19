@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Award, BookOpen, Heart, Users, CheckCircle2, Briefcase, MessageSquare } from "lucide-react";
 
@@ -114,10 +116,10 @@ const About = () => {
             viewport={{ once: true }}
             className="space-y-6 h-full flex flex-col justify-center"
           >
-            <h2 className="font-heading font-bold text-4xl" style={{ color:"#6cc52e" }}>Meet Madhavi Sharma</h2>
+            <h2 className="font-heading font-bold text-4xl" style={{ color:"#6cc52e" }}>Meet Madhavi </h2>
             <div className="prose prose-lg">
               <p className="text-muted-foreground pb-3 text-[18px]">
-                Madhavi Sharma is a Functional Nutritionist and the Founder of Informed Health, with a 5-year educational qualification in Nutrition from Delhi University and over 20 years of international experience in the field of integrative health and lifestyle medicine.
+                Madhavi Sharma is a Functional Nutritionist and the Founder of Informed Health, with degree in Nutrition & Dietitics from Delhi University and over 20 years of international experience in the field of integrative health and lifestyle medicine.
               </p>
               <p className="text-muted-foreground pb-3 text-[18px]">
                 Her continuing education includes advanced training at the Centre for Diabetes and Endocrinology, South Africa, and accreditation by the International Diabetes Federation (Belgium) — strengthening her expertise in metabolic health, endocrinology, and chronic disease management.
@@ -341,7 +343,7 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-12 px-4"
           >
-            <h2 className="font-heading font-bold text-4xl mb-4" style={{ color: "#444444" }}>Trusted by Leading Brands</h2>
+            <h2 className="font-heading font-bold text-4xl mb-4" style={{ color: "#444444" }}>Our Clients</h2>
             <p className="text-muted-foreground text-lg">Working with organizations committed to wellness and health</p>
           </motion.div>
 
@@ -352,14 +354,14 @@ const About = () => {
                 { name: "Zomato", logo: "/logos/zomato.png" },
                 { name: "Doordarshan", logo: "/logos/durdarshan.png" },
                 { name: "TOI", logo: "/logos/toi.png" },
-                { name: "The Hindu", logo: "/logos/the-hindu.png" },
+                { name: "GRID India", logo: "/logos/GridIndiaLogo.png" },
                 { name: "BlogChatter", logo: "/logos/blogchatter.jpg" },
                 { name: "Aditya Birla Group", logo: "/logos/aditya-birla.png" },
                 { name: "HT", logo: "/logos/ht.png" },
                 { name: "Happy Moms & Kids", logo: "/logos/happy-moms-kids.jpg" },
                 { name: "Millennium Post", logo: "/logos/millennium-post.png" },
                 { name: "ITC", logo: "/logos/itc.png" },
-                { name: "Mind Vriksha", logo: "/logos/mind-vriksha.png" },
+                { name: "The Hindu", logo: "/logos/the-hindu.png" },
                 { name: "HMD", logo: "/logos/hmd.png" },
                 { name: "Doordarshan Kisan", logo: "/logos/ddkisan.png" },
                 { name: "Heart Foundation Botswana", logo: "/logos/heart-foundation-botswana.jpeg" },
@@ -387,6 +389,18 @@ const About = () => {
             </div>
           </div>
         </section>
+
+        <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 }}
+                        className="mt-12 text-center"
+                      >
+                        <Button asChild size="lg">
+                          <Link to="/services" style={{fontSize: '18px'}}>Kickstart your Health Journey</Link>
+                        </Button>
+                      </motion.div>
 
         {/* Values Section - Reinserted
         <motion.div

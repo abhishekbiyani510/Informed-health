@@ -491,7 +491,7 @@ const Home = () => {
             className="mt-12 text-center"
           >
             <Button asChild size="lg">
-              <Link to="/about">Meet Madhavi</Link>
+              <Link to="/about" style={{fontSize: '18px'}}>Meet Madhavi</Link>
             </Button>
           </motion.div>
         </div>

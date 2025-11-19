@@ -9,7 +9,6 @@ import { useEffect } from "react";
 const Footer = () => {
   const { pathname } = useLocation();
 
-  // Scroll to top on route change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
   }, [pathname]);
