@@ -3,13 +3,13 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Star, X, Heart } from "lucide-react";
-import homepageImage from "../../public/facebook banner.png";
-import seed from "../../public/seedling.png";
-import stretch from "../../public/gymnastic.png";
-import sunMoon from "../../public/day-and-night.png";
-import lotus from "../../public/lotus.png";
-import gutIcon from "../../public/stomach.png";
+import { ArrowRight, Star, X } from "lucide-react";
+import homepageImage from "/facebook banner.png";
+import seed from "/seedling.png";
+import stretch from "/gymnastic.png";
+import sunMoon from "/day-and-night.png";
+import lotus from "/lotus.png";
+import gutIcon from "/stomach.png";
 
 const scrollToId = (id: string, offset = 120) => {
   const el = document.getElementById(id);

@@ -102,7 +102,7 @@ const About = () => {
           >
             <div className="aspect-[6/5] rounded-2xl overflow-hidden shadow-xl">
               <BlurImage
-                src="../../public/madhavi.jpg"
+                src="/madhavi.jpg"
                 alt="Madhavi K. Sharma"
                 className="w-full h-full"
               />
