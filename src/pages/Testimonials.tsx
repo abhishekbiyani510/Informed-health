@@ -305,19 +305,28 @@ const Testimonials = () => {
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
 						{[
 						{
-							id: "QxdP3AcThts?si=IHIN-k97nC477WFW",
-							title: "Reversed Diabetes & Lost 18kg in 3 Months",
-							name: "Rohit Sharma",
+							id: "O3vD0fP9AQ0?si=d9DSOOZbKT8iHT8K",
+							name: "Gunasekran",
 						},
 						{
-							id: "NLuam0x_XfU?si=epuK32MunjLPhQ8A",
-							title: "Finally Healed My PCOS Naturally",
-							name: "Priya Malhotra",
+							id: "cL9HspTQe2k?si=y6rqgTdORe5dogzk",
+							name: "Chaaya",
 						},
 						{
-							id: "shDzaDqmNig?si=dmST74uJWF129QJM",
-							title: "Got Off Thyroid Medication After 10 Years",
-							name: "Anjali Verma",
+							id: "MlaZHopHOl8?si=vSbrGRVR0dLW-GVb",
+							name: "Dhananjay",
+						},
+						{
+							id: "zDude14s-NQ?si=fC-2AFoVDJYrxD2K",
+							name: "She Reversed her Diabetes",
+						},
+						{
+							id: "V061YKewouE?si=CFpp-rJjf2fAW4GE",
+							name: "Bani Biswas",
+						},
+						{
+							id: "KFRHW56BVgo?si=Sv6_nwtZ_uJzXpsK",
+							name: "Client Reversed her Diabetes"
 						},
 						].map((video, index) => (
 						<motion.div
@@ -332,7 +341,6 @@ const Testimonials = () => {
 							<iframe
 								className="w-full h-full rounded-2xl scale-100 group-hover:scale-[1.03] transition-transform duration-500"
 								src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1&autoplay=0`}
-								title={video.title}
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 								allowFullScreen
 								loading="lazy"
@@ -341,7 +349,6 @@ const Testimonials = () => {
 							{/* Gradient Overlay + Play Icon on Hover */}
 							<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none">
 								<div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-								<p className="text-lg font-semibold mb-1">{video.title}</p>
 								<p className="text-sm opacity-90">— {video.name}</p>
 								</div>
 							</div>

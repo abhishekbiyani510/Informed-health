@@ -25,7 +25,7 @@ const Workshops = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }} className="font-heading font-semibold text-4xl md:text-4xl mb-2 tracking-tight">Upcoming Workshops</h1>
+          <h1 style={{ fontFamily: 'Inter, sans-serif', color: '#444444', fontWeight: "bold" }} className="font-heading font-semibold text-[50px] md:text-[50px] mb-2 tracking-tight">Upcoming Workshops</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Join our interactive workshops to deepen your understanding of
             functional nutrition and practical wellness strategies
@@ -46,7 +46,7 @@ const Workshops = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               >
-              <Card className="overflow-hidden h-[500px] w-[400px] flex flex-col hover:shadow-xl transition-shadow mx-auto">
+              <Card className="overflow-hidden h-[500px] w-[500px] flex flex-col hover:shadow-xl transition-shadow mx-auto">
                 {/* Image */}
                 <div className="aspect-video relative overflow-hidden">
                 <img
@@ -55,7 +55,7 @@ const Workshops = () => {
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
                 {isAlmostFull && (
-                  <Badge className="absolute top-4 right-4 bg-destructive">
+                  <Badge className="absolute top-4 right-4 bg-secondary">
                   Only {spotsLeft} spots left!
                   </Badge>
                 )}
