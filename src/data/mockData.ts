@@ -1,4 +1,6 @@
 import testimonialImage from "../../public/About-image.jpg"
+import w1 from "@/assets/gut.jpg"
+import w2 from "@/assets/diabetes.jpg"
 
 export interface Workshop {
   id: string;
@@ -20,7 +22,7 @@ export const workshops: Workshop[] = [
     date: "2025-11-15",
     duration: "3 days",
     price: 299,
-    image: "/gut.jpg",
+    image: w1,
     capacity: 20,
     enrolled: 18,
   },
@@ -31,7 +33,7 @@ export const workshops: Workshop[] = [
     date: "2025-11-22",
     duration: "2 hours",
     price: 99,
-    image: "/diabetes.jpg",
+    image: w2,
     capacity: 25,
     enrolled: 12,
   },
