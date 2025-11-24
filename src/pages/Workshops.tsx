@@ -18,7 +18,7 @@ const Workshops = () => {
 
   return (
     <div className="min-h-screen py-8">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-24">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

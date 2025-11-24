@@ -7,15 +7,18 @@ import { link } from "fs";
 
 const programmeData = [
 	{
-		title: "Biohack your Gut",
+		title: "Gut Reboot",
 		icon: User,
 		description:
-			"A 12-week intensive programme designed to restore gut health, improve digestion, and boost immunity. Includes personalized nutrition plans, gut-friendly recipes, and lifestyle strategies to rebalance your microbiome.",
+			"A transformative 12-week programme designed to reset your gut—the epicenter of your overall well-being. Rooted in the five pillars of health (Nutrition, Exercise, Sleep, Gut Health, Emotional Stability), this personalised blueprint helps restore balance, improve digestion, boost immunity, elevate energy, and unlock holistic wellness using the proven 5R Strategy.",
 		features: [
-			"Comprehensive gut health assessment",
-			"Personalized meal planning",
-			"Weekly progress tracking",
-			"Supplement guidance",
+			"Blood report analysis to identify key imbalances",
+			"Understanding gut physiology and root-cause triggers",
+			"Weeding, Seeding & Feeding strategy for microbiome restoration",
+			"Customized diet plan tailored to your gut & goals",
+			"Weekly workout plan design",
+			"Defined metabolic health parameters to track progress",
+			"Weekly 30-minute follow-up sessions",
 		],
 		internalRoute: "/biohack-your-gut",
 	},
@@ -23,12 +26,15 @@ const programmeData = [
 		title: "Glucose Biohacking",
 		icon: ShieldPlus,
 		description:
-			"Transform your metabolic health in 12 weeks. Learn to stabilize blood sugar, reduce cravings, and optimize energy through targeted nutrition, movement, and biohacking techniques.",
+			"A 14-week science-driven programme designed to reverse diabetes by addressing its true root causes—insulin resistance, chronic inflammation, and gut imbalances. This personalized approach goes beyond medication-based symptom control, empowering you with customized nutrition, gut restoration, movement and circadian optimization to naturally reset metabolism and achieve sustainable diabetes reversal.",
 		features: [
-			"Continuous glucose monitoring support",
-			"Low-glycemic meal plans",
-			"Lifestyle & stress management",
-			"Weekly coaching sessions",
+			"Blood report analysis to identify metabolic imbalances",
+			"Comprehensive lifestyle review using the Diabetes Care Model",
+			"Understanding physiological mechanisms behind diabetes",
+			"Customized diet plan for metabolic healing",
+			"Individually tailored weekly workout plan",
+			"Defined metabolic health parameters for progress tracking",
+			"Weekly 30-minute follow-up sessions throughout the programme",
 		],
 		internalRoute: "/glucose-biohacking",
 	},
@@ -36,26 +42,16 @@ const programmeData = [
 		title: "Body Transformation",
 		icon: Activity,
 		description:
-			"Achieve your body composition goals with this 12-week programme. Focuses on fat loss, muscle gain, and sustainable habits using evidence-based nutrition and fitness strategies.",
+			"A holistic 12-week programme designed to support sustainable inch loss and weight management through the integrative power of the five pillars of lifestyle—Nutrition, Exercise, Sleep, Gut Health, and Emotional Stability. Rooted in both traditional Ayurvedic wisdom and modern science, this approach goes beyond calorie counting to help you reset your metabolism, enhance immunity, and improve overall physical and mental well-being.",
 		features: [
-			"Custom fitness & nutrition plans",
-			"Body composition tracking",
-			"Motivation & accountability",
-			"Mindset coaching",
+			"Lifestyle assessment through the 5 Pillars framework",
+			"Detailed blood report analysis",
+			"Personalized diet plan tailored to food preferences and clinical conditions",
+			"Weekly workout plan designed for sustainable fat loss",
+			"Defined metabolic health parameters for progress tracking",
+			"Weekly 30-minute follow-up sessions",
 		],
-		link: "https://example.com/body-transformation",
-	},
-	{
-		title: "Women's Wellness",
-		icon: Bold,
-		description:
-			"A 12-week programme dedicated to women's unique health needs. Balance hormones, boost energy, and support overall wellbeing with tailored nutrition and lifestyle strategies.",
-		features: [
-			"Hormonal balance support",
-			"Cycle-synced nutrition",
-			"Stress & sleep optimization",
-			"Personalized coaching",
-		],
+		internalRoute: "/body-transformation",
 	},
 ];
 
@@ -70,8 +66,8 @@ const Services = () => {
 					className="text-center mb-12"
 				>
 					<h1
-						style={{ fontFamily: "Poppins, sans-serif", color: "#444444" }}
-						className="font-heading font-semibold text-4xl md:text-4xl mb-2 tracking-tight"
+						style={{ fontFamily: "Inter, sans-serif", fontWeight: "bold", color: "#444444" }}
+						className="font-heading font-semibold text-[50px] md:text-[50px] mb-2 tracking-tight"
 					>
 						Biohack to Heal Programme
 					</h1>
@@ -82,13 +78,12 @@ const Services = () => {
 				</motion.div>
 
 				{/* Programmes Grid */}
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
 					{programmeData.map((programme, index) => {
 						const Icon = programme.icon;
 						const isInternal = !!programme.internalRoute;
-						const isExternal = !!programme.link;
 						const cardContent = (
-							<Card className={`p-6 h-full flex flex-col justify-between hover:shadow-xl transition-shadow ${(isInternal || isExternal) ? "cursor-pointer hover:ring-2 hover:ring-primary" : ""}`}>
+							<Card className={`p-6 h-full flex flex-col justify-between hover:shadow-xl transition-shadow ${(isInternal) ? "cursor-pointer hover:ring-2 hover:ring-primary" : ""}`}>
 								<div>
 									<div className="flex items-start space-x-4 mb-6">
 										<div className="p-2 bg-primary/10 rounded-lg">
@@ -143,16 +138,6 @@ const Services = () => {
 									>
 										{cardContent}
 									</a>
-								) : isExternal ? (
-									<a
-										href={programme.link}
-										target="_blank"
-										rel="noopener noreferrer"
-										style={{ textDecoration: "none" }}
-										tabIndex={0}
-									>
-										{cardContent}
-									</a>
 								) : (
 									cardContent
 								)}
@@ -163,13 +148,15 @@ const Services = () => {
 
 				{/* One Time Consultation CTA */}
 				<div className="flex justify-center mb-16">
-					<Card className="w-full max-w-2xl p-6 bg-gradient-to-r from-primary/10 to-accent/10 text-center shadow-lg">
-						<p className="mb-4 font-medium text-lg text-primary">
+					<Card className="w-full max-w-5xl p-6 bg-gradient-to-r from-secondary/10 to-secondary/10 text-center shadow-lg">
+						<h1 style={{ fontFamily: "Inter, sans-serif", fontWeight: "bolder", color: "#444444" }}
+						className="font-semibold text-[30px] md:text-[30px] mb-2 tracking-tight">One Time Consultation</h1>
+						<p className="mb-4 font-medium text-lg text-secondary">
 							Before you proceed, if you wish to have a one-time consultation to discuss your needs, click below:
 						</p>
-						<Button asChild size="lg" className="font-semibold">
+						<Button asChild size="lg" className="font-semibold bg-secondary hover:bg-secondary/80">
 							<Link to="/contact?type=one-time-consultation">
-								Book One Time Consultation
+								Book Now
 							</Link>
 						</Button>
 					</Card>
@@ -181,7 +168,7 @@ const Services = () => {
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
-						className="w-full max-w-4xl bg-gradient-to-r from-primary/10 to-accent rounded-2xl shadow-lg p-8 flex flex-col md:flex-row items-center justify-between gap-8"
+						className="w-full max-w-5xl bg-gradient-to-r from-primary/10 to-accent rounded-2xl shadow-lg p-8 flex flex-col md:flex-row items-center justify-between gap-8"
 					>
 						<div className="flex-1 text-center md:text-left">
 							<h3 className="font-heading font-bold text-2xl mb-2 text-primary">
