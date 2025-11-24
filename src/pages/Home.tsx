@@ -10,6 +10,7 @@ import stretch from "/gymnastic.png";
 import sunMoon from "/day-and-night.png";
 import lotus from "/lotus.png";
 import gutIcon from "/stomach.png";
+import madhavi from "@/assets/madhavi2.jpeg"
 
 const scrollToId = (id: string, offset = 120) => {
   const el = document.getElementById(id);
@@ -356,7 +357,7 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 blur-3xl -z-10"></div>
                 <div className="overflow-hidden rounded-3xl shadow-6xl">
                   <img
-                    src="public\madhavi2.jpeg"
+                    src={madhavi}
                     alt="Madhavi"
                     className="w-full h-auto object-cover"
                   />
