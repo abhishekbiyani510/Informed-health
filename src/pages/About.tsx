@@ -3,7 +3,24 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Award, BookOpen, Heart, Users, CheckCircle2, Briefcase, MessageSquare } from "lucide-react";
+import madhavi from "@/assets/madhavi.jpg"
+import madhaviwork from "@/assets/wellness talk.jpg"
+import olxLogo from "@/assets/logos/olx.png";
+import zomatoLogo from "@/assets/logos/zomato.png";
+import durdarshanLogo from "@/assets/logos/durdarshan.png";
+import toiLogo from "@/assets/logos/toi.png";
+import gridIndiaLogo from "@/assets/logos/GridIndiaLogo.png";
+import blogChatterLogo from "@/assets/logos/blogchatter.jpg";
+import adityaBirlaLogo from "@/assets/logos/aditya-birla.png";
+import htLogo from "@/assets/logos/ht.png";
+import happyMomsLogo from "@/assets/logos/happy-moms-kids.jpg";
+import millenniumLogo from "@/assets/logos/millenium.jpeg";
+import itcLogo from "@/assets/logos/itc.png";
+import hmdLogo from "@/assets/logos/hmd.jpg";
+import ddkisanLogo from "@/assets/logos/ddkisan.png";
+import thehindu from "@/assets/logos/the-hindu.png";
+import heartFoundationLogo from "@/assets/logos/heart-foundation-botswana.jpeg";
+import { Award, BookOpen, Heart, Users, CheckCircle2, Briefcase, MessageSquare, LogOut } from "lucide-react";
 
 // BlurImage component for optimized loading
 const BlurImage = ({
@@ -102,7 +119,7 @@ const About = () => {
           >
             <div className="aspect-[6/5] rounded-2xl overflow-hidden shadow-xl">
               <BlurImage
-                src="/madhavi.jpg"
+                src={madhavi}
                 alt="Madhavi K. Sharma"
                 className="w-full h-full"
               />
@@ -216,7 +233,7 @@ const About = () => {
             >
               <div className="absolute inset-0">
                 <BlurImage
-                  src="/wellness talk.jpg"
+                  src={madhaviwork}
                   alt="Wellness Session"
                   className="w-full h-full"
                 />
@@ -350,21 +367,21 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
               {[
-                { name: "OLX", logo: "/logos/olx.png" },
-                { name: "Zomato", logo: "/logos/zomato.png" },
-                { name: "Doordarshan", logo: "/logos/durdarshan.png" },
-                { name: "TOI", logo: "/logos/toi.png" },
-                { name: "GRID India", logo: "/logos/GridIndiaLogo.png" },
-                { name: "BlogChatter", logo: "/logos/blogchatter.jpg" },
-                { name: "Aditya Birla Group", logo: "/logos/aditya-birla.png" },
-                { name: "HT", logo: "/logos/ht.png" },
-                { name: "Happy Moms & Kids", logo: "/logos/happy-moms-kids.jpg" },
-                { name: "Millennium Post", logo: "/logos/millenium.jpeg" },
-                { name: "ITC", logo: "/logos/itc.png" },
-                { name: "The Hindu", logo: "/logos/the-hindu.png" },
-                { name: "HMD", logo: "/logos/hmd.jpg" },
-                { name: "Doordarshan Kisan", logo: "/logos/ddkisan.png" },
-                { name: "Heart Foundation Botswana", logo: "/logos/heart-foundation-botswana.jpeg" },
+                { name: "OLX", logo: olxLogo },
+                { name: "Zomato", logo: zomatoLogo },
+                { name: "Doordarshan", logo: durdarshanLogo },
+                { name: "TOI", logo: toiLogo },
+                { name: "GRID India", logo: gridIndiaLogo },
+                { name: "BlogChatter", logo: blogChatterLogo },
+                { name: "Aditya Birla Group", logo: adityaBirlaLogo },
+                { name: "HT", logo: htLogo },
+                { name: "Happy Moms & Kids", logo: happyMomsLogo },
+                { name: "Millennium Post", logo: millenniumLogo },
+                { name: "ITC", logo: itcLogo },
+                { name: "The Hindu", logo: thehindu },
+                { name: "HMD", logo: hmdLogo },
+                { name: "Doordarshan Kisan", logo: ddkisanLogo },
+                { name: "Heart Foundation Botswana", logo: heartFoundationLogo },
               ].map((brand, idx) => (
                 <motion.div
                   key={idx}
