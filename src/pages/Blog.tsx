@@ -17,7 +17,7 @@ const Blog = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }} className="font-heading font-semibold text-4xl md:text-4xl mb-2 tracking-tight">Wellness Blog</h1>
+          <h1 style={{ fontFamily: 'Inter, sans-serif', fontWeight: "bold", color: '#444444' }} className="font-heading font-semibold text-[50px] md:text-[50px] mb-2 tracking-tight">Wellness Blog</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Explore evidence-based insights, nutrition tips, and wellness strategies
           </p>

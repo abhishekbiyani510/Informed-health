@@ -408,43 +408,16 @@ const About = () => {
         </section>
 
         <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                        className="mt-12 text-center"
-                      >
-                        <Button asChild size="lg">
-                          <Link to="/services" style={{fontSize: '18px'}}>Kickstart your Health Journey</Link>
-                        </Button>
-                      </motion.div>
-
-        {/* Values Section - Reinserted
-        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16"
-        >
-          <h2 className="font-heading font-bold text-3xl text-center mb-12">Core Values</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className="p-6 h-full hover:shadow-lg transition-shadow">
-                  <value.icon className="text-primary mb-4" size={40} />
-                  <h3 className="font-heading font-semibold text-lg mb-2">{value.title}</h3>
-                  <p className="text-sm text-muted-foreground">{value.description}</p>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div> */}
+          transition={{ delay: 0.3 }}
+          className="mt-12 text-center"
+          >
+            <Button asChild size="lg">
+              <Link to="/services" style={{fontSize: '18px'}}>Kickstart your Health Journey</Link>
+              </Button>
+        </motion.div>
       </div>
     </div>
   );
