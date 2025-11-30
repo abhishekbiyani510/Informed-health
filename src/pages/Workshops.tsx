@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { workshops } from "@/data/mockData";
 import { Calendar, Clock, Users, IndianRupee } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import wellness from '@/assets/welcome.jpg';
 
 const Workshops = () => {
   const { toast } = useToast();
@@ -111,7 +112,7 @@ const Workshops = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto my-16"
+          className="max-w-5xl mx-auto my-16"
         >
           <Card className="bg-gradient-to-r from-secondary/10 to-accent/10 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1 text-center md:text-left">
@@ -137,9 +138,9 @@ const Workshops = () => {
             </div>
             <div className="hidden md:block flex-shrink-0">
               <img
-                src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332"
+                src={wellness}
                 alt="Corporate Wellness"
-                className="rounded-xl shadow-lg w-35% h-40 object-cover"
+                className="rounded-xl shadow-lg w-50% h-80 object-cover"
               />
             </div>
           </Card>
