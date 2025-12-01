@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-background border-b border-border sticky top-0 z-50 shadow-sm">
-      <div className="container mx-auto px-15">
+      <div className="container mx-auto px-15 my-2">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center space-x-3">
             <img src={logo} alt="Logo" className="h-16 w-auto" />

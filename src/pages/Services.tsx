@@ -4,11 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { User, ShieldPlus, Activity, Bold } from "lucide-react";
 import { link } from "fs";
+import gut from "@/assets/gut-health-trends.jpg";
+import glucose from "@/assets/glucose.jpg";
+import body from "@/assets/body.jpg";
 
 const programmeData = [
 	{
 		title: "Gut Reboot",
-		icon: User,
+		image: gut,
 		description:
 			"A transformative 12-week programme designed to reset your gut—the epicenter of your overall well-being. Rooted in the five pillars of health (Nutrition, Exercise, Sleep, Gut Health, Emotional Stability), this personalised blueprint helps restore balance, improve digestion, boost immunity, elevate energy, and unlock holistic wellness using the proven 5R Strategy.",
 		features: [
@@ -24,9 +27,9 @@ const programmeData = [
 	},
 	{
 		title: "Glucose Biohacking",
-		icon: ShieldPlus,
+		image: glucose,
 		description:
-			"A 14-week science-driven programme designed to reverse diabetes by addressing its true root causes—insulin resistance, chronic inflammation, and gut imbalances. This personalized approach goes beyond medication-based symptom control, empowering you with customized nutrition, gut restoration, movement and circadian optimization to naturally reset metabolism and achieve sustainable diabetes reversal.",
+			"A 14-week science-driven programme designed to reverse diabetes by addressing its true root causes—insulin resistance, chronic inflammation, and gut imbalances. This personalized approach goes beyond medication-based symptom control, empowering you with customized nutrition, gut restoration, movement and circadian optimization to achieve sustainable diabetes reversal.",
 		features: [
 			"Blood report analysis to identify metabolic imbalances",
 			"Comprehensive lifestyle review using the Diabetes Care Model",
@@ -40,9 +43,9 @@ const programmeData = [
 	},
 	{
 		title: "Body Transformation",
-		icon: Activity,
+		image: body,
 		description:
-			"A holistic 12-week programme designed to support sustainable inch loss and weight management through the integrative power of the five pillars of lifestyle—Nutrition, Exercise, Sleep, Gut Health, and Emotional Stability. Rooted in both traditional Ayurvedic wisdom and modern science, this approach goes beyond calorie counting to help you reset your metabolism, enhance immunity, and improve overall physical and mental well-being.",
+			"A holistic 12-week programme designed to support sustainable inch loss and weight management through the integrative power of the five pillars of lifestyle — Nutrition, Exercise, Sleep, Gut Health, and Emotional Stability. Rooted in both traditional Ayurvedic wisdom and modern science, this approach goes beyond calorie counting to help you reset your metabolism, and improve overall physical and mental well-being.",
 		features: [
 			"Lifestyle assessment through the 5 Pillars framework",
 			"Detailed blood report analysis",
@@ -80,24 +83,24 @@ const Services = () => {
 				{/* Programmes Grid */}
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
 					{programmeData.map((programme, index) => {
-						const Icon = programme.icon;
 						const isInternal = !!programme.internalRoute;
 						const cardContent = (
-							<Card className={`p-6 h-full flex flex-col justify-between hover:shadow-xl transition-shadow ${(isInternal) ? "cursor-pointer hover:ring-2 hover:ring-primary" : ""}`}>
-								<div>
-									<div className="flex items-start space-x-4 mb-6">
-										<div className="p-2 bg-primary/10 rounded-lg">
-											<Icon className="text-primary" size={24} />
-										</div>
-										<div className="flex-1">
-											<h3 className="font-heading font-bold text-xl mb-2">
-												{programme.title}
-											</h3>
-											<p className="text-sm text-muted-foreground">
-												{programme.description}
-											</p>
-										</div>
-									</div>
+							<Card className={`overflow-hidden h-full flex flex-col hover:shadow-xl transition-shadow ${(isInternal) ? "cursor-pointer hover:ring-2 hover:ring-primary" : ""}`}>
+								{/* Image */}
+								<div className="aspect-video relative overflow-hidden">
+									<img
+										src={programme.image}
+										alt={programme.title}
+										className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+									/>
+								</div>
+
+								{/* Content */}
+								<div className="p-6 flex-1 flex flex-col">
+									<h3 className="font-heading font-bold text-lg mb-2 text-center">{programme.title}</h3>
+									<p className="text-sm text-muted-foreground mb-4 flex-1 text-center">{programme.description}</p>
+
+									{/* Features */}
 									<div className="space-y-3 mb-6">
 										<h4 className="font-semibold text-sm uppercase text-muted-foreground">
 											Includes:
@@ -111,11 +114,13 @@ const Services = () => {
 											))}
 										</ul>
 									</div>
-								</div>
-								<div className="flex flex-col gap-2 mt-auto">
-									<Button asChild className="w-full">
-										<Link to="/contact">Book 12-Week Programme</Link>
-									</Button>
+
+									{/* CTA */}
+									<div className="flex flex-col gap-2 mt-auto">
+										<Button asChild className="w-full">
+											<Link to="/contact">Book 12-Week Programme</Link>
+										</Button>
+									</div>
 								</div>
 							</Card>
 						);
