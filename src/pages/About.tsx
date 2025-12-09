@@ -55,6 +55,7 @@ const BlurImage = ({
       />
       {currentSrc && (
         <img
+          loading="lazy"
           src={currentSrc}
           alt={alt}
           className={`

@@ -52,6 +52,7 @@ const Workshops = () => {
                 {/* Image */}
                 <div className="aspect-video relative overflow-hidden w-full">
                 <img
+                  loading="lazy"
                   src={workshop.image}
                   alt={workshop.title}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
@@ -120,6 +121,7 @@ const Workshops = () => {
           {/* Image */}
           <div className="relative">
             <img
+              loading="lazy"
               src={wellness}
               alt="Corporate Wellness"
               className="w-full h-[500px] object-cover rounded-2xl"

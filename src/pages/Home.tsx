@@ -303,7 +303,7 @@ const Home = () => {
                   >
                     <div className="flex flex-col items-center text-center p-4 rounded-lg">
                       <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                        <img src={p.iconPath} alt={p.title} className="w-10 h-10 object-contain" />
+                        <img src={p.iconPath} alt={p.title} loading="lazy" className="w-10 h-10 object-contain" />
                       </div>
                       <div className="flex flex-col items-center max-w-xs">
                         <h3 className="font-heading font-semibold text-base sm:text-lg mb-2">
@@ -366,6 +366,7 @@ const Home = () => {
                   src={madhavi}
                   alt="Madhavi"
                   className="w-full h-64 sm:h-80 md:h-96 object-cover"
+                  loading="lazy"
                 />
               </div>
             </motion.div>
