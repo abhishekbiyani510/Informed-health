@@ -193,7 +193,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white text-slate-800">
-      <section className="relative min-h-[70vh] sm:min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-[80vh] sm:min-h-[550px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${homepageImage})` }}

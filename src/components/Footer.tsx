@@ -19,7 +19,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-muted border-t border-border mt-auto">
+    <footer className="border-t border-border mt-auto bg-orange-100/70">
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -28,21 +28,21 @@ const Footer = () => {
         className="relative overflow-hidden bg-gray-50/80 backdrop-blur-sm border-t border-gray-200"
       >
         {/* Subtle top shadow */}
-        <div className="absolute top-0 left-0 right-0 h-4 bg-gradient-to-b from-gray-200/50 to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-gray-300/50 to-transparent pointer-events-none" />
 
-        <div className="container mx-auto px-4 py-16 text-center">
+        <div className="container mx-auto px-4 py-8 text-center">
           <motion.div
             initial={{ scale: 0.95 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            <h2 className="font-heading font-bold text-2xl md:text-3xl lg:text-5xl text-gray-800 mb-6 leading-tight">
+            <h2 className="font-heading font-bold text-1xl md:text-2xl lg:text-3xl text-gray-800 mb-6 leading-tight">
               Discuss Your Case<br />
               <span className="text-[#6cc52e]">With Madhavi Today!</span>
             </h2>
 
-            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto mb-10">
+            <p className="text-sm md:text-lg text-gray-600 max-w-4xl mx-auto mb-10">
               Take the first step toward better health with personalized functional nutrition guidance
             </p>
 
@@ -52,7 +52,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-3 px-10 py-5 bg-white text-[#6cc52e] text-xl rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 border-4 border-[#6cc52e]/20"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-white text-[#6cc52e] text-l rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 border-4 border-[#6cc52e]/20"
             >
               <FontAwesomeIcon icon={faWhatsapp} size="lg" className="text-[#6cc52e]" />
               <p>Book an Appointment</p>
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
       </motion.section>
 
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <motion.div
@@ -191,8 +191,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-border text-center">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-8 pt-4 border-t border-black/20 text-center">
+          <p className="text-sm text-black-300">
             © {new Date().getFullYear()} Madhavi K. Sharma. All rights reserved.
           </p>
         </div>

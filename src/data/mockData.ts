@@ -17,25 +17,25 @@ export interface Workshop {
 export const workshops: Workshop[] = [
   {
     id: "1",
-    title: "Biohack Your Gut Workshop",
-    description: "Get Permanent Relief from Acidity, Bloating & Gas Naturally,without Medicines.",
-    date: "2025-11-15",
-    duration: "3 days",
-    price: 299,
-    image: w1,
-    capacity: 20,
-    enrolled: 18,
-  },
-  {
-    id: "2",
-    title: "Diabetes Reversal Masterclass",
-    description: "Defeat Diabetes Naturally without Medicines with GBH SYSTEM. Live a Needle-free, Pill-free & Complication-free Life With The Exact Strategies That ONLY Top 1% Are Using!.",
+    title: "Glucose Biohacking Masterclass",
+    description: "Defeat diabetes naturally without medicines using the GBH system. Learn the exact strategies that only the top 1% use to live a needle-free, pill-free, and complication-free life.",
     date: "2025-11-22",
     duration: "2 hours",
     price: 99,
     image: w2,
     capacity: 25,
     enrolled: 12,
+  },
+  {
+    id: "2",
+    title: "Gut Biohacking Masterclass",
+    description: "Get permanent relief from acidity, bloating, and gas naturally without medicines. Discover proven strategies to restore digestive balance and achieve lasting wellness.",
+    date: "2025-11-15",
+    duration: "3 days",
+    price: 299,
+    image: w1,
+    capacity: 20,
+    enrolled: 18,
   },
 ];
 

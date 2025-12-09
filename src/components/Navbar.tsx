@@ -23,8 +23,8 @@ const Navbar = () => {
   return (
     <nav className="bg-background border-b border-border sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-15 my-2">
-        <div className="flex justify-between items-center h-20">
-          <div className="flex items-center space-x-3">
+        <div className="flex justify-between items-center h-[80px]">
+          <div className="flex items-center space-x-3 ml-[-50px]">
             <img src={logo} alt="Logo" className="h-16 w-auto" />
             <Link to="/" className="flex items-center space-x-2">
               <div className="font-heading font-bold text-xl md:text-2xl">
@@ -35,12 +35,12 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden lg:flex items-center space-x-1 mr-[-50px]">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                className={`px-4 py-2 rounded-md text-md font-medium transition-colors duration-200 ${
                   isActive(item.path)
                     ? "bg-primary text-primary-foreground"
                     : "text-foreground hover:bg-accent hover:text-accent-foreground"

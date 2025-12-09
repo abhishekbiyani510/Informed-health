@@ -34,7 +34,7 @@ const Workshops = () => {
         </motion.div>
 
         {/* Workshops Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
           {workshops.map((workshop, index) => {
             const spotsLeft = workshop.capacity - workshop.enrolled;
             const isAlmostFull = spotsLeft <= 5;
@@ -46,10 +46,11 @@ const Workshops = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
+              className="w-full"
               >
-              <Card className="overflow-hidden h-[500px] w-[500px] flex flex-col hover:shadow-xl transition-shadow mx-auto">
+              <Card className="overflow-hidden flex flex-col hover:shadow-xl transition-shadow h-ful">
                 {/* Image */}
-                <div className="aspect-video relative overflow-hidden">
+                <div className="aspect-video relative overflow-hidden w-full">
                 <img
                   src={workshop.image}
                   alt={workshop.title}
@@ -63,39 +64,41 @@ const Workshops = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-4 flex-1 flex flex-col">
-                <h3 className="font-heading font-bold text-lg mb-2">{workshop.title}</h3>
-                <p className="text-sm text-muted-foreground mb-3 flex-1">{workshop.description}</p>
+                <div className="p-4 md:p-6 flex-1 flex flex-col">
+                <h3 className="font-heading font-bold text-base md:text-lg mb-2">{workshop.title}</h3>
+                <p className="text-xs md:text-sm text-muted-foreground mb-3 flex-1">{workshop.description}</p>
 
                 {/* Details */}
                 <div className="space-y-1 mb-4">
-                  <div className="flex items-center text-sm text-muted-foreground">
-                  <Calendar size={16} className="mr-2 text-primary" />
+                  <div className="flex items-center text-xs md:text-sm text-muted-foreground">
+                  <Calendar size={14} className="mr-2 text-primary flex-shrink-0" />
                   <span>{new Date(workshop.date).toLocaleDateString('en-IN', { 
                     year: 'numeric', 
                     month: 'long', 
                     day: 'numeric' 
                   })}</span>
                   </div>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                  <Clock size={16} className="mr-2 text-primary" />
+                  <div className="flex items-center text-xs md:text-sm text-muted-foreground">
+                  <Clock size={14} className="mr-2 text-primary flex-shrink-0" />
                   <span>{workshop.duration}</span>
                   </div>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                  <Users size={16} className="mr-2 text-primary" />
+                  <div className="flex items-center text-xs md:text-sm text-muted-foreground">
+                  <Users size={14} className="mr-2 text-primary flex-shrink-0" />
                   <span>{workshop.enrolled} / {workshop.capacity} enrolled</span>
                   </div>
                 </div>
 
                 {/* Price and CTA */}
-                <div className="flex items-center justify-between pt-2 border-t">
+                <div className="flex items-center justify-between pt-2 border-t gap-2">
                   <div className="flex items-center">
-                  <IndianRupee size={20} className="text-primary" />
-                  <span className="font-heading font-bold text-xl">{workshop.price}</span>
+                  <IndianRupee size={16} className="text-primary flex-shrink-0" />
+                  <span className="font-heading font-bold text-lg md:text-xl">{workshop.price}</span>
                   </div>
                   <Button 
                   onClick={() => handlePayNow(workshop.title)}
                   disabled={spotsLeft === 0}
+                  size="sm"
+                  className="whitespace-nowrap"
                   >
                   {spotsLeft === 0 ? 'Sold Out' : 'Pay Now'}
                   </Button>
@@ -107,28 +110,38 @@ const Workshops = () => {
           })}
         </div>
 
-        {/* Wellness & Corporate Workshops Card */}
+        {/* Wellness & Corporate Workshops Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-5xl mx-auto my-16"
+          className="max-w-6xl mx-auto my-16 relative rounded-2xl overflow-hidden"
         >
-          <Card className="bg-gradient-to-r from-secondary/10 to-accent/10 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-8">
-            <div className="flex-1 text-center md:text-left">
-              <h2 className="font-heading font-bold text-2xl mb-2 text-secondary">
+          {/* Image */}
+          <div className="relative">
+            <img
+              src={wellness}
+              alt="Corporate Wellness"
+              className="w-full h-[500px] object-cover rounded-2xl"
+            />
+            <div className="absolute inset-0 bg-black/10 rounded-t-2xl" />
+          </div>
+
+          {/* Content */}
+          <div className="bg-white p-8 rounded-b-2xl">
+            <div className="text-center">
+              <h2 className="font-heading font-bold text-3xl mb-4 text-secondary">
                 Wellness & Corporate Workshops
               </h2>
-              <p className="text-muted-foreground mb-4">
-                Elevate your team’s wellbeing and productivity with our customized wellness and corporate nutrition workshops. 
-                <br />
-                <span className="font-semibold text-secondary">Interactive, evidence-based, and tailored for your organization’s unique needs.</span>
-                <br />
-                Topics include stress management, healthy eating at work, energy optimization, and more. Available for both in-person and virtual formats.
+              <p className="text-muted-foreground mb-6 text-lg">
+                Elevate your team’s wellbeing and productivity with our customized wellness and corporate nutrition workshops.
               </p>
-              <Button 
-                asChild 
-                size="lg" 
+            </div>
+
+            <div className="text-center mt-8">
+              <Button
+                asChild
+                size="lg"
                 className="text-white font-semibold shadow-md hover:scale-105 transition-transform"
               >
                 <a href="/contact?type=corporate" target="_blank" rel="noopener noreferrer">
@@ -136,14 +149,7 @@ const Workshops = () => {
                 </a>
               </Button>
             </div>
-            <div className="hidden md:block flex-shrink-0">
-              <img
-                src={wellness}
-                alt="Corporate Wellness"
-                className="rounded-xl shadow-lg w-50% h-80 object-cover"
-              />
-            </div>
-          </Card>
+          </div>
         </motion.div>
 
         {/* Info Section */}
@@ -151,7 +157,7 @@ const Workshops = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-16 bg-muted rounded-2xl p-8"
+          className="bg-muted rounded-2xl p-8 mt-[-20px]"
         >
           <h2 className="font-heading font-bold text-2xl mb-4">What to Expect</h2>
           <div className="grid md:grid-cols-3 gap-6">
