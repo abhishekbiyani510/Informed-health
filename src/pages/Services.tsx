@@ -23,7 +23,7 @@ const programmeData = [
 			"Defined metabolic health parameters to track progress",
 			"Weekly 30-minute follow-up sessions",
 		],
-		internalRoute: "/biohack-your-gut",
+		internalRoute: "/#/biohack-your-gut",
 	},
 	{
 		title: "Glucose Biohacking",
@@ -39,7 +39,7 @@ const programmeData = [
 			"Defined metabolic health parameters for progress tracking",
 			"Weekly 30-minute follow-up sessions throughout the programme",
 		],
-		internalRoute: "/glucose-biohacking",
+		internalRoute: "/#/glucose-biohacking",
 	},
 	{
 		title: "Body Transformation",
@@ -54,7 +54,7 @@ const programmeData = [
 			"Defined metabolic health parameters for progress tracking",
 			"Weekly 30-minute follow-up sessions",
 		],
-		internalRoute: "/body-transformation",
+		internalRoute: "/#/body-transformation",
 	},
 ];
 

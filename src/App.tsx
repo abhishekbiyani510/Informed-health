@@ -42,7 +42,7 @@ const App = () => (
               <Route path="/cancellation-policy" element={<CancellationPolicy />} />
               <Route path="/grievance" element={<Grievance />} />
               <Route path="/biohack-your-gut" element={<BiohackYourGut />} />
-              <Route path="glucose-biohacking" element={<GlucoseBiohacking />} />
+              <Route path="/glucose-biohacking" element={<GlucoseBiohacking />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
