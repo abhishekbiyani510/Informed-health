@@ -34,6 +34,8 @@ const App = () => (
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services/gut-reset-programme" element={<BiohackYourGut />} />
+              <Route path="/services/glucose-biohacking" element={<GlucoseBiohacking />} />
               <Route path="/workshops" element={<Workshops />} />
               <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/blog" element={<Blog />} />
@@ -41,8 +43,6 @@ const App = () => (
               <Route path="/refund-policy" element={<RefundPolicy />} />
               <Route path="/cancellation-policy" element={<CancellationPolicy />} />
               <Route path="/grievance" element={<Grievance />} />
-              <Route path="/gut-reset-programme" element={<BiohackYourGut />} />
-              <Route path="/glucose-biohacking" element={<GlucoseBiohacking />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

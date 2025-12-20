@@ -23,7 +23,7 @@ const programmeData = [
 			"Defined metabolic health parameters to track progress",
 			"Weekly 30-minute follow-up sessions",
 		],
-		internalRoute: "/#/gut-reset-programme",
+		internalRoute: "/services/gut-reset-programme",
 	},
 	{
 		title: "Glucose Biohacking",
@@ -39,7 +39,7 @@ const programmeData = [
 			"Defined metabolic health parameters for progress tracking",
 			"Weekly 30-minute follow-up sessions throughout the programme",
 		],
-		internalRoute: "/#/glucose-biohacking",
+		internalRoute: "/services/glucose-biohacking",
 	},
 	{
 		title: "Body Transformation",
@@ -54,7 +54,7 @@ const programmeData = [
 			"Defined metabolic health parameters for progress tracking",
 			"Weekly 30-minute follow-up sessions",
 		],
-		internalRoute: "/#/body-transformation",
+		internalRoute: "/services/body-transformation",
 	},
 ];
 
@@ -135,13 +135,12 @@ const Services = () => {
 								transition={{ delay: index * 0.1 }}
 							>
 								{isInternal ? (
-									<a
-										href={programme.internalRoute}
+									<Link
+										to={programme.internalRoute}
 										style={{ textDecoration: "none" }}
-										tabIndex={0}
 									>
 										{cardContent}
-									</a>
+									</Link>
 								) : (
 									cardContent
 								)}
