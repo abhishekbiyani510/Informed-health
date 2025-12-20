@@ -23,7 +23,7 @@ const programmeData = [
 			"Defined metabolic health parameters to track progress",
 			"Weekly 30-minute follow-up sessions",
 		],
-		internalRoute: "/#/biohack-your-gut",
+		internalRoute: "/#/gut-reset-programme",
 	},
 	{
 		title: "Glucose Biohacking",
