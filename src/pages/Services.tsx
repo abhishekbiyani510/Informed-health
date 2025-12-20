@@ -12,6 +12,7 @@ const programmeData = [
 	{
 		title: "Gut Reboot",
 		image: gut,
+		duration: 12,
 		description:
 			"A transformative 12-week programme designed to reset your gut—the epicenter of your overall well-being. Rooted in the five pillars of health (Nutrition, Exercise, Sleep, Gut Health, Emotional Stability), this personalised blueprint helps restore balance, improve digestion, boost immunity, elevate energy, and unlock holistic wellness using the proven 5R Strategy.",
 		features: [
@@ -28,6 +29,7 @@ const programmeData = [
 	{
 		title: "Glucose Biohacking",
 		image: glucose,
+		duration: 14,
 		description:
 			"A 14-week science-driven programme designed to reverse diabetes by addressing its true root causes—insulin resistance, chronic inflammation, and gut imbalances. This personalized approach goes beyond medication-based symptom control, empowering you with customized nutrition, gut restoration, movement and circadian optimization to achieve sustainable diabetes reversal.",
 		features: [
@@ -44,6 +46,7 @@ const programmeData = [
 	{
 		title: "Body Transformation",
 		image: body,
+		duration: 12,
 		description:
 			"A holistic 12-week programme designed to support sustainable inch loss and weight management through the integrative power of the five pillars of lifestyle — Nutrition, Exercise, Sleep, Gut Health, and Emotional Stability. Rooted in both traditional Ayurvedic wisdom and modern science, this approach goes beyond calorie counting to help you reset your metabolism, and improve overall physical and mental well-being.",
 		features: [
@@ -121,7 +124,7 @@ const Services = () => {
 									{/* CTA */}
 									<div className="flex flex-col gap-2 mt-auto">
 										<Button asChild className="w-full">
-											<Link to="/contact">Book 12-Week Programme</Link>
+											<Link to="/contact">Book {programme.duration}-Week Programme</Link>
 										</Button>
 									</div>
 								</div>
