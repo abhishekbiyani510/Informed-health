@@ -104,7 +104,7 @@ const GlucoseBiohacking = () => {
 						<div className="space-y-6 text-muted-foreground text-base sm:text-lg leading-relaxed">
 							<motion.p
 								initial={{ opacity: 0, x: -20 }}
-								whileInView={{ opacity: 1, x: 0 }}
+								animate={{ opacity: 1, x: 0 }}
 								transition={{ delay: 0.2 }}
 								viewport={{ once: true }}
 								className="text-center font-semibold"
@@ -114,7 +114,7 @@ const GlucoseBiohacking = () => {
 
 							<motion.p
 								initial={{ opacity: 0, x: 20 }}
-								whileInView={{ opacity: 1, x: 0 }}
+								animate={{ opacity: 1, x: 0 }}
 								transition={{ delay: 0.3 }}
 								viewport={{ once: true }}
 								className="text-center"
@@ -124,7 +124,7 @@ const GlucoseBiohacking = () => {
 
 							<motion.p
 								initial={{ opacity: 0, x: -20 }}
-								whileInView={{ opacity: 1, x: 0 }}
+								animate={{ opacity: 1, x: 0 }}
 								transition={{ delay: 0.4 }}
 								viewport={{ once: true }}
 								className="text-center"
@@ -134,7 +134,7 @@ const GlucoseBiohacking = () => {
 
 							<motion.div
 								initial={{ opacity: 0, y: 10 }}
-								whileInView={{ opacity: 1, y: 0 }}
+								animate={{ opacity: 1, y: 0 }}
 								transition={{ delay: 0.5 }}
 								viewport={{ once: true }}
 								className="bg-primary/5 p-6 rounded-lg border-l-4 border-primary mt-8"
@@ -286,7 +286,7 @@ const GlucoseBiohacking = () => {
 							Join our 14-week Glucose Biohacking Programme and break free from medication dependence.
 						</p>
 						<Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-md text-[20px]">
-							<Link to="/contact?service=glucose-biohacking" className="flex items-center justify-center gap-2">
+							<Link to="https://www.instamojo.com/@InformedHealth/l8e2ea7f3267d45d18b36531ded74dd9f/" className="flex items-center justify-center gap-2">
 								Register Now <ArrowRight size={20} />
 							</Link>
 						</Button>

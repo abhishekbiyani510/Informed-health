@@ -227,7 +227,7 @@ const BiohackYourGut = () => {
               Take the first step towards lasting health with our comprehensive 12-week Gut Reset Blueprint programme.
             </p>
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-white shadow-md text-[20px]">
-              <Link to="/contact?service=gut-reset" className="flex items-center justify-center gap-2">
+              <Link to="https://www.instamojo.com/@InformedHealth/l1de85a2ad7c5433c85deb24707a748e8/" className="flex items-center justify-center gap-2">
                 Register Now <ArrowRight size={20} />
               </Link>
             </Button>

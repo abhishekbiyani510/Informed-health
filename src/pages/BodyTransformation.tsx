@@ -227,7 +227,7 @@ const BodyTransformation = () => {
               Join our 12-week Body Transformation Programme and achieve sustainable, lasting results.
             </p>
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-white shadow-md text-[20px]">
-              <Link to="/contact?service=body-transformation" className="flex items-center justify-center gap-2">
+              <Link to="https://www.instamojo.com/@InformedHealth/le8152fb9c616410197a9f99ae7c8541c/" className="flex items-center justify-center gap-2">
                 Register Now <ArrowRight size={20} />
               </Link>
             </Button>

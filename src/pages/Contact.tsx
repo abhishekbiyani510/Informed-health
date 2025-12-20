@@ -83,22 +83,22 @@ const Contact = () => {
   // Contact info list
   const contactInfo = [
     {
-      icon: () => <FontAwesomeIcon icon={faWhatsapp} size="lg" color="primary" />,
+      icon: () => <FontAwesomeIcon icon={faWhatsapp} size="lg" />,
       title: "WhatsApp",
       content: "+91 88265 04708",
     },
     {
-      icon: Phone,
+      icon: () => <Phone size={24} />,
       title: "Phone",
       content: "+91 88265 04708",
     },
     {
-      icon: Mail,
+      icon: () => <Mail size={24} />,
       title: "Email",
       content: "behealthinformed@gmail.com",
     },
     {
-      icon: Clock,
+      icon: () => <Clock size={24} />,
       title: "Hours",
       content: "Mon-Sat: 11:00 AM - 7:00 PM",
     },
@@ -197,13 +197,13 @@ const Contact = () => {
               <motion.div
                 key={info.title}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 + index * 0.1, ease: "easeOut" }}
               >
                 <Card className="p-6 hover:shadow-lg transition-shadow mb-4">
                   <div className="flex items-start space-x-4">
                     <div className="p-3 bg-primary/10 rounded-lg">
-                      <info.icon size={24} />
+                      <info.icon />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">{info.title}</h3>
