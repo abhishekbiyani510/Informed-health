@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight, Microscope, Target, Search, UtensilsCrossed } from "lucide-react";
 import { Link } from "react-router-dom";
 import GutResetImage from "@/assets/gut-reset.jpg";
 
@@ -17,10 +17,26 @@ const BiohackYourGut = () => {
   ];
 
   const programmeFeatures = [
-    "Blood Report Analysis",
-    "Goal Setting",
-    "Root Cause Analysis",
-    "Customized Meal Plan",
+    {
+      title: "Blood Report Analysis",
+      icon: Microscope,
+      description: "In-depth analysis of your blood work"
+    },
+    {
+      title: "Goal Setting",
+      icon: Target,
+      description: "Clear, achievable health goals"
+    },
+    {
+      title: "Root Cause Analysis",
+      icon: Search,
+      description: "Identify underlying health issues"
+    },
+    {
+      title: "Customized Meal Plan",
+      icon: UtensilsCrossed,
+      description: "Personalized nutrition strategy"
+    },
   ];
 
   return (
@@ -40,7 +56,7 @@ const BiohackYourGut = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+              <h1 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                 Gut Reset Blueprint
               </h1>
 
@@ -170,21 +186,24 @@ const BiohackYourGut = () => {
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {programmeFeatures.map((feature, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, scale: 0.9, y: 15 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ delay: idx * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-primary/10 to-primary/5 border-l-4 border-primary p-6 rounded-lg text-center hover:shadow-md transition-shadow"
-                >
-                  <CheckCircle2 className="text-primary mx-auto mb-4" size={32} />
-                  <h3 className="font-heading font-semibold text-base" style={{ color: "#444444" }}>
-                    {feature}
-                  </h3>
-                </motion.div>
-              ))}
+              {programmeFeatures.map((feature, idx) => {
+                const IconComponent = feature.icon;
+                return (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, scale: 0.9, y: 15 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ delay: idx * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-gradient-to-br from-primary/10 to-primary/5 border-l-4 border-primary p-6 rounded-lg text-center hover:shadow-md transition-shadow flex flex-col items-center justify-center"
+                  >
+                    <IconComponent className="text-primary mx-auto mb-4" size={40} />
+                    <h3 className="font-heading font-semibold text-base" style={{ color: "#444444" }}>
+                      {feature.title}
+                    </h3>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </div>
