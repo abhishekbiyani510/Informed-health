@@ -18,6 +18,7 @@ import Grievance from "./pages/Grievance";
 import NotFound from "./pages/NotFound";
 import BiohackYourGut from "./pages/BiohackYourGut";
 import GlucoseBiohacking from "./pages/GlucoseBiohacking";
+import BodyTransformation from "./pages/BodyTransformation";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
               <Route path="/services" element={<Services />} />
               <Route path="/services/gut-reset-programme" element={<BiohackYourGut />} />
               <Route path="/services/glucose-biohacking" element={<GlucoseBiohacking />} />
+              <Route path="/services/body-transformation" element={<BodyTransformation />} />
               <Route path="/workshops" element={<Workshops />} />
               <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/blog" element={<Blog />} />
