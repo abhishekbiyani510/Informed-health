@@ -44,6 +44,8 @@ const BodyTransformation = () => {
           src={BodyTransformationImage}
           alt="Body Transformation"
           className="absolute inset-0 w-full h-full object-cover object-center"
+          loading="lazy"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-black/60" />
 

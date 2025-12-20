@@ -93,6 +93,8 @@ const Services = () => {
 										alt={programme.title}
 										className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
 										loading="lazy"
+										decoding="async"
+										fetchPriority="low"
 									/>
 								</div>
 
