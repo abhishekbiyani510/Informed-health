@@ -137,8 +137,6 @@ const Services = () => {
 								{isInternal ? (
 									<a
 										href={programme.internalRoute}
-										target="_blank"
-										rel="noopener noreferrer"
 										style={{ textDecoration: "none" }}
 										tabIndex={0}
 									>
