@@ -10,7 +10,7 @@ const realTestimonials = [
 		content:
 			"Madhvi ji came highly recommended and I can say she has delivered for me. So the five stars for her. Despite my crazy travel schedule, she taught me / motivated me / guided me and explained to me the basics of food selection and food planning. Her teachings will stay with me forever. She is not a dietician. Her philosophy is simple - healthy eating & healthy habits leads to great life. Thank you Madhvi ji.",
 		rating: 5,
-		name: "shailesh jain",
+		name: "Shailesh Jain",
 		date: "a month ago",
 	},
 	{
@@ -18,7 +18,7 @@ const realTestimonials = [
 		content:
 			"I followed Madhavi Ji's 3 month diet plan which helped me in controlling my diabetes very well and I also lost weight. Her plans are flexible and provide ample options to choose from and fit into family routine. Thank You for your personal guidance of making me feel good about my health and lifestyle.",
 		rating: 5,
-		name: "suman saboo",
+		name: "Suman Saboo",
 		date: "3 months ago",
 	},
 	{

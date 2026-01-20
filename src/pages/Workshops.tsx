@@ -112,57 +112,63 @@ const Workshops = () => {
             );
           })}
         </div>
+      </div>
 
-        {/* Wellness & Corporate Workshops Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-6xl mx-auto my-16 relative rounded-2xl overflow-hidden"
-        >
-          {/* Image */}
-          <div className="relative">
-            <img
-              src={wellness}
-              alt="Corporate Wellness"
-              className="w-full h-[500px] object-cover rounded-2xl"
-              loading="lazy"
-              decoding="async"
-             />
-            <div className="absolute inset-0 bg-black/10 rounded-t-2xl" />
-          </div>
-
-          {/* Content */}
-          <div className="bg-white p-8 rounded-b-2xl">
-            <div className="text-center">
-              <h2 className="font-heading font-bold text-3xl mb-4 text-secondary">
-                Wellness & Corporate Workshops
-              </h2>
-              <p className="text-muted-foreground mb-6 text-lg">
-                Elevate your team’s wellbeing and productivity with our customized wellness and corporate nutrition workshops.
-              </p>
+      {/* Wellness & Corporate Workshops Section */}
+      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-gradient-to-r from-secondary/20 via-secondary/10 to-secondary/20 py-16 mt-8">
+        <div className="container mx-auto px-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-6xl mx-auto relative rounded-2xl overflow-hidden"
+          >
+            {/* Image */}
+            <div className="relative">
+              <img
+                src={wellness}
+                alt="Corporate Wellness"
+                className="w-full h-[500px] object-cover rounded-2xl"
+                loading="lazy"
+                decoding="async"
+              />
+              <div className="absolute inset-0 bg-black/10 rounded-t-2xl" />
             </div>
 
-            <div className="text-center mt-8">
-              <Button
-                asChild
-                size="lg"
-                className="text-white font-semibold shadow-md hover:scale-105 transition-transform"
-              >
-                <a href="/contact?type=corporate" target="_blank" rel="noopener noreferrer">
-                  Enquire for Corporate Wellness
-                </a>
-              </Button>
-            </div>
-          </div>
-        </motion.div>
+            {/* Content */}
+            <div className="p-8 rounded-b-2xl">
+              <div className="text-center">
+                <h2 className="font-heading font-bold text-5xl mb-4 text-secondary">
+                  Wellness & Corporate Workshops
+                </h2>
+                <p className="text-muted-foreground mb-6 text-lg">
+                  Elevate your team’s wellbeing and productivity with our customized wellness and corporate nutrition workshops.
+                </p>
+              </div>
 
+              <div className="text-center mt-8">
+                <Button
+                  asChild
+                  size="lg"
+                  className="text-white font-semibold shadow-md hover:scale-105 transition-transform"
+                >
+                  <a href="/contact?type=corporate" target="_blank" rel="noopener noreferrer">
+                    Enquire for Corporate Wellness
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-24">
         {/* Info Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-muted rounded-2xl p-8 mt-[-20px]"
+          className="bg-muted rounded-2xl p-8 mt-8"
         >
           <h2 className="font-heading font-bold text-2xl mb-4">What to Expect</h2>
           <div className="grid md:grid-cols-3 gap-6">

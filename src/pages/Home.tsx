@@ -143,16 +143,16 @@ const Home = () => {
   const testimonialData = [
     {
       id: 1,
-      content: "Within 3 months my bloating, acidity, and sugar spikes dropped. I finally feel light and in control again.",
+      content: "I was referred to informed health by my physiotherapist at gk2. I wasn't sure if how much Madhavi would be able to help or guide me. I have been with her for 5 months now and I can surely recommend her guidance and help in not just weight loss but in guiding for a healthier mind set. She just doesn't give you a diet plan but explains reasons and scientific explanations. I got the feel that she recommends only what she practices herself or had worked for her clients in past.Her guidance modified my lipid profile, led to weight loss and better sustainable food habits.She is driven and passionate about helping her clients. Her bubbly personality adds to the outcomes. I wish her all the luck.",
       rating: 5,
-      name: "Participant",
-      date: "3 months ago",
+      name: "Amita Gupta",
+      date: "3 years ago",
     },
     {
       id: 2,
-      content: "I'd tried everything for years. Madhavi's approach made me understand my body for the first time.",
+      content: "I had the privilege to attend 3 day workshop on Gut Health by Madhvi & she’s so immaculate & precise to give all the information & bio hacks on gut health ! It was amazing 3 day session thanks a lot Madhvi , you saw to it that you cover all aspects of health ( mental / physical & emotional) .. keep up the super work .",
       rating: 5,
-      name: "Gut Reset Client",
+      name: "Tushar Shain",
       date: "a year ago",
     },
   ];
@@ -411,7 +411,6 @@ const Home = () => {
                     {testimonial.content.length > 150 && (
                       <button
                         onClick={() => {
-                          window.scrollTo({ top: 0, behavior: "smooth" });
                           setTimeout(() => setSelectedTestimonial(testimonial), 200);
                         }}
                         className="text-primary hover:underline ml-1 not-italic cursor-pointer text-sm"

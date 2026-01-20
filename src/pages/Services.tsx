@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { User, ShieldPlus, Activity, Bold } from "lucide-react";
-import { link } from "fs";
 import gut from "@/assets/gut-health-trends.jpg";
 import glucose from "@/assets/glucose.jpg";
 import body from "@/assets/body.jpg";
