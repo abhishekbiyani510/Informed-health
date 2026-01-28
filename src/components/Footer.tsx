@@ -38,8 +38,8 @@ const Footer = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
           >
             <h2 className="font-heading font-bold text-1xl md:text-2xl lg:text-3xl text-gray-800 mb-6 leading-tight">
-              Discuss Your Case<br />
-              <span className="text-[#6cc52e]">With Madhavi Today!</span>
+              Start Your Personalized Path to Vitality<br />
+              <span className="text-[#6cc52e]">With Madhavi!</span>
             </h2>
 
             <p className="text-sm md:text-lg text-gray-600 max-w-4xl mx-auto mb-10">

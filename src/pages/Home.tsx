@@ -167,27 +167,27 @@ const Home = () => {
     {
       iconPath: gutIcon,
       title: "Gut Reset",
-      text: "Restore digestion and microbiome to improve nutrient absorption and digestive comfort.",
+      text: "Heal Your Core. Optimize your microbiome to eliminate bloating and unlock peak nutrient absorption for all-day energy.",
     },
     {
       iconPath: seed,
       title: "Metabolic Nutrition",
-      text: "Stabilise glucose and hormones with personalised, food-as-medicine strategies.",
+      text: "Fuel Your Metabolism. Stabilize blood sugar and balance hormones using \"food-as-medicine\" to crush cravings and burn fat efficiently.",
     },
     {
       iconPath: stretch,
       title: "Movement",
-      text: "Build strength and insulin sensitivity through gentle, consistent movement practices.",
+      text: "Move with Purpose. Boost insulin sensitivity and functional strength through sustainable movement that energizes rather than exhausts.",
     },
     {
       iconPath: sunMoon,
       title: "Rhythm & Recovery",
-      text: "Align sleep and meals to your circadian rhythm to support repair and sustained energy.",
+      text: "Master Your Clock. Align your sleep and nutrition with your natural circadian rhythm to trigger deep cellular repair and wake up refreshed.",
     },
     {
       iconPath: lotus,
       title: "Mind-Body Balance",
-      text: "Cultivate emotional resilience and stress regulation for whole-system healing.",
+      text: "Regulate Your System. Master stress regulation and emotional resilience to shift your body from \"survival mode\" into a state of total healing.",
     },
   ];
 
@@ -270,14 +270,14 @@ const Home = () => {
             className="max-w-3xl mx-auto text-center mb-8"
           >
             <h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl" style={{ color: "#444444" }}>
-              5 Pillars of Functional Healing
+              Reclaim Your Vitality with the 5 Pillars of Functional Healing.
             </h2>
             <p className="text-muted-foreground mt-3 text-base sm:text-lg">
-              True wellness isn't built on quick fixes, but on five timeless foundations.
+              Stop managing symptoms and start addressing the root cause. Build a high-performance body with a science-backed, personalized foundation.
             </p>
           </motion.div>
 
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 8 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -322,35 +322,30 @@ const Home = () => {
 
       <section className="pt-12 sm:pt-20 pb-6">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-          <div className="flex justify-center">
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl mb-8" style={{ color: '#444444' }}>
-              Why This Matters
+          <div className="flex justify-center max-w-4xl mx-auto mb-6">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl mb-8 text-center" style={{ color: '#444444' }}>
+              Why Functional Healing is the Key to Lasting Health.
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="order-2 md:order-1"
+              className="order-1 md:order-1 flex flex-col items-left"
             >
-              <div className="space-y-5 text-muted-foreground text-base sm:text-lg leading-relaxed">
-                <p>
-                  Many people chase quick symptom relief for acidity, bloating, high sugar, fatigue, acne,
-                  hair loss, or stubborn weight without ever asking what triggered them. Treating surface
-                  symptoms alone often means the underlying imbalance persists.
-                </p>
-                <p>
-                  Real, lasting healing begins by addressing root causes — the gut ecosystem, metabolic
-                  function, and daily rhythm that regulate digestion, hormones and energy. When you target
-                  the source, symptoms resolve more naturally and sustainably.
-                </p>
-                <p>
-                  My approach blends evidence-based nutrition, circadian-friendly habits, and time-tested
-                  wisdom to help you rebuild health with compassion — no fads, no fear, and no unnecessary
-                  restriction. The result is practical, steady change that fits your life.
-                </p>
+              <div className="relative rounded-3xl overflow-hidden shadow-xl w-full">
+                <img
+                  src={madhavi}
+                  alt="Madhavi"
+                  className="w-full h-64 sm:h-80 md:h-96 object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="mt-4 text-left ml-6">
+                <p className="font-heading font-semibold text-lg" style={{ color: '#444444' }}>Madhavi K. Sharma</p>
+                <p className="text-sm text-muted-foreground">Founder - InformedHealth</p>
               </div>
             </motion.div>
 
@@ -359,15 +354,15 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="order-1 md:order-2"
+              className="order-2 md:order-2"
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-xl">
-                <img
-                  src={madhavi}
-                  alt="Madhavi"
-                  className="w-full h-64 sm:h-80 md:h-96 object-cover"
-                  loading="lazy"
-                />
+              <div className="space-y-5 text-muted-foreground text-base sm:text-lg leading-relaxed">
+                <p>
+                  Many of us spend years chasing quick relief for acidity, bloating, high sugar, or stubborn weight without ever uncovering the true trigger. Treating only the surface symptoms ensures the underlying imbalance persists, but real, lasting healing begins by addressing the <span className="font-bold text-gray-600">Root Cause</span>: your gut ecosystem, metabolic function, and circadian rhythms.
+                </p>
+                <p>
+                  My approach replaces fads and fear with evidence-based nutrition and circadian-friendly habits that align your lifestyle with your body's natural clock for deep repair. By combining modern nutrition science with traditional Indian foods, ancient yogic practices, and Ayurvedic principles, I help you rebuild your health with compassion—no fads, no fear, and no unnecessary restriction. The result is a practical, <span className="font-bold text-gray-600">Sustainable Change</span> that fits your real life, allowing your symptoms to resolve naturally so you can finally move forward with clarity and sustained energy.
+                </p>
               </div>
             </motion.div>
           </div>
@@ -377,8 +372,11 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="mt-10 text-center"
+            className="mt-12 text-center"
           >
+            <a href="#contact" className="inline-block px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors">
+              Start Your Healing Journey
+            </a>
           </motion.div>
         </div>
       </section>
@@ -471,7 +469,7 @@ const Home = () => {
       <section className="py-12">
         <div className="container mx-auto px-4 md:px-8 max-w-5xl">
           <div className="flex justify-center">
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl mb-6" style={{ color: '#444444' }}>Why Work With Me</h2>
+            <h2 className="font-heading font-semibold text-3xl sm:text-4xl md:text-5xl mb-6 text-center" style={{ color: '#444444' }}>Meet <span className="text-primary font-bold">Madhavi Sharma</span>, Your Partner in Functional Health</h2>
           </div>
           <div className="space-y-6">
             <motion.div
@@ -483,11 +481,11 @@ const Home = () => {
             >
               <div className="space-y-4 text-muted-foreground text-base sm:text-lg leading-relaxed text-center">
                 <p>
-                  I'm Madhavi Sharma, a Functional Nutritionist specialising in Gut Health & Diabetes Reversal with over 20 years of international experience in integrative health.
-                  My approach blends modern nutrition science with Indian wisdom — focusing on circadian rhythm, mindful eating, satiety signals, and unlearning diet culture. I help people rebuild health naturally through clarity, rhythm, and flow — not fear or restriction.
+                  I am Madhavi Sharma, a Functional Nutritionist specializing in Gut Health and Diabetes Reversal. With over 20 years of international experience in integrative health, I’ve learned that your body isn’t broken—it’s simply waiting to be understood.
+                  My approach uniquely combines modern nutrition science with traditional Indian foods and Ayurvedic principles to address the root causes of chronic illness.
                 </p>
                 <p>
-                  Every plan I design is Simple, Sensible, and Sustainable, created to fit real lives and enable long-term healing. Your body isn't broken; it's waiting to be understood.
+                  By focusing on circadian rhythm alignment, mindful eating, and unlearning the stress of restrictive diet culture, I help you rebuild your vitality naturally through clarity and flow. Together, we will design a simple, sensible, and sustainable plan that fits your real life and enables true, long-term healing.
                 </p>
               </div>
             </motion.div>
