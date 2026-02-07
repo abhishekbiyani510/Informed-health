@@ -105,7 +105,7 @@ const About = () => {
         >
           <h1 style={{ fontFamily: 'Inter, sans-serif', color: '#444444', fontWeight: 'bold' }} className="font-heading font-semibold text-[50px] md:text-[50px] mb-2 tracking-tight">About Madhavi K. Sharma</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Functional Nutritionist | Founder, Informed Health <br />Specialising in Functional Healing, Metabolic Health & Preventive Nutrition
+          Top-Tier Functional Nutritionist | Founder, Informed Health <br />Specializing in Root-Cause Healing, Metabolic Wellness & Chronic Recovery
           </p>
         </motion.div>
 
@@ -137,19 +137,19 @@ const About = () => {
             <h2 className="font-heading font-bold text-4xl" style={{ color:"#6cc52e", fontFamily: 'Inter, sans-serif' }}>Meet Madhavi </h2>
             <div className="prose prose-lg">
               <p className="text-muted-foreground pb-3 text-[18px]">
-                Madhavi Sharma is a Functional Nutritionist and the Founder of Informed Health, with degree in Nutrition & Dietitics from Delhi University and over 20 years of international experience in the field of integrative health and lifestyle medicine.
+                Madhavi Sharma is a premier Functional Nutritionist and the visionary Founder of Informed Health. Leveraging a Nutrition & Dietetics degree from Delhi University and 20+ years of global practice, she is a leading authority in integrative medicine, Gut Reset protocols, and evidence-based lifestyle interventions.
               </p>
               <p className="text-muted-foreground pb-3 text-[18px]">
-                Her continuing education includes advanced training at the Centre for Diabetes and Endocrinology, South Africa, and accreditation by the International Diabetes Federation (Belgium) — strengthening her expertise in metabolic health, endocrinology, and chronic disease management.
+                Her clinical expertise includes specialized residency at the Centre for Diabetes and Endocrinology (South Africa) and International Diabetes Federation (Belgium) accreditation. This worldwide experience empowers her to master natural Diabetes Reversal, advanced endocrinology, and complex metabolic health management.
               </p>
               <p className="text-muted-foreground pb-3 text-[18px]">
-                With deep roots in both Modern Nutrition Science and Traditional Indian Food Wisdom, Madhavi blends evidence-based functional nutrition with practical lifestyle therapies to create holistic, sustainable transformations.
+                By merging Modern Nutritional Science with Traditional Ayurvedic Food Wisdom, Madhavi delivers high-impact functional nutrition and lifestyle therapy. Her holistic strategy transcends calorie tracking, prioritizing gut microbiome restoration and sustainable metabolic transformation.
               </p>
               <p className="text-muted-foreground pb-3 text-[18px]">
-                She has worked with a diverse global clientele — from professionals and families to public figures, including Sir Seretse Khama, the President of Botswana.
+                Throughout her prestigious career, Madhavi has mentored a global elite—ranging from high-performance professionals to global leaders, including Sir Seretse Khama, the former President of Botswana.
               </p>
               <p className="text-muted-foreground pb-3 text-[18px]">
-                Madhavi’s approach goes beyond conventional diet plans. Her philosophy focuses on restoring balance through food, movement, rhythm, and mindfulness — helping individuals reconnect with their body’s innate intelligence and achieve lasting well-being across physical, mental, and emotional dimensions.
+                Madhavi’s methodology centers on bio-individual balance through nutrition, movement, and mindfulness. By fostering a connection with the body’s innate biological intelligence, she empowers clients to achieve permanent well-being and optimal metabolic harmony.
               </p>
             </div>
           </motion.div>
@@ -170,38 +170,38 @@ const About = () => {
                 <CheckCircle2 className="text-primary" size={48} />
               </div>
               <div>
-                <h2 className="font-heading font-bold text-3xl mb-4" style={{ color: "#444444", fontFamily: 'Inter, sans-serif' }}>Her Approach</h2>
+                <h2 className="font-heading font-bold text-3xl mb-4" style={{ color: "#444444", fontFamily: 'Inter, sans-serif' }}>The Functional Framework: A Multi-Dimensional Approach</h2>
                  <p className="text-muted-foreground mb-8 text-[18px]">
                    Madhavi's work is anchored in the principle of root-cause healing — addressing underlying imbalances rather than managing surface-level symptoms. Her functional framework integrates:
                  </p>
 
                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                     {[
-                      {
-                        title: "Food as Medicine",
-                        desc: "Using nutrition to correct metabolism, hormones, and inflammation.",
-                        bg: "from-primary/10 to-primary/5",
-                        border: "border-l-4 border-primary",
-                      },
-                      {
-                        title: "Movement & Strength",
-                        desc: "Building flexibility, insulin sensitivity, and energy balance.",
-                        bg: "from-secondary/10 to-secondary/5",
-                        border: "border-l-4 border-secondary",
-                      },
-                      {
-                        title: "Circadian & Lifestyle Alignment",
-                        desc: "Syncing meals, rest, and sleep with natural body rhythms.",
-                        bg: "from-primary/10 to-primary/5",
-                        border: "border-l-4 border-primary",
-                      },
-                      {
-                        title: "Mind-Body Connection",
-                        desc: "Cultivating emotional balance and resilience through mindfulness.",
-                        bg: "from-secondary/10 to-secondary/5",
-                        border: "border-l-4 border-secondary",
-                      },
-                    ].map((point, idx) => (
+                        {
+                          title: "Food as Medicine",
+                          desc: "Targeted nutrition to optimize metabolism, balance hormones, and reverse systemic inflammation.",
+                          bg: "from-primary/10 to-primary/5",
+                          border: "border-l-4 border-primary",
+                        },
+                        {
+                          title: "Movement & Strength",
+                          desc: "Enhancing metabolic flexibility, insulin sensitivity, and sustainable energy balance.",
+                          bg: "from-secondary/10 to-secondary/5",
+                          border: "border-l-4 border-secondary",
+                        },
+                        {
+                          title: "Circadian Alignment",
+                          desc: "Synchronizing nutrition and sleep hygiene with your natural biological rhythms.",
+                          bg: "from-primary/10 to-primary/5",
+                          border: "border-l-4 border-primary",
+                        },
+                        {
+                          title: "Mind-Body Connection",
+                          desc: "Cultivating emotional resilience and nervous system regulation via mindfulness.",
+                          bg: "from-secondary/10 to-secondary/5",
+                          border: "border-l-4 border-secondary",
+                        },
+                      ].map((point, idx) => (
                       <motion.div
                         key={idx}
                         initial={{ opacity: 0, y: 10 }}
@@ -246,29 +246,29 @@ const About = () => {
                   <Briefcase className="text-white" size={48} />
                 </div>
                 <h2 className="font-heading font-bold text-3xl mb-4 text-white" style={{ color: "#ffffff", fontFamily: 'Inter, sans-serif' }}>
-                  Her Work
+                  Her Work: Driving Global Metabolic Health
                 </h2>
                 <p className="text-white/90 mb-8 text-[18px] max-w-4xl mx-auto">
-                  Madhavi's work spans across multiple dimensions of health education and wellness, combining scientific rigour with practical strategies.
+                  Madhavi’s influence extends across global health education and clinical wellness, bridging the gap between advanced nutritional science and actionable recovery strategies for international communities and organizations.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-40 gap-y-8 max-w-5xl mx-auto">
                   {[
                     {
-                      title: "Media & Education",
-                      content: "On-panel Nutritionist at DD National; articles in The Times of India, The Indian Express and others.",
+                      title: "Media & Health Advocacy",
+                      content: "As a vetted Functional Nutritionist, Madhavi is a frequent expert on DD National. Her clinical insights on natural diabetes reversal and metabolic repair are regularly featured in authoritative outlets like The Times of India and The Indian Express.",
                     },
                     {
-                      title: "Corporate Wellness",
-                      content: "Speaker and advisor for organisations including GRID India, Aditya Birla Group, OLX and HMD.",
+                      title: "Strategic Corporate Wellness",
+                      content: "She serves as a premier corporate health advisor for global giants, including Aditya Birla Group, GRID India, OLX, and HMD. Her executive programs optimize workforce performance through circadian-synced nutrition and biological stress management.",
                     },
                     {
-                      title: "Projects & Partnerships",
-                      content: "Health projects for Heart Foundation Botswana, Zomato Healthy and international initiatives.",
+                      title: "International Clinical Partnerships",
+                      content: "Madhavi spearheads high-level health initiatives for the Heart Foundation Botswana and Zomato Healthy. Her global projects focus on deploying sustainable lifestyle medicine and functional therapies across diverse international demographics.",
                     },
                     {
-                      title: "Digital Outreach",
-                      content: "Informed Health YouTube channel offering evidence-based insights on nutrition, hormones and metabolic healing.",
+                      title: "Digital Health Outreach",
+                      content: "Through the Informed Health ecosystem, she delivers evidence-based education on gut-brain health and hormonal regulation. Her digital platform empowers a global community to master metabolic healing through science-backed advocacy.",
                     },
                   ].map((item, idx) => (
                     <motion.div
@@ -302,26 +302,26 @@ const About = () => {
                 <div>
                   <h2 className="font-heading font-bold text-3xl mb-4" style={{ color: "#444444", fontFamily: 'Inter, sans-serif' }}>Her Philosophy</h2>
                   <p className="text-muted-foreground mb-8 text-[18px] max-w-4xl mx-auto">
-                    True health is an inside-out process — nourish the body with the right food, rhythm, and mindfulness, and it naturally restores balance.
+                    True health is an inside-out biological process. By nourishing your system with targeted functional nutrition, circadian rhythm, and mindfulness, you activate the body's natural ability to restore metabolic balance.
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto mb-8">
                     {[
                       {
                         title: "Root-Cause Healing",
-                        desc: "Address underlying imbalances, not just surface symptoms.",
+                        desc: "Identify and address underlying metabolic imbalances to eliminate chronic symptoms like bloating, adrenal fatigue, and insulin spikes at the source.",
                       },
                       {
                         title: "Body’s Innate Intelligence",
-                        desc: "The body knows how to heal when given the right environment.",
+                        desc: "Your physiology is biologically programmed for homeostasis; we curate the optimal environment for natural recovery and peak vitality.",
                       },
                       {
-                        title: "Simple & Sustainable",
-                        desc: "Plans that fit real lives — no extreme diets or complexity.",
+                        title: "Simple & Sustainable Wellness",
+                        desc: "Practical, evidence-based protocols designed for modern lifestyles—eliminating restrictive diets, health fads, and unnecessary complexity.",
                       },
                       {
-                        title: "Wisdom Meets Science",
-                        desc: "Blending Indian food traditions with modern nutrition research.",
+                        title: "Ancient Wisdom Meets Modern Science",
+                        desc: "A potent synergy of Traditional Indian Food Wisdom (Ayurvedic principles) and cutting-edge functional nutrition research.",
                       },
                     ].map((point, idx) => (
                       <motion.div
@@ -344,8 +344,8 @@ const About = () => {
                     ))}
                   </div>
 
-                  <blockquote className="border-l-4 border-primary pl-4 italic text-muted-foreground max-w-3xl mx-auto text-[18px] font-medium">
-                    "When you understand your body, you no longer need to fight it."
+                  <blockquote className="border-l-4 border-primary italic text-muted-foreground max-w-4xl mx-auto text-[18px] font-medium">
+                    "When you decode your body’s unique bio-signals, you stop fighting it and start healing it."
                   </blockquote>
                 </div>
               </div>

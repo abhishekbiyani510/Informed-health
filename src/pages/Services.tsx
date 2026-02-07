@@ -12,7 +12,8 @@ const programmeData = [
 		image: gut,
 		duration: 12,
 		description:
-			"A transformative 12-week programme designed to reset your gut—the epicenter of your overall well-being. Rooted in the five pillars of health (Nutrition, Exercise, Sleep, Gut Health, Emotional Stability), this personalised blueprint helps restore balance, improve digestion, boost immunity, elevate energy, and unlock holistic wellness using the proven 5R Strategy.",
+			"A transformative programme designed to reset your gut—the epicentre of your immunity, mood, and metabolism. This programme goes beyond basic digestion to address the root causes of bloating, food sensitivities, and chronic fatigue. Using our proven 5R Strategy, we create a personalized blueprint to weed out pathogens and reseed your gut for total wellness.",
+		tag: "12-Week Microbiome Restoration",
 		features: [
 			"Blood report analysis to identify key imbalances",
 			"Understanding gut physiology and root-cause triggers",
@@ -30,6 +31,7 @@ const programmeData = [
 		duration: 14,
 		description:
 			"A 14-week science-driven programme designed to reverse diabetes by addressing its true root causes—insulin resistance, chronic inflammation, and gut imbalances. This personalized approach goes beyond medication-based symptom control, empowering you with customized nutrition, gut restoration, movement and circadian optimization to achieve sustainable diabetes reversal.",
+		tag: "14-Week Diabetes Reversal",
 		features: [
 			"Blood report analysis to identify metabolic imbalances",
 			"Comprehensive lifestyle review using the Diabetes Care Model",
@@ -71,13 +73,12 @@ const Services = () => {
 				>
 					<h1
 						style={{ fontFamily: "Inter, sans-serif", fontWeight: "bold", color: "#444444" }}
-						className="font-heading font-semibold text-[50px] md:text-[50px] mb-2 tracking-tight"
+						className="font-heading font-semibold text-[50px] md:text-[50px] mx-auto max-w-3xl text-center mb-4 tracking-tight leading-[1.1]"
 					>
-						Biohack to Heal Programme
+						Biohack to Heal: Specialized Results-Driven Programmes
 					</h1>
-					<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-						Choose from our Specialized Programmes designed to help you
-						Biohack your Health and achieve lasting results.
+					<p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+						Choose your path to lasting transformation with science-backed protocols designed to hack your biology and reclaim your health.
 					</p>
 				</motion.div>
 
@@ -102,8 +103,8 @@ const Services = () => {
 								{/* Content */}
 								<div className="p-6 flex-1 flex flex-col">
 									<h3 className="font-heading font-bold text-lg mb-2 text-center">{programme.title}</h3>
+									<p className="text-md font-bold text-gray-500 mb-4 text-center">{programme.tag}</p>
 									<p className="text-sm text-muted-foreground mb-4 flex-1 text-center">{programme.description}</p>
-
 									{/* Features */}
 									<div className="space-y-3 mb-6">
 										<h4 className="font-semibold text-sm uppercase text-muted-foreground">
@@ -156,13 +157,13 @@ const Services = () => {
 				<div className="flex justify-center mb-16">
 					<Card className="w-full max-w-5xl p-6 bg-gradient-to-r from-secondary/10 to-secondary/10 text-center shadow-lg">
 						<h1 style={{ fontFamily: "Inter, sans-serif", fontWeight: "bolder", color: "#444444" }}
-						className="font-semibold text-[30px] md:text-[30px] mb-2 tracking-tight">One Time Consultation</h1>
+						className="font-semibold text-[30px] md:text-[30px] mb-2 tracking-tight">Personalized One-Time Functional Nutrition Consultation</h1>
 						<p className="mb-4 font-medium text-lg text-secondary">
-							Before you proceed, if you wish to have a one-time consultation to discuss your needs, click below:
+							Before committing to a comprehensive recovery program, schedule a one-time functional nutrition assessment. This session is designed to evaluate your unique metabolic bio-markers, review persistent symptoms, and map out a data-driven path for your long-term root-cause healing journey.
 						</p>
 						<Button asChild size="lg" className="font-semibold bg-secondary hover:bg-secondary/80">
 							<Link to="/contact?type=one-time-consultation">
-								Book Now
+								Book Your Expert Consultation Now
 							</Link>
 						</Button>
 					</Card>
