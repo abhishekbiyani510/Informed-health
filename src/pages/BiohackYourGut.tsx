@@ -52,29 +52,34 @@ const BiohackYourGut = () => {
         <div className="absolute inset-0 bg-black/60" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center space-y-6 text-white">
+          <div className="max-w-7xl mx-auto text-center space-y-6 text-white">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-                Gut Reset Blueprint
-              </h1>
-
-              <div className="mt-3">
-                <p className="font-heading font-semibold text-lg sm:text-xl text-white/90">
-                  Reclaim Your Health with a
-                </p>
-
-                <p className="mt-2 font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-3xl mx-auto" style={{ color: '#6cc52e', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>
-                  Holistic Gut Reset Approach
-                </p>
-              </div>
-
-              <p className="mt-12 text-lg sm:text-xl text-primary bg-white/90 inline-block px-4 py-2 rounded-sm">
-                12 Weeks Programme
-              </p>
+              <p className="font-heading font-semibold text-lg sm:text-3xl text-white/90 mb-1">
+                              12 Weeks
+                            </p>
+              
+                            <h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6">
+                              Gut Reset Blueprint
+                            </h1>
+              
+                            <div className="mt-3 space-y-2">
+                              <p className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-4xl" style={{ color: "white", textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                                Reclaim Your Health with a
+                              </p>
+              
+                              <p className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-4xl" style={{ color: '#6cc52e', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                                Holistic Gut Reset Approach
+                              </p>
+                            </div>
+                            <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-white shadow-md text-[20px] mt-10">
+                              <Link to="https://www.instamojo.com/@InformedHealth/l1de85a2ad7c5433c85deb24707a748e8/" className="flex items-center justify-center gap-2">
+                                Register Now <ArrowRight size={20} />
+                              </Link>
+                            </Button>
             </motion.div>
           </div>
         </div>

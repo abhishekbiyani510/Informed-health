@@ -215,7 +215,7 @@ const Contact = () => {
             ))}
 
             {/* Map */}
-            <Card className="overflow-hidden">
+            {/* <Card className="overflow-hidden">
               <div className="aspect-video">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1401.931883847473!2d77.2438309!3d28.5375533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3a43a325245%3A0x11ca783ce946bc7a!2sInformed%20Health!5e0!3m2!1sen!2sin!4v1697041234567!5m2!1sen!2sin"
@@ -226,7 +226,7 @@ const Contact = () => {
                   allowFullScreen
                 ></iframe>
               </div>
-            </Card>
+            </Card> */}
           </motion.div>
 
         </div>

@@ -28,8 +28,8 @@ const Workshops = () => {
         >
           <h1 style={{ fontFamily: 'Inter, sans-serif', color: '#444444', fontWeight: "bold" }} className="font-heading font-semibold text-[50px] md:text-[50px] mb-2 tracking-tight">Upcoming Workshops</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Join our interactive workshops to deepen your understanding of
-            functional nutrition and practical wellness strategies
+            Join our Interactive Workshops to deepen your Understanding of
+            Functional Nutrition and Practical Wellness Strategies
           </p>
         </motion.div>
 
