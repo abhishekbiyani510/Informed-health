@@ -8,7 +8,7 @@ import body from "@/assets/body.jpg";
 
 const programmeData = [
 	{
-		title: "Gut Reboot",
+		title: "Gut Biohacking",
 		image: gut,
 		duration: 12,
 		description:
@@ -74,10 +74,13 @@ const Services = () => {
 				>
 					<h1
 						style={{ fontFamily: "Inter, sans-serif", fontWeight: "bold", color: "#444444" }}
-						className="font-heading font-semibold text-[50px] md:text-[50px] mx-auto max-w-3xl text-center mb-4 tracking-tight leading-[1.1]"
+						className="font-heading font-semibold text-[50px] md:text-[50px] mx-auto max-w-3xl text-center mb-2 tracking-tight leading-[1.1]"
 					>
-						Biohack to Heal: Specialized Results-Driven Programmes
+						Biohack to Heal
 					</h1>
+					<h2 className="text-[30px] md:text-[30px] text-center text-muted-foreground font-semibold">
+						Specialized Results-Driven Programmes
+					</h2>
 					<p className="text-lg text-muted-foreground max-w-3xl mx-auto">
 						Choose your path to lasting transformation with science-backed protocols designed to hack your biology and reclaim your health.
 					</p>
@@ -104,7 +107,7 @@ const Services = () => {
 								{/* Content */}
 								<div className="p-6 flex-1 flex flex-col">
 									<h3 className="font-heading font-bold text-xl mb-2 text-center">{programme.title}</h3>
-									<p className="text-md text-white mb-4 text-center bg-blue-400 rounded-xl p-2">{programme.tag}</p>
+									<p className="text-md text-white mb-4 text-center bg-blue-400 rounded-md p-2 inline-block mx-auto">{programme.tag}</p>
 									<p className="text-sm text-muted-foreground mb-4 flex-1 text-center">{programme.description}</p>
 									{/* Features
 									<div className="space-y-3 mb-6">
