@@ -103,7 +103,7 @@ const Workshops = () => {
                   size="sm"
                   className="whitespace-nowrap"
                   >
-                  {spotsLeft === 0 ? 'Sold Out' : 'Pay Now'}
+                  {spotsLeft === 0 ? 'Sold Out' : 'Register Now'}
                   </Button>
                 </div>
                 </div>
