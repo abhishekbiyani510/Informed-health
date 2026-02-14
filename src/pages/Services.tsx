@@ -49,6 +49,7 @@ const programmeData = [
 		duration: 12,
 		description:
 			"A holistic 12-week programme designed to support sustainable inch loss and weight management through the integrative power of the five pillars of lifestyle — Nutrition, Exercise, Sleep, Gut Health, and Emotional Stability. Rooted in both traditional Ayurvedic wisdom and modern science, this approach goes beyond calorie counting to help you reset your metabolism, and improve overall physical and mental well-being.",
+		tag: "12-Week Sustainable Fat Loss",
 		features: [
 			"Lifestyle assessment through the 5 Pillars framework",
 			"Detailed blood report analysis",
@@ -87,7 +88,7 @@ const Services = () => {
 					{programmeData.map((programme, index) => {
 						const isInternal = !!programme.internalRoute;
 						const cardContent = (
-							<Card className={`overflow-hidden h-full flex flex-col hover:shadow-xl transition-shadow ${(isInternal) ? "cursor-pointer hover:ring-2 hover:ring-primary" : ""}`}>
+							<Card className={`overflow-hidden h-full flex flex-col hover:shadow-xl transition-shadow`}>
 								{/* Image */}
 								<div className="aspect-video relative overflow-hidden">
 									<img
@@ -102,10 +103,10 @@ const Services = () => {
 
 								{/* Content */}
 								<div className="p-6 flex-1 flex flex-col">
-									<h3 className="font-heading font-bold text-lg mb-2 text-center">{programme.title}</h3>
-									<p className="text-md font-bold text-gray-500 mb-4 text-center">{programme.tag}</p>
+									<h3 className="font-heading font-bold text-xl mb-2 text-center">{programme.title}</h3>
+									<p className="text-md text-white mb-4 text-center bg-blue-400 rounded-xl p-2">{programme.tag}</p>
 									<p className="text-sm text-muted-foreground mb-4 flex-1 text-center">{programme.description}</p>
-									{/* Features */}
+									{/* Features
 									<div className="space-y-3 mb-6">
 										<h4 className="font-semibold text-sm uppercase text-muted-foreground">
 											Includes:
@@ -118,14 +119,14 @@ const Services = () => {
 												</li>
 											))}
 										</ul>
-									</div>
+									</div> */}
 
 									{/* CTA */}
-									<div className="flex flex-col gap-2 mt-auto">
-										<Button asChild className="w-full">
-											<Link to="/contact">Book {programme.duration}-Week Programme</Link>
-										</Button>
-									</div>
+									   <div className="flex flex-col gap-2 mt-auto">
+										   <Button asChild className="w-full">
+											   <Link to={programme.internalRoute}>Book {programme.duration}-Week Programme</Link>
+										   </Button>
+									   </div>
 								</div>
 							</Card>
 						);
@@ -138,14 +139,7 @@ const Services = () => {
 								viewport={{ once: true }}
 								transition={{ delay: index * 0.1 }}
 							>
-								{isInternal ? (
-									<Link
-										to={programme.internalRoute}
-										style={{ textDecoration: "none" }}
-									>
-										{cardContent}
-									</Link>
-								) : (
+								{(
 									cardContent
 								)}
 							</motion.div>
@@ -179,10 +173,10 @@ const Services = () => {
 					>
 						<div className="flex-1 text-center md:text-left">
 							<h3 className="font-heading font-bold text-2xl mb-2 text-primary">
-								Prefer a Longer Commitment?
+								Achieve Lasting Results with a Long-Term Program
 							</h3>
 							<p className="text-muted-foreground mb-4">
-								Unlock deeper transformation with our extended packages. Choose a 3-month or 6-month program for ongoing support, accountability, and results.
+								Chronic conditions, gut health, and diabetes reversal—takes time and consistent support. Unlock a deeper transformation with our extended health packages, designed for those ready to commit to their long-term vitality.
 							</p>
 						</div>
 						<div className="flex flex-col md:flex-row gap-4">

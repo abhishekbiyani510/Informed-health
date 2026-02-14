@@ -40,11 +40,11 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-4 py-2 rounded-md text-md font-medium transition-colors duration-200 ${
-                  isActive(item.path)
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-accent hover:text-accent-foreground"
-                }`}
+                className={`px-4 py-2 rounded-md text-md font-medium transition-colors duration-200 relative
+                  ${isActive(item.path)
+                    ? "text-primary after:absolute after:left-4 after:right-4 after:-bottom-1 after:h-[3px] after:bg-primary after:rounded-full after:content-['']"
+                    : "text-foreground hover:text-primary"}
+                `}
               >
                 {item.name}
               </Link>
@@ -77,11 +77,11 @@ const Navbar = () => {
                     key={item.path}
                     to={item.path}
                     onClick={() => setIsOpen(false)}
-                    className={`block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                      isActive(item.path)
-                        ? "bg-primary text-primary-foreground"
-                        : "text-foreground hover:bg-accent"
-                    }`}
+                    className={`block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative
+                      ${isActive(item.path)
+                        ? "text-primary after:absolute after:left-4 after:right-4 after:-bottom-1 after:h-[3px] after:bg-primary after:rounded-full after:content-['']"
+                        : "text-foreground hover:text-primary"}
+                    `}
                   >
                     {item.name}
                   </Link>
