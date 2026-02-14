@@ -56,7 +56,7 @@ const BodyTransformation = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <p className="font-heading font-semibold text-lg sm:text-3xl text-white/90 mb-4">
+          <p className="font-heading font-semibold text-lg sm:text-3xl text-white/90 mb-1">
             12 Weeks
           </p>
 

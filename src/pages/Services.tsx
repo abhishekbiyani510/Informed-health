@@ -74,15 +74,15 @@ const Services = () => {
 				>
 					<h1
 						style={{ fontFamily: "Inter, sans-serif", fontWeight: "bold", color: "#444444" }}
-						className="font-heading font-semibold text-[50px] md:text-[50px] mx-auto max-w-3xl text-center mb-2 tracking-tight leading-[1.1]"
+						className="font-heading font-semibold text-[50px] md:text-[50px] mx-auto max-w-3xl text-center tracking-tight leading-[1.1] mb-[-2px]"
 					>
 						Biohack to Heal
 					</h1>
-					<h2 className="text-[30px] md:text-[30px] text-center text-muted-foreground font-semibold">
+					<h2 className="text-[30px] md:text-[30px] text-center text-muted-foreground font-semibold mb-2">
 						Specialized Results-Driven Programmes
 					</h2>
 					<p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-						Choose your path to lasting transformation with science-backed protocols designed to hack your biology and reclaim your health.
+						Choose your Path to Lasting Transformation with Science-backed Protocols designed to Hack your Biology and Reclaim your Health.
 					</p>
 				</motion.div>
 
