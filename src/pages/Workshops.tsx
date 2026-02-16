@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -5,17 +6,19 @@ import { Badge } from "@/components/ui/badge";
 import { workshops } from "@/data/mockData";
 import { Calendar, Clock, Users, IndianRupee } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 import wellness from '@/assets/welcome.jpg';
 
 const Workshops = () => {
   const { toast } = useToast();
+  const [now, setNow] = useState(new Date());
 
-  const handlePayNow = (workshopTitle: string) => {
-    toast({
-      title: "Payment Processing",
-      description: `Redirecting to payment gateway for ${workshopTitle}...`,
-    });
-  };
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setNow(new Date());
+    }, 1000); // Update every second
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="min-h-screen py-8">
@@ -39,82 +42,94 @@ const Workshops = () => {
             const spotsLeft = workshop.capacity - workshop.enrolled;
             const isAlmostFull = spotsLeft <= 5;
 
+            // Date Calculation Logic
+            const eventDate = new Date(workshop.dateTime);
+            const diffMs = eventDate.getTime() - now.getTime();
+            
+            const diffDays = Math.max(0, Math.floor(diffMs / (1000 * 60 * 60 * 24)));
+            const diffHours = Math.max(0, Math.floor((diffMs / (1000 * 60 * 60)) % 24));
+            const diffMinutes = Math.max(0, Math.floor((diffMs / (1000 * 60)) % 60));
+            const diffSeconds = Math.max(0, Math.floor((diffMs / 1000) % 60));
+            const isPast = diffMs < 0;
+
             return (
               <motion.div
-              key={workshop.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="w-full"
+                key={workshop.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="w-full"
               >
-              <Card className="overflow-hidden flex flex-col hover:shadow-xl transition-shadow h-ful">
-                {/* Image */}
-                <div className="aspect-video relative overflow-hidden w-full">
-                <img
-                  src={workshop.image}
-                  alt={workshop.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                  decoding="async"
-                  fetchPriority="low"
-                />
-                {isAlmostFull && (
-                  <Badge className="absolute top-4 right-4 bg-secondary">
-                  Only {spotsLeft} spots left!
-                  </Badge>
-                )}
-                </div>
+                <Card className="overflow-hidden flex flex-col hover:shadow-xl transition-shadow h-full">
+                  <div className="aspect-video relative overflow-hidden w-full">
+                    <img
+                      src={workshop.image}
+                      alt={workshop.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                    {isAlmostFull && spotsLeft > 0 && (
+                      <Badge className="absolute top-4 right-4 bg-secondary">
+                        Only {spotsLeft} spots left!
+                      </Badge>
+                    )}
+                  </div>
 
-                {/* Content */}
-                <div className="p-4 md:p-6 flex-1 flex flex-col">
-                <h3 className="font-heading font-bold text-base md:text-lg mb-2">{workshop.title}</h3>
-                <p className="text-xs md:text-sm text-muted-foreground mb-3 flex-1">{workshop.description}</p>
+                  <div className="p-4 md:p-6 flex-1 flex flex-col">
+                    <h3 className="font-heading font-bold text-base md:text-lg mb-2">{workshop.title}</h3>
+                    <p className="text-xs md:text-sm text-muted-foreground mb-3 flex-1">{workshop.description}</p>
 
-                {/* Details */}
-                <div className="space-y-1 mb-4">
-                  <div className="flex items-center text-xs md:text-sm text-muted-foreground">
-                  <Calendar size={14} className="mr-2 text-primary flex-shrink-0" />
-                  <span>{new Date(workshop.date).toLocaleDateString('en-IN', { 
-                    year: 'numeric', 
-                    month: 'long', 
-                    day: 'numeric' 
-                  })}</span>
-                  </div>
-                  <div className="flex items-center text-xs md:text-sm text-muted-foreground">
-                  <Clock size={14} className="mr-2 text-primary flex-shrink-0" />
-                  <span>{workshop.duration}</span>
-                  </div>
-                  <div className="flex items-center text-xs md:text-sm text-muted-foreground">
-                  <Users size={14} className="mr-2 text-primary flex-shrink-0" />
-                  <span>{workshop.enrolled} / {workshop.capacity} enrolled</span>
-                  </div>
-                </div>
+                    <div className="space-y-1 mb-4">
+                      <div className="flex items-center text-xs md:text-sm text-muted-foreground">
+                        <Calendar size={14} className="mr-2 text-primary flex-shrink-0" />
+                        <span>{eventDate.toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                        {!isPast && (
+                          <span className="ml-2 text-xs text-primary font-semibold">
+                            ({diffDays}d {diffHours}h {diffMinutes}m {diffSeconds}s left)
+                          </span>
+                        )}
+                      </div>
+                      <div className="flex items-center text-xs md:text-sm text-muted-foreground">
+                        <Clock size={14} className="mr-2 text-primary flex-shrink-0" />
+                        <span>{workshop.duration}</span>
+                      </div>
+                      <div className="flex items-center text-xs md:text-sm text-muted-foreground">
+                        <Users size={14} className="mr-2 text-primary flex-shrink-0" />
+                        <span>{workshop.enrolled} / {workshop.capacity} enrolled</span>
+                      </div>
+                    </div>
 
-                {/* Price and CTA */}
-                <div className="flex items-center justify-between pt-2 border-t gap-2">
-                  <div className="flex items-center">
-                  <IndianRupee size={16} className="text-primary flex-shrink-0" />
-                  <span className="font-heading font-bold text-lg md:text-xl">{workshop.price}</span>
+                    <div className="flex items-center justify-between pt-2 border-t gap-2">
+                      <div className="flex items-center">
+                        <IndianRupee size={16} className="text-primary flex-shrink-0" />
+                        <span className="font-heading font-bold text-lg md:text-xl">{workshop.price}</span>
+                      </div>
+                      <Button 
+                        asChild
+                        disabled={spotsLeft === 0 || isPast}
+                        size="sm"
+                        className="whitespace-nowrap"
+                      >
+                        {spotsLeft === 0 ? (
+                          <span>Sold Out</span>
+                        ) : isPast ? (
+                          <span>Completed</span>
+                        ) : (
+                          <Link to={workshop.internalRoute}>
+                            Register Now
+                          </Link>
+                        )}
+                      </Button>
+                    </div>
                   </div>
-                  <Button 
-                  onClick={() => handlePayNow(workshop.title)}
-                  disabled={spotsLeft === 0}
-                  size="sm"
-                  className="whitespace-nowrap"
-                  >
-                  {spotsLeft === 0 ? 'Sold Out' : 'Register Now'}
-                  </Button>
-                </div>
-                </div>
-              </Card>
+                </Card>
               </motion.div>
             );
           })}
         </div>
       </div>
 
-      {/* Wellness & Corporate Workshops Section */}
       <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-gradient-to-r from-secondary/20 via-secondary/10 to-secondary/20 py-16 mt-8">
         <div className="container mx-auto px-24">
           <motion.div
@@ -123,19 +138,15 @@ const Workshops = () => {
             viewport={{ once: true }}
             className="max-w-6xl mx-auto relative rounded-2xl overflow-hidden"
           >
-            {/* Image */}
             <div className="relative">
               <img
                 src={wellness}
                 alt="Corporate Wellness"
                 className="w-full h-[500px] object-cover rounded-2xl"
-                loading="lazy"
-                decoding="async"
               />
               <div className="absolute inset-0 bg-black/10 rounded-t-2xl" />
             </div>
 
-            {/* Content */}
             <div className="p-8 rounded-b-2xl">
               <div className="text-center">
                 <h2 className="font-heading font-bold text-5xl mb-4 text-secondary">
@@ -163,7 +174,6 @@ const Workshops = () => {
       </div>
 
       <div className="container mx-auto px-24">
-        {/* Info Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
