@@ -1,12 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, ArrowRight, Zap, Brain, Activity, Briefcase, BatteryLow, Cookie, ShieldPlus, TrendingUp, UserX, BarChart2, AlertTriangle, Frown, HelpCircle, Calendar, Clock } from "lucide-react";
+import { ArrowRight, Activity, Briefcase, BatteryLow, Cookie, ShieldPlus, TrendingUp, UserX, BarChart2, AlertTriangle, Calendar, Clock, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import DiabetesImage from "@/assets/masterclass1.jpg";
 import MadhaviImage from "@/assets/madhavi1.jpg";
-import GlucoseBiohacking from "./GlucoseBiohacking";
 import { UPCOMING_WORKSHOP_DATETIME } from "@/data/mockData";
 import olxLogo from "@/assets/logos/olx.png";
 import adityaBirlaLogo from "@/assets/logos/aditya-birla.png";
@@ -14,6 +12,8 @@ import durdarshanLogo from "@/assets/logos/durdarshan.png";
 import hmdLogo from "@/assets/logos/hmd.jpg";
 import thehindu from "@/assets/logos/the-hindu.png";
 import zomatoLogo from "@/assets/logos/zomato.png";
+import Mindfullness from "@/assets/mindfullness.png";
+import Friendly from "@/assets/friendly.png";
 
 // Countdown Component
 const CountdownTimer = () => {
@@ -159,11 +159,6 @@ const GlucoseBiohackingMasterclass = () => {
 			description: "Stress, confusion, or fear about food",
 			icon: AlertTriangle,
 		},
-		{
-			title: "You feel anxious or fearful about your health",
-			description: "Anxiety, fear, or worry about diabetes",
-			icon: Frown,
-		},
 	];
 
 	const benefitsItems = [
@@ -230,103 +225,71 @@ const GlucoseBiohackingMasterclass = () => {
 	return (
 		<div className="min-h-screen bg-white">
 			{/* Hero Section */}
-			<section className="relative h-[60vh] sm:h-[70vh] flex items-center overflow-hidden">
+			<section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-start overflow-hidden">
 				<img
 					src={DiabetesImage}
 					alt="Defeat Diabetes Naturally"
-					className="absolute inset-0 w-full h-full object-top object-cover"
+					className="absolute inset-0 w-full h-full object-top object-cover opacity-30"
 					loading="lazy"
 					decoding="async"
 				/>
-				<div className="absolute inset-0 bg-black/50" />
+				<div className="absolute inset-0 bg-white/30" />
 
-				<div className="container mx-auto px-4 relative z-10">
-					<div className="max-w-4xl mx-auto text-center space-y-6 text-white">
+				<div className="container mx-auto px-4 relative z-10 pt-24 sm:pt-28 pb-12">
+					<div className="max-w-7xl mx-auto text-center space-y-5">
 						<motion.div
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, ease: "easeOut" }}
+							className="space-y-4"
 						>
-							<h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4">
+							{/* Small title at top */}
+							<p className="font-heading font-semibold text-lg sm:text-xl md:text-2xl text-gray-700">
 								Take Your First Step to Reverse Diabetes Naturally!!
+							</p>
+
+							{/* Big primary title */}
+							<h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-primary shadow-white drop-shadow-lg">
+								Defeat Diabetes Naturally
 							</h1>
 
-							<Button
-								asChild
-								size="lg"
-								className="bg-secondary hover:bg-secondary/90 text-white shadow-md text-[20px] mt-10"
-							>
-								<Link
-									to="https://www.instamojo.com/@InformedHealth/l6dbad0a9b68c41df8922a9563bb84b27/"
-									className="flex items-center justify-center gap-2"
+							{/* Secondary colored subtitle */}
+							<h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-secondary drop-shadow-md">
+								<span>Without Medicines</span><span className="text-gray-700"> with GBH SYSTEM</span>
+							</h2>
+
+							<div className="space-y-1">
+								<p className="text-base sm:text-lg font-semibold text-gray-700">
+									Live a Needle-free, Pill-free & Complication-free Life
+								</p>
+							</div>
+
+							{/* Countdown */}
+							<div className="pt-4">
+								<CountdownTimer />
+							</div>
+
+							{/* CTA Button */}
+							<div className="pt-4">
+								<Button
+									asChild
+									size="lg"
+									className="bg-primary hover:bg-primary/80 text-white shadow-md text-[20px]"
 								>
-									Register Now <ArrowRight size={20} />
-								</Link>
-							</Button>
+									<Link
+										to="https://www.instamojo.com/@InformedHealth/l6dbad0a9b68c41df8922a9563bb84b27/"
+										className="flex items-center justify-center gap-2"
+									>
+										Register Now <ArrowRight size={20} />
+									</Link>
+								</Button>
+							</div>
 						</motion.div>
 					</div>
 				</div>
 			</section>
 
-			{/* Countdown Timer */}
-			<section className="py-8 sm:py-12 bg-muted">
-				<div className="container mx-auto px-4">
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						className="max-w-4xl mx-auto"
-					>
-						<h2 className="text-center text-2xl font-bold mb-6" style={{ color: "#444444" }}>
-							Register Now for  2 Hour Masterclass
-						</h2>
-						<CountdownTimer />
-					</motion.div>
-				</div>
-			</section>
 
-			{/* Main Heading */}
-			<section className="py-8 sm:py-10 md:py-12">
-				<div className="container mx-auto px-4">
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						className="max-w-4xl mx-auto text-center"
-					>
-						<h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl mb-2" style={{ color: "#444444" }}>
-							Defeat Diabetes Naturally
-						</h2>
-						<h3 className="font-heading font-bold text-2xl sm:text-3xl mb-6" style={{ color: "#6cc52e" }}>
-							Without Medicines with GBH SYSTEM
-						</h3>
-
-						<div className="space-y-1 mb-8">
-							<p className="text-lg font-semibold text-gray-700">
-								Live a Needle-free, Pill-free & Complication-free Life
-							</p>
-							<p className="text-lg text-gray-700">
-								With The Exact Strategies That ONLY Top 1% Are Using!
-							</p>
-						</div>
-
-						<InlineCountdown />
-
-						<Button
-							asChild
-							size="lg"
-							className="bg-primary hover:bg-primary/90 text-white shadow-md text-[20px]"
-						>
-							<Link
-								to="https://www.instamojo.com/@InformedHealth/l6dbad0a9b68c41df8922a9563bb84b27/"
-								className="flex items-center justify-center gap-2"
-							>
-								Register Now <ArrowRight size={20} />
-							</Link>
-						</Button>
-					</motion.div>
-				</div>
-			</section>
 
 			{/* Featured In */}
 			<section className="py-8 sm:py-12 md:py-16 bg-gradient-to-b from-gray-50 to-white">
@@ -362,7 +325,7 @@ const GlucoseBiohackingMasterclass = () => {
 									whileInView={{ opacity: 1, scale: 1, y: 0 }}
 									transition={{ delay: idx * 0.1 }}
 									viewport={{ once: true }}
-									className="h-20 sm:h-24 flex items-center justify-center bg-white rounded-xl p-3 shadow-md border border-gray-100 hover:shadow-xl hover:border-primary/30 transition-all duration-300"
+									className="h-28 sm:h-32 flex items-center justify-center bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-xl hover:border-primary/30 transition-all duration-300"
 								>
 									<img
 										src={brand.logo}
@@ -391,7 +354,7 @@ const GlucoseBiohackingMasterclass = () => {
 						</h2>
 
 						<div className="flex flex-col items-center">
-							<div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
+							<div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-7xl">
 								{resonancePoints.map((point, idx) => {
 									const IconComponent = point.icon;
 									return (
@@ -455,9 +418,9 @@ const GlucoseBiohackingMasterclass = () => {
 									whileInView={{ opacity: 1, x: 0 }}
 									transition={{ delay: idx * 0.05 }}
 									viewport={{ once: true }}
-									className="flex items-center gap-3 bg-primary/5 p-4 rounded-lg"
+									className="flex items-center gap-3 bg-red-500/15 p-4 rounded-lg"
 								>
-									<CheckCircle2 className="text-primary flex-shrink-0" size={24} />
+									<X className="text-red-500 flex-shrink-0" size={24} />
 									<p className="font-semibold text-gray-700">{benefit}</p>
 								</motion.div>
 							))}
@@ -488,7 +451,7 @@ const GlucoseBiohackingMasterclass = () => {
 						className="max-w-5xl mx-auto"
 					>
 						<h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl mb-12 text-center" style={{ color: "#444444" }}>
-							What You Will Learn In These 3 Days
+							What You Will Learn
 						</h2>
 
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -499,15 +462,15 @@ const GlucoseBiohackingMasterclass = () => {
 									whileInView={{ opacity: 1, scale: 1, y: 0 }}
 									transition={{ delay: idx * 0.1 }}
 									viewport={{ once: true }}
-									className="bg-white p-6 rounded-lg border-t-4 border-primary hover:shadow-lg transition-shadow"
+									className="bg-white p-6 rounded-lg border-t-4 border-primary hover:shadow-lg transition-shadow h-full flex flex-col"
 								>
-									<div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+									<div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4 flex-shrink-0">
 										<span className="text-primary font-bold text-xl">{idx + 1}</span>
 									</div>
 									<h3 className="font-semibold text-lg mb-3" style={{ color: "#444444" }}>
 										{learning.title}
 									</h3>
-									<p className="text-gray-600">{learning.description}</p>
+									<p className="text-gray-600 flex-1">{learning.description}</p>
 								</motion.div>
 							))}
 						</div>
@@ -645,8 +608,8 @@ const GlucoseBiohackingMasterclass = () => {
 								viewport={{ once: true }}
 								className="bg-primary/10 p-8 rounded-lg border-2 border-primary"
 							>
-								<div className="bg-primary/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-									<Zap className="text-primary" size={32} />
+								<div className="w-1rem h-auto flex items-center justify-center mx-auto mb-4">
+									<img src={Mindfullness} alt="Diabetes Mindfulness" className="w-full h-full object-cover" />
 								</div>
 								<h3 className="font-bold text-xl mb-2" style={{ color: "#444444" }}>
 									Diabetes Mindfulness Hacks
@@ -661,8 +624,8 @@ const GlucoseBiohackingMasterclass = () => {
 								viewport={{ once: true }}
 								className="bg-primary/10 p-8 rounded-lg border-2 border-primary"
 							>
-								<div className="bg-primary/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-									<Brain className="text-primary" size={32} />
+								<div className="w-1rem h-auto flex items-center justify-center mx-auto mb-4">
+									<img src={Friendly} alt="Free eBook on Diabetes" className="w-full h-full object-cover" />
 								</div>
 								<h3 className="font-bold text-xl mb-2" style={{ color: "#444444" }}>
 									Free eBook on Diabetes
@@ -718,7 +681,7 @@ const GlucoseBiohackingMasterclass = () => {
 						className="max-w-6xl mx-auto text-center bg-gradient-to-r from-primary/10 to-primary/5 p-12 rounded-2xl"
 					>
 						<h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl mb-4" style={{ color: "#444444" }}>
-							Join 100+ People Who Have Benefitted!
+							Join 1000+ People Who Have Benefitted!
 						</h2>
 						<p className="text-lg text-gray-700 mb-4">
 							BioHack Your Diabetes @ Just Rs. 99/-
