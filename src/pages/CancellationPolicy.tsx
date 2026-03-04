@@ -9,67 +9,69 @@ const CancellationPolicy = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <h1 style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }} className="font-heading font-semibold text-4xl md:text-4xl mb-6 tracking-tight">Cancellation Policy</h1>
+          <h1 style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }} className="font-heading font-semibold text-4xl md:text-4xl mb-2 tracking-tight">Cancellation & No-Show Policy</h1>
           
-          <Card className="p-8">
-            <div className="prose prose-lg max-w-none">
-              <p className="text-muted-foreground mb-6">
-                Last Updated: October 5, 2025
-              </p>
+          <p className="text-muted-foreground mb-8">
+            Last Updated: October 5, 2025
+          </p>
 
-              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">Appointment Cancellations</h2>
-              <p className="text-muted-foreground mb-4">
-                We understand that sometimes schedules change. Please review our cancellation policies:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
-                <li>Appointments can be cancelled or rescheduled free of charge with 48 hours notice</li>
-                <li>Cancellations made 24-48 hours in advance may incur a 50% cancellation fee</li>
-                <li>Late cancellations (less than 24 hours) or no-shows will be charged the full appointment fee</li>
-                <li>Emergency situations will be handled on a case-by-case basis</li>
-              </ul>
+          <p className="text-muted-foreground mb-8 text-lg">
+            At Informed Health, our clinical resources and time are dedicated to your transformation. To maintain the integrity of our schedules, we adhere to the following strict policy:
+          </p>
 
-              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">How to Cancel</h2>
-              <p className="text-muted-foreground mb-4">
-                To cancel or reschedule an appointment:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
-                <li>Email us at behealthinformed@gmail.com</li>
-                <li>Call us at +91 88265 04708 during business hours</li>
-                <li>Use the cancellation link in your appointment confirmation email</li>
-              </ul>
+          <div className="space-y-6">
+            {/* Section 1 */}
+            <Card className="p-8 border-l-4 border-primary">
+              <h2 className="font-heading font-bold text-2xl mb-4">1. 48-Hour Notification Rule</h2>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-gray-700">Written Notice Required:</h3>
+                  <p className="text-muted-foreground">
+                    Any request to cancel or reschedule a session must be submitted via email to behealthinformed@gmail.com or Whatsapp at 8826504708 at least 48 hours prior to the scheduled appointment.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-gray-700">Late Cancellations:</h3>
+                  <p className="text-muted-foreground">
+                    In the absence of a written notification 48 hours in advance, the session will be considered forfeited and taken.
+                  </p>
+                </div>
+              </div>
+            </Card>
 
-              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">Workshop Cancellations</h2>
-              <p className="text-muted-foreground mb-4">
-                Workshop cancellation timeline:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
-                <li>7+ days before workshop: Free cancellation or transfer to another date</li>
-                <li>3-7 days before: Cancellation fee applies (see Refund Policy)</li>
-                <li>Less than 3 days: No cancellations accepted</li>
-              </ul>
+            {/* Section 2 */}
+            <Card className="p-8 border-l-4 border-primary">
+              <h2 className="font-heading font-bold text-2xl mb-4">2. Session Participation & No-Shows</h2>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-gray-700">Self-Responsibility:</h3>
+                  <p className="text-muted-foreground">
+                    It is the client's responsibility to be present at the scheduled time.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-gray-700">No Reminders:</h3>
+                  <p className="text-muted-foreground">
+                    Please note that no reminders (calls or messages) will be sent at the time of the session to prompt you to join.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-gray-700">Forfeiture:</h3>
+                  <p className="text-muted-foreground">
+                    If you fail to join the session within the first 10 minutes of the scheduled time without prior 48-hour notice, the session will be marked as completed.
+                  </p>
+                </div>
+              </div>
+            </Card>
 
-              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">Provider Cancellations</h2>
-              <p className="text-muted-foreground mb-4">
-                In the rare event that we need to cancel:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
-                <li>You will be notified at least 24 hours in advance when possible</li>
-                <li>You can choose to reschedule or receive a full refund</li>
-                <li>For workshops, you may transfer to a future date or receive a full refund</li>
-              </ul>
-
-              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">Program Cancellations</h2>
-              <p className="text-muted-foreground mb-4">
-                For multi-session programs, cancellations are accepted up to the program start date. 
-                Once the program has begun, please refer to our Refund Policy for details on partial refunds.
-              </p>
-
-              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">Contact Us</h2>
+            {/* Section 3 */}
+            <Card className="p-8 border-l-4 border-primary">
+              <h2 className="font-heading font-bold text-2xl mb-4">3. Provider Cancellations</h2>
               <p className="text-muted-foreground">
-                Questions about our cancellation policy? Contact us at behealthinformed@gmail.com or call +91 88265 04708.
+                In the rare event that Informed Health must reschedule a session, you will be notified at least 24 hours in advance, and the session will be rescheduled at a mutually convenient time.
               </p>
-            </div>
-          </Card>
+            </Card>
+          </div>
         </motion.div>
       </div>
     </div>

@@ -16,22 +16,22 @@ const BodyTransformation = () => {
 
   const programmeFeatures = [
     {
-      title: "Blood Report Analysis",
+      title: "Clinical Bio-Marker Analysis",
       icon: Microscope,
       description: "In-depth analysis of your blood work"
     },
     {
-      title: "Goal Setting",
+      title: "Weekly Guidance & Accountability",
       icon: Target,
       description: "Clear transformation goals"
     },
     {
-      title: "Root Cause Analysis",
+      title: "Integrative Root-Cause Diagnostics",
       icon: Search,
       description: "Understand weight management triggers"
     },
     {
-      title: "Customized Meal Plan",
+      title: "Sustainable Lifestyle Support",
       icon: UtensilsCrossed,
       description: "Personalized nutrition strategy"
     },

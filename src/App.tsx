@@ -20,6 +20,8 @@ import BiohackYourGut from "./pages/BiohackYourGut";
 import GlucoseBiohacking from "./pages/GlucoseBiohacking";
 import BodyTransformation from "./pages/BodyTransformation";
 import GlucoseBiohackingMasterclass from "./pages/GlucoseBiohackingMasterclass";
+import PaymentCallback from "./pages/PaymentCallback";
+import ThankYou from "./pages/ThankYou";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +49,8 @@ const App = () => (
               <Route path="/refund-policy" element={<RefundPolicy />} />
               <Route path="/cancellation-policy" element={<CancellationPolicy />} />
               <Route path="/grievance" element={<Grievance />} />
+              <Route path="/payment/callback" element={<PaymentCallback />} />
+              <Route path="/:uniqueKey/thank-you" element={<ThankYou />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

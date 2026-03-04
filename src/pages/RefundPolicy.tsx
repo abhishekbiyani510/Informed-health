@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
+import { AlertCircle } from "lucide-react";
 
 const RefundPolicy = () => {
   return (
@@ -11,57 +12,53 @@ const RefundPolicy = () => {
         >
           <h1 style={{ fontFamily: 'Poppins, sans-serif', color: '#444444' }} className="font-heading font-semibold text-4xl md:text-4xl mb-6 tracking-tight">Refund Policy</h1>
           
+          <Card className="p-8 mb-6 border-l-4 border-red-500 bg-red-50">
+            <div className="flex gap-4">
+              <AlertCircle className="h-6 w-6 text-red-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <h2 className="font-heading font-bold text-lg text-red-900 mb-2">Strict No-Refund Policy</h2>
+                <p className="text-red-800">
+                  At Informed Health, we are committed to providing high-value, clinically-driven programs. To maintain the integrity of our scheduling and resources, we follow a Strict No-Refund Policy.
+                </p>
+              </div>
+            </div>
+          </Card>
+
           <Card className="p-8">
             <div className="prose prose-lg max-w-none">
-              <p className="text-muted-foreground mb-6">
-                Last Updated: October 5, 2025
+              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">1. Consultation Services</h2>
+              <p className="text-muted-foreground mb-4">
+                All fees paid for consultations, workshops, and program packages are non-refundable and non-transferable.
+              </p>
+              <p className="text-muted-foreground mb-6 italic">
+                <strong>Commitment:</strong> By enrolling in a program or booking a session, you acknowledge that the fee is a commitment to your health journey and cannot be reclaimed.
               </p>
 
-              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">Consultation Services</h2>
-              <p className="text-muted-foreground mb-4">
-                For one-on-one consultation services, refunds are available under the following conditions:
-              </p>
+              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">2. Program Packages & Consultations</h2>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
-                <li>Cancellation made at least 48 hours before the scheduled appointment - Full refund</li>
-                <li>Cancellation made 24-48 hours before appointment - 50% refund</li>
-                <li>Cancellation made less than 24 hours before appointment - No refund</li>
-                <li>No-shows are not eligible for refunds</li>
+                <li>Once a program has commenced or a consultation is booked, no refunds will be issued for "change of mind" or partial completion.</li>
+                <li>Sessions must be utilized within the stipulated program duration (e.g., 12–14 weeks); unused sessions will not be refunded or carried forward.</li>
               </ul>
 
-              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">Workshop Registrations</h2>
+              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">3. Professional Conduct & Compliance</h2>
               <p className="text-muted-foreground mb-4">
-                Workshop registration refunds are processed as follows:
+                A successful transformation is built on mutual respect, trust, and transparency. Informed Health reserves the right to terminate any program immediately, without a refund, in the following instances:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
-                <li>Cancellation 7+ days before workshop - Full refund minus processing fee (5%)</li>
-                <li>Cancellation 3-7 days before workshop - 50% refund</li>
-                <li>Cancellation less than 3 days before workshop - No refund</li>
-                <li>Workshop cancellation by us - Full refund or transfer to future workshop</li>
+                <li><strong>Behavioral Issues:</strong> Display of poor attitude, lack of respect, or resorting to baseless allegations and blame.</li>
+                <li><strong>Non-Compliance:</strong> Repeated failure to provide food and activity journals or providing intentionally inaccurate information.</li>
+                <li><strong>Guideline Violations:</strong> Failure to abide by the clinical guidelines and protocols signed up for.</li>
               </ul>
 
-              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">Program Packages</h2>
-              <p className="text-muted-foreground mb-4">
-                For multi-session programs and packages:
-              </p>
+              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">4. Corporate Workshop Registrations</h2>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
-                <li>Cancellation before program start - Full refund minus 10% administrative fee</li>
-                <li>Cancellation after program start - Refund for unused sessions only, minus 10% fee</li>
-                <li>No refunds after 50% of program completion</li>
+                <li>Registration fees for corporate or public workshops are final.</li>
+                <li>In the event of a participant's absence (no-show), the fee remains non-refundable.</li>
               </ul>
 
-              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">Digital Products</h2>
-              <p className="text-muted-foreground mb-4">
-                E-books, meal plans, and other digital products are non-refundable once downloaded.
-              </p>
-
-              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">Refund Processing</h2>
-              <p className="text-muted-foreground mb-4">
-                All approved refunds will be processed within 7-10 business days to the original payment method.
-              </p>
-
-              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">Contact</h2>
+              <h2 className="font-heading font-bold text-2xl mt-8 mb-4">5. Digital Products</h2>
               <p className="text-muted-foreground">
-                For refund requests, please contact us at behealthinformed@gmail.com with your booking details.
+                All sales of digital goods, including e-books, meal plans, and guidebooks, are final once access is granted or the file is downloaded.
               </p>
             </div>
           </Card>

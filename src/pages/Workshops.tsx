@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { workshops } from "@/data/mockData";
-import { Calendar, Clock, Users, IndianRupee } from "lucide-react";
+import { Calendar, Clock, Users, IndianRupee, Award, Globe, Zap, TrendingUp } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 import wellness from '@/assets/welcome.jpg';
@@ -22,14 +22,14 @@ const Workshops = () => {
 
   return (
     <div className="min-h-screen py-8">
-      <div className="container mx-auto px-24">
+      <div className="container mx-auto px-4 sm:px-8 md:px-12 lg:px-24">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 style={{ fontFamily: 'Inter, sans-serif', color: '#444444', fontWeight: "bold" }} className="font-heading font-semibold text-[50px] md:text-[50px] mb-2 tracking-tight">Upcoming Workshops</h1>
+          <h1 style={{ fontFamily: 'Inter, sans-serif', color: '#444444', fontWeight: "bold" }} className="font-heading font-semibold text-[28px] sm:text-[36px] md:text-[50px] mb-2 tracking-tight">Upcoming Workshops</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Join our Interactive Workshops to deepen your Understanding of
             Functional Nutrition and Practical Wellness Strategies
@@ -81,7 +81,7 @@ const Workshops = () => {
                     <p className="text-xs md:text-sm text-muted-foreground mb-3 flex-1">{workshop.description}</p>
 
                     <div className="space-y-1 mb-4">
-                      <div className="flex items-center text-xs md:text-sm text-muted-foreground">
+                      <div className="flex items-center flex-wrap text-xs md:text-sm text-muted-foreground">
                         <Calendar size={14} className="mr-2 text-primary flex-shrink-0" />
                         <span>{eventDate.toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                         {!isPast && (
@@ -130,8 +130,8 @@ const Workshops = () => {
         </div>
       </div>
 
-      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-gradient-to-r from-secondary/20 via-secondary/10 to-secondary/20 py-16 mt-8">
-        <div className="container mx-auto px-24">
+      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-gradient-to-r from-secondary/20 via-secondary/10 to-secondary/20 py-10 mt-8">
+        <div className="container mx-auto px-4 sm:px-8 md:px-12 lg:px-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -142,64 +142,146 @@ const Workshops = () => {
               <img
                 src={wellness}
                 alt="Corporate Wellness"
-                className="w-full h-[500px] object-cover rounded-2xl"
+                className="w-full h-[250px] sm:h-[350px] md:h-[500px] object-cover rounded-2xl"
               />
               <div className="absolute inset-0 bg-black/10 rounded-t-2xl" />
             </div>
 
-            <div className="p-8 rounded-b-2xl">
+            <div className="p-4 sm:p-6 md:p-8 rounded-b-2xl">
               <div className="text-center">
-                <h2 className="font-heading font-bold text-5xl mb-4 text-secondary">
-                  Wellness & Corporate Workshops
-                </h2>
-                <p className="text-muted-foreground mb-6 text-lg">
-                  Elevate your team’s wellbeing and productivity with our customized wellness and corporate nutrition workshops.
-                </p>
+              <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-5xl mb-4 text-secondary">
+                Wellness & Corporate Workshops: Fueling Organizational Performance
+              </h2>
+              <p className="text-base md:text-lg text-gray-700 font-bold mb-2">
+                Transform Employee Health into Your Competitive Advantage
+              </p>
+              <p className="text-muted-foreground mb-6 text-sm md:text-base leading-relaxed max-w-4xl mx-auto">
+                In a high-pressure corporate world, your team's vitality is your greatest asset. Madhavi Sharma brings over 20 years of international expertise as a Functional Nutritionist to help global organizations move beyond "perk-based" wellness into science-backed performance. Having empowered teams at OLX, Aditya Birla Group, Grid India and more, Madhavi delivers dynamic, high-impact sessions that eliminate the "invisible" costs of burnout, brain fog, and declining productivity.
+              </p>
               </div>
 
-              <div className="text-center mt-8">
-                <Button
-                  asChild
-                  size="lg"
-                  className="text-white font-semibold shadow-md hover:scale-105 transition-transform"
-                >
-                  <a href="/contact?type=corporate" target="_blank" rel="noopener noreferrer">
-                    Enquire for Corporate Wellness
-                  </a>
-                </Button>
+                <div className="mt-8 mb-8">
+                <h3 className="font-heading font-bold text-2xl mb-6 text-center">Why HR Leaders Partner With Us:</h3>
+                <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                  <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 border border-primary/20 hover:border-primary/40 transition-all hover:shadow-lg"
+                  >
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/20 rounded-lg p-3 flex-shrink-0">
+                    <Award size={24} className="text-primary" />
+                    </div>
+                    <div>
+                    <h4 className="font-semibold text-lg mb-2">Proven Authority</h4>
+                    <p className="text-sm text-muted-foreground">Targeted strategies rooted in the 5 Pillars of Health and Functional Medicine.</p>
+                    </div>
+                  </div>
+                  </motion.div>
+                  <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 border border-primary/20 hover:border-primary/40 transition-all hover:shadow-lg"
+                  >
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/20 rounded-lg p-3 flex-shrink-0">
+                    <Globe size={24} className="text-primary" />
+                    </div>
+                    <div>
+                    <h4 className="font-semibold text-lg mb-2">Global Track Record</h4>
+                    <p className="text-sm text-muted-foreground">Trusted by industry giants to inspire and retain high-performing talent.</p>
+                    </div>
+                  </div>
+                  </motion.div>
+                  <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 border border-primary/20 hover:border-primary/40 transition-all hover:shadow-lg"
+                  >
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/20 rounded-lg p-3 flex-shrink-0">
+                    <Zap size={24} className="text-primary" />
+                    </div>
+                    <div>
+                    <h4 className="font-semibold text-lg mb-2">Actionable Biohacks</h4>
+                    <p className="text-sm text-muted-foreground">Employees leave with immediate tools to optimize energy, focus, and stress resilience.</p>
+                    </div>
+                  </div>
+                  </motion.div>
+                  <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                  className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 border border-primary/20 hover:border-primary/40 transition-all hover:shadow-lg"
+                  >
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/20 rounded-lg p-3 flex-shrink-0">
+                    <TrendingUp size={24} className="text-primary" />
+                    </div>
+                    <div>
+                    <h4 className="font-semibold text-lg mb-2">Measurable Results</h4>
+                    <p className="text-sm text-muted-foreground">Designed to reduce health-related absenteeism and boost productivity.</p>
+                    </div>
+                  </div>
+                  </motion.div>
+                </div>
+                </div>
+
+              <div className="text-center">
+              <Button
+                asChild
+                size="lg"
+                className="text-white font-semibold shadow-md hover:scale-105 transition-transform"
+              >
+                <a href="/contact?type=corporate" target="_blank" rel="noopener noreferrer">
+                Enquire for Corporate Wellness
+                </a>
+              </Button>
               </div>
             </div>
           </motion.div>
         </div>
       </div>
 
-      <div className="container mx-auto px-24">
+      <div className="container mx-auto px-4 sm:px-8 md:px-12 lg:px-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-muted rounded-2xl p-8 mt-8"
+          className="bg-muted rounded-2xl p-4 sm:p-6 md:p-8 mt-8"
         >
           <h2 className="font-heading font-bold text-2xl mb-4">What to Expect</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div>
-              <h3 className="font-semibold mb-2">Interactive Learning</h3>
-              <p className="text-sm text-muted-foreground">
-                Engage with content through hands-on activities and group discussions
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Practical Resources</h3>
-              <p className="text-sm text-muted-foreground">
-                Take home actionable guides, meal plans, and recipe collections
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Expert Guidance</h3>
-              <p className="text-sm text-muted-foreground">
-                Direct access to ask questions and get personalized insights
-              </p>
-            </div>
+          <div className="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 className="font-semibold mb-2">Immersive Interactive Learning</h3>
+          <p className="text-sm text-muted-foreground">
+            Move beyond passive listening with hands-on biohacking and real-time health audits.
+          </p>
+        </div>
+        <div>
+          <h3 className="font-semibold mb-2">Behavioral Architecture</h3>
+          <p className="text-sm text-muted-foreground">
+            Learn the psychology of "habit stacking" to seamlessly integrate wellness into a demanding workday.
+          </p>
+        </div>
+        <div>
+          <h3 className="font-semibold mb-2">Direct Expert Access (Live Q&A)</h3>
+          <p className="text-sm text-muted-foreground">
+            Get answers to individual health barriers through direct clinical insights in a group setting.
+          </p>
+        </div>
+        <div>
+          <h3 className="font-semibold mb-2">Actionable "Desk-Side" Biohacks</h3>
+          <p className="text-sm text-muted-foreground">
+            Stop the slump with immediate, science-backed interventions that work right from the office chair.
+          </p>
+        </div>
           </div>
         </motion.div>
       </div>

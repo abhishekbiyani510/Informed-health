@@ -37,7 +37,7 @@ export const workshops: Workshop[] = [
     title: "Gut Biohacking Masterclass",
     description: "Get permanent relief from acidity, bloating, and gas naturally without medicines. Discover proven strategies to restore digestive balance and achieve lasting wellness.",
     date: "15th Mar 2025",
-    dateTime: "2025-03-15T11:00:00+05:30",
+    dateTime: "2026-03-15T11:00:00+05:30",
     duration: "3 days",
     price: 299,
     image: w1,
