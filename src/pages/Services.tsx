@@ -216,7 +216,7 @@ const Services = () => {
 						Schedule a 30-minutes Clarity Call to discuss your Health Goals.
 					</p>
 					<Button asChild size="lg">
-						<Link to="/contact">Schedule Your Clarity Call</Link>
+						<a href="https://imjo.in/24hMwR" target="_blank" rel="noopener noreferrer">Book Your Clarity Call</a>
 					</Button>
 				</motion.div>
 			</div>

@@ -361,7 +361,7 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-12 px-4"
           >
-            <h2 className="font-heading font-bold text-4xl mb-4" style={{ color: "#444444", fontFamily: 'Inter, sans-serif' }}>Our Clients</h2>
+            <h2 className="font-heading font-bold text-4xl mb-4" style={{ color: "#444444", fontFamily: 'Inter, sans-serif' }}>Featured In</h2>
             <p className="text-muted-foreground text-lg">Working with organizations committed to wellness and health</p>
           </motion.div>
 

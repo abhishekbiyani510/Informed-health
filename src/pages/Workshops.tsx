@@ -21,7 +21,7 @@ const Workshops = () => {
   }, []);
 
   return (
-    <div className="min-h-screen py-8">
+    <div className="min-h-screen py-8 overflow-x-hidden">
       <div className="container mx-auto px-4 sm:px-8 md:px-12 lg:px-24">
         {/* Header */}
         <motion.div
@@ -116,9 +116,9 @@ const Workshops = () => {
                         ) : isPast ? (
                           <span>Completed</span>
                         ) : (
-                          <Link to={workshop.internalRoute}>
+                          <a href={`#${workshop.internalRoute}`} target="_blank" rel="noopener noreferrer">
                             Register Now
-                          </Link>
+                          </a>
                         )}
                       </Button>
                     </div>
@@ -209,7 +209,7 @@ const Workshops = () => {
                     </div>
                     <div>
                     <h4 className="font-semibold text-lg mb-2">Actionable Biohacks</h4>
-                    <p className="text-sm text-muted-foreground">Employees leave with immediate tools to optimize energy, focus, and stress resilience.</p>
+                    <p className="text-sm text-muted-foreground">Employees learn tools to optimize energy, focus, and stress resilience.</p>
                     </div>
                   </div>
                   </motion.div>
@@ -239,7 +239,7 @@ const Workshops = () => {
                 size="lg"
                 className="text-white font-semibold shadow-md hover:scale-105 transition-transform"
               >
-                <a href="/contact?type=corporate" target="_blank" rel="noopener noreferrer">
+                <a href="/contact#/contact">
                 Enquire for Corporate Wellness
                 </a>
               </Button>
@@ -254,9 +254,9 @@ const Workshops = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-muted rounded-2xl p-4 sm:p-6 md:p-8 mt-8"
+          className="bg-primary/20 rounded-2xl p-4 sm:p-6 md:p-8 mt-8"
         >
-          <h2 className="font-heading font-bold text-2xl mb-4">What to Expect</h2>
+          <h2 className="font-heading font-bold text-2xl mb-4 text-center">What to Expect</h2>
           <div className="grid md:grid-cols-2 gap-6">
         <div>
           <h3 className="font-semibold mb-2">Immersive Interactive Learning</h3>
