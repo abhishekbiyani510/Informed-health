@@ -22,14 +22,14 @@ const Navbar = () => {
 
   return (
     <nav className="bg-background border-b border-border sticky top-0 z-50 shadow-sm">
-      <div className="container mx-auto px-15 my-2">
-        <div className="flex justify-between items-center h-[80px]">
-          <div className="flex items-center space-x-3 ml-[-50px]">
-            <img src={logo} alt="Logo" className="h-16 w-auto" />
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="font-heading font-bold text-xl md:text-2xl">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-15 my-2">
+        <div className="flex justify-between items-center h-[80px] min-w-0">
+          <div className="flex items-center space-x-3 ml-0 lg:ml-[-50px] min-w-0">
+            <img src={logo} alt="Logo" className="h-16 w-auto flex-shrink-0" />
+            <Link to="/" className="flex items-center space-x-2 min-w-0">
+              <div className="font-heading font-bold text-xl md:text-2xl min-w-0">
                 <span style={{ fontFamily: 'Anton, sans-serif' }} className="text-primary font-thin">Informed Health</span>
-                <p className="text-xs font-normal text-muted-foreground">Eat Well. Live Well. Be Healthy.</p>
+                <p className="text-xs font-normal text-muted-foreground whitespace-nowrap">Eat Well. Live Well. Be Healthy.</p>
               </div>
             </Link>
           </div>

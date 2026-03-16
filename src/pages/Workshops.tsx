@@ -282,9 +282,12 @@ const Workshops = () => {
                 size="lg"
                 className="text-white font-semibold shadow-md hover:scale-105 transition-transform"
               >
-                <a href="/contact#/contact">
+                {/* <a href="/contact#/contact">
                 Enquire for Corporate Wellness
-                </a>
+                </a> */}
+                <Link to="/contact">
+                  Enquire for Corporate Wellness
+                </Link>
               </Button>
               </div>
             </div>
