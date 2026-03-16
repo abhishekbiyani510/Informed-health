@@ -18,25 +18,25 @@ const GlucoseBiohacking = () => {
 
 	const programmeFeatures = [
 		{
-			title: "Blood Report Analysis",
+			title: "Clinical Bio-Marker Analysis",
 			icon: Microscope,
-			description: "In-depth analysis of your blood work",
-		},
-		{
-			title: "Reversal Goal Mapping",
+			description: "In-depth analysis of your blood work"
+		  },
+		  {
+			title: "Weekly Guidance & Accountability",
 			icon: Target,
-			description: "Clear diabetes reversal goals",
-		},
-		{
-			title: "Root Cause Analysis",
+			description: "Clear transformation goals"
+		  },
+		  {
+			title: "Integrative Root-Cause Diagnostics",
 			icon: Search,
-			description: "Understand insulin resistance triggers",
-		},
-		{
-			title: "Customized Meal Plan",
+			description: "Understand weight management triggers"
+		  },
+		  {
+			title: "Sustainable Lifestyle Support",
 			icon: UtensilsCrossed,
-			description: "Personalized nutrition strategy",
-		},
+			description: "Personalized nutrition strategy"
+		  },
 	];
 
 	return (

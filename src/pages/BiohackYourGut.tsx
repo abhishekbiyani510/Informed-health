@@ -18,22 +18,22 @@ const BiohackYourGut = () => {
 
   const programmeFeatures = [
     {
-      title: "Blood Report Analysis",
+      title: "Clinical Bio-Marker Analysis",
       icon: Microscope,
       description: "In-depth analysis of your blood work"
     },
     {
-      title: "Goal Setting",
+      title: "Reversal Goal Mapping",
       icon: Target,
-      description: "Clear, achievable health goals"
+      description: "Clear transformation goals"
     },
     {
-      title: "Root Cause Analysis",
+      title: "Integrative Root-Cause Diagnostics",
       icon: Search,
-      description: "Identify underlying health issues"
+      description: "Understand weight management triggers"
     },
     {
-      title: "Customized Meal Plan",
+      title: "Sustainable Lifestyle Support",
       icon: UtensilsCrossed,
       description: "Personalized nutrition strategy"
     },
@@ -89,17 +89,18 @@ const BiohackYourGut = () => {
       <section className="py-12 sm:py-16 md:py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="max-w-4xl mx-auto"
           >
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
-          className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl mb-8 text-center" style={{ fontFamily: 'Inter, sans-serif', color: "#444444" }}
+          className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl mb-8 text-center"
+          style={{ fontFamily: 'Inter, sans-serif', color: "#444444" }}
         >
           What is the Gut Reset Blueprint?
         </motion.h2>
@@ -112,7 +113,7 @@ const BiohackYourGut = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            This 12 week program offers a comprehensive and personalized blueprint for resetting your gut, the epicenter of your entire well-being. Rooted in the integrative power of the five pillars of health—Nutrition, Exercise, Sleep, Gut Health, and Emotional Stability—this approach goes beyond quick fixes to address the root causes of imbalances. By focusing on restoring gut health, we unlock the key to improving digestion, boosting energy, enhancing immunity, and achieving holistic wellness, empowering you to thrive in every aspect of your life.
+            Living with chronic bloating, acidity, or unpredictable IBS is more than an inconvenience—it’s an invisible burden. It’s the constant anxiety about what you eat, the brain fog that slows your workday, and the chronic fatigue that lingers no matter how much you sleep. If you are struggling with constipation, skin flare-ups, or low immunity, your body is signalling that your gut microbiome is out of balance.
           </motion.p>
 
           <motion.p
@@ -122,7 +123,17 @@ const BiohackYourGut = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            The Biohack Your Gut program goes beyond superficial quick fixes and symptomatic relief. This transformative journey empowers you with the 5R Strategy—a proven framework grounded in both traditional wisdom and cutting-edge science. You'll learn to identify your unique triggers, heal your gut, and unlock true, lasting health. This sustainable approach not only frees you from recurring symptoms but also 10X's your energy, immunity, and overall well-being, giving you the clarity and tools to take charge of your health for life.
+            The Gut Reset Blueprint is a transformative 12-week programme designed to address the root causes of your discomfort. We move beyond superficial quick fixes to reset the foundation of your immunity, mood, and metabolism.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            Rooted in the Five Pillars of Health—Nutrition, Exercise, Sleep, Gut Health, and Emotional Stability—this programme is your roadmap to a life free from digestive distress. We utilize the 5R Strategy, a proven functional medicine framework that blends traditional wisdom with cutting-edge nutritional science to heal your gut from the inside out.
           </motion.p>
         </div>
           </motion.div>

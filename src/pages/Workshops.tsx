@@ -160,6 +160,49 @@ const Workshops = () => {
               </p>
               </div>
 
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="max-w-5xl mx-auto mb-8 rounded-2xl border border-primary/20 bg-white/80 backdrop-blur-sm p-4 sm:p-6 md:p-8"
+              >
+                <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-primary font-semibold text-center mb-2">
+                  Corporate Wellness
+                </p>
+                <h3 className="font-heading font-bold text-xl sm:text-2xl md:text-3xl text-center mb-5">
+                  Signature Speaking Topics
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-6">
+                  {[
+                    "Beyond the Fad: Building a Foundation of Science-Backed Lifestyle Medicine.",
+                    "The Circadian Edge: Aligning Biological Rhythms for Peak Professional Performance.",
+                    "The Intuitive Gut: How Microbiome Health Dictates Leadership Clarity.",
+                    "The Psychology of Performance: Conscious Eating for Sustained Energy & Focus.",
+                    "Neuro-Metabolic Resilience: Rewiring Stress Responses & Emotional Eating Patterns.",
+                    "The Sleep Advantage: Optimizing the Most Underrated Pillar of Corporate Health."
+                  ].map((topic, idx) => {
+                    const [title, ...rest] = topic.split(":");
+                    const body = rest.join(":").trim();
+
+                    return (
+                      <div
+                        key={idx}
+                        className="rounded-xl border border-primary/15 bg-gradient-to-br from-primary/5 to-secondary/10 p-4 text-sm md:text-base text-foreground leading-relaxed"
+                      >
+                        <span className="font-semibold">{title}{rest.length ? ":" : ""}</span>
+                        {body ? ` ${body}` : ""}
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="text-center">
+                  <Button asChild size="lg" className="w-full sm:w-auto text-white font-semibold shadow-md hover:scale-105 transition-transform">
+                    <Link to="/contact">Invite Madhavi Sharma to Empower Your Team</Link>
+                  </Button>
+                </div>
+              </motion.div>
+
                 <div className="mt-8 mb-8">
                 <h3 className="font-heading font-bold text-2xl mb-6 text-center">Why HR Leaders Partner With Us:</h3>
                 <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
