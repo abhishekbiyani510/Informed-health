@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => ({
     allowedHosts: true
   },
   plugins: [react()],
-  base: mode === "development" ? "/" : "/Informed-health/",
+  base: "/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
