@@ -84,7 +84,7 @@ export const testimonials: Testimonial[] = [
 ];
 
 export interface BlogPost {
-  id: string;
+  id: number;
   title: string;
   excerpt: string;
   content: string;
@@ -92,12 +92,13 @@ export interface BlogPost {
   date: string;
   category: string;
   image: string;
+  imageSmall: string;
   readTime: string;
 }
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "1",
+    id: 1,
     title: "5 Signs Your Gut Health Needs Attention",
     excerpt: "Discover the warning signs that indicate your digestive system needs support and what you can do about it.",
     content: "Full blog content would go here...",
@@ -105,10 +106,11 @@ export const blogPosts: BlogPost[] = [
     date: "2025-10-28",
     category: "Gut Health",
     image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8",
+    imageSmall: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=100",
     readTime: "5 min read",
   },
   {
-    id: "2",
+    id: 2,
     title: "The Power of Anti-Inflammatory Foods",
     excerpt: "Learn which foods can help reduce inflammation and support your body's natural healing processes.",
     content: "Full blog content would go here...",
@@ -116,10 +118,11 @@ export const blogPosts: BlogPost[] = [
     date: "2025-10-25",
     category: "Nutrition",
     image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352",
+    imageSmall: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=100",
     readTime: "7 min read",
   },
   {
-    id: "3",
+    id: 3,
     title: "Understanding Functional Nutrition",
     excerpt: "What makes functional nutrition different and why it might be the approach you've been looking for.",
     content: "Full blog content would go here...",
@@ -127,6 +130,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-10-20",
     category: "Education",
     image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061",
+    imageSmall: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=100",
     readTime: "6 min read",
   },
 ];

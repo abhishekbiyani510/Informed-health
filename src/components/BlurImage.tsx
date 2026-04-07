@@ -2,20 +2,19 @@ import { useState, useEffect } from 'react';
 
 interface BlurImageProps {
   src: string;
+  srcSmall: string;
   alt: string;
   className?: string;
 }
 
-const BlurImage = ({ src, alt, className = '' }: BlurImageProps) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [currentSrc, setCurrentSrc] = useState('');
+const BlurImage = ({ src, srcSmall, alt, className = '' }: BlurImageProps) => {
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const img = new Image();
     img.src = src;
     img.onload = () => {
-      setCurrentSrc(src);
-      setIsLoading(false);
+      setIsLoaded(true);
     };
   }, [src]);
 
@@ -23,22 +22,21 @@ const BlurImage = ({ src, alt, className = '' }: BlurImageProps) => {
     <div className={`relative overflow-hidden ${className}`}>
       <div
         className={`
-          absolute inset-0 
-          ${isLoading ? 'animate-pulse bg-muted' : 'opacity-0'}
+          absolute inset-0 bg-cover bg-center
           transition-opacity duration-300
+          ${isLoaded ? 'opacity-0' : 'opacity-100 blur-md'}
+        `}
+        style={{ backgroundImage: `url(${srcSmall})` }}
+      />
+      <img
+        src={src}
+        alt={alt}
+        className={`
+          w-full h-full object-cover
+          transition-opacity duration-300
+          ${isLoaded ? 'opacity-100' : 'opacity-0'}
         `}
       />
-      {currentSrc && (
-        <img
-          src={currentSrc}
-          alt={alt}
-          className={`
-            w-full h-full object-cover
-            ${isLoading ? 'scale-110 blur-lg' : 'scale-100 blur-0'}
-            transition-all duration-300
-          `}
-        />
-      )}
     </div>
   );
 };

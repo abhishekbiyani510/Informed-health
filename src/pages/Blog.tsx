@@ -36,6 +36,7 @@ const Blog = () => {
                 <div className="aspect-video md:aspect-[4/3]">
                   <BlurImage
                     src={blogPosts[0].image}
+                    srcSmall={blogPosts[0].imageSmall}
                     alt={blogPosts[0].title}
                     className="w-full h-full"
                   />
@@ -71,24 +72,24 @@ const Blog = () => {
 
         {/* Blog Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.slice(1).map((post, index) => (
+          {blogPosts.slice(1).map((post) => (
             <motion.div
               key={post.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: post.id * 0.1 }}
             >
               <Card className="overflow-hidden h-full flex flex-col hover:shadow-xl transition-shadow">
-                <div className="aspect-video overflow-hidden">
+                <div className="aspect-video">
                   <BlurImage
                     src={post.image}
+                    srcSmall={post.imageSmall}
                     alt={post.title}
-                    className="w-full h-full hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full"
                   />
                 </div>
-                
-                <div className="p-6 flex-1 flex flex-col">
+                <div className="p-6 flex flex-col flex-grow">
                   <Badge className="w-fit mb-3">{post.category}</Badge>
                   <h3 className="font-heading font-bold text-xl mb-3">{post.title}</h3>
                   <p className="text-sm text-muted-foreground mb-4 flex-1">{post.excerpt}</p>
