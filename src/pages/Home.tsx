@@ -374,7 +374,7 @@ const Home = () => {
             transition={{ delay: 0.3 }}
             className="mt-12 text-center"
           >
-            <a href="#contact" className="inline-block px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors">
+            <a href="/contact" className="inline-block px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors">
               Start Your Healing Journey
             </a>
           </motion.div>
